@@ -4,6 +4,7 @@ import config from "./attributes/config";
 import styles from "./attributes/styles";
 import fonts from "./attributes/fonts";
 import Button from "./attributes/Button";
+import FullSection from "./attributes/fullsection";
 
 const theme = extendTheme({
   config,
@@ -11,6 +12,7 @@ const theme = extendTheme({
   styles,
   components: {
     Button,
+    FullSection,
   },
 });
 

@@ -10,12 +10,20 @@ const ContainerComponent = (props) => {
     <Flex minH="100vh" flexDir="column" w="100%" alignItems="center">
       <Header />
       {props.hero}
-      <Flex flex="1" w={width} flexDir="column">
-        <Main>{props.children}</Main>
-        <Footer />
-      </Flex>
+
+      <Main>{props.children}</Main>
+      <Footer />
     </Flex>
   );
 };
 
 export default ContainerComponent;
+
+// <Flex minH="100vh" flexDir="column" w="100%" alignItems="center">
+// <Header />
+// {props.hero}
+// <Flex flex="1" w={width} flexDir="column">
+//   <Main>{props.children}</Main>
+//   <Footer />
+// </Flex>
+// </Flex>
