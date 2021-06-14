@@ -7,7 +7,7 @@ const NavButton = (props) => {
       <Button
         w={{ base: "full", md: "auto" }}
         variant="ghost"
-        navigation={true}
+        navigation="true"
       >
         {props.children}
       </Button>

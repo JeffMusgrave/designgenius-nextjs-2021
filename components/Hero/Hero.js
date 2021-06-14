@@ -1,7 +1,7 @@
 import {
   FullSection,
   ContentConstrainer,
-} from "../../styles/designgenius/components/fullsection";
+} from "../../styles/designgenius/components/Fullsection";
 
 const HeroComponent = (props) => {
   return (

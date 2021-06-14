@@ -2,11 +2,11 @@ import { SimpleGrid, AspectRatio, Box, Flex, Heading } from "@chakra-ui/react";
 import {
   FullSection,
   ContentConstrainer,
-} from "../../styles/designgenius/components/fullsection";
+} from "../../styles/designgenius/components/Fullsection";
 
 const PortfolioComponent = (props) => {
   return (
-    <FullSection>
+    <FullSection variant="constrainedBox">
       <ContentConstrainer>
         <Heading as="h2">Portfolio</Heading>
         <SimpleGrid columns={3} spacing={10} mt={10}>

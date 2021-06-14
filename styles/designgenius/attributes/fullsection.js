@@ -7,7 +7,7 @@ const FullSection = {
   baseStyle: {
     container: {
       display: "flex",
-      width: "100vw",
+      width: "100%",
       alignItems: "center",
       bg: "red.200",
       flexDir: "column",
@@ -54,6 +54,18 @@ const FullSection = {
     constrained: {
       container: {
         bg: "transparent",
+      },
+    },
+    constrainedBox: {
+      container: {
+        _last: {
+          pb: "2.5rem",
+        },
+      },
+      constrainer: {
+        mt: "2.5rem",
+        p: "2.5rem",
+        borderRadius: "2xl",
       },
     },
   },
