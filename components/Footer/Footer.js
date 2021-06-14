@@ -1,10 +1,15 @@
-import { Flex } from "@chakra-ui/layout";
+import {
+  FullSection,
+  ContentConstrainer,
+} from "../../styles/designgenius/components/fullsection";
 
 const FooterComponent = (props) => {
   return (
-    <Flex as="footer" py={16}>
-      Created by Design Genius. &copy; 2021
-    </Flex>
+    <FullSection variant="fullNoGrow">
+      <ContentConstrainer>
+        Created by Design Genius. &copy; 2021
+      </ContentConstrainer>
+    </FullSection>
   );
 };
 

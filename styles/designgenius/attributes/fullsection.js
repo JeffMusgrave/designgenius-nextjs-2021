@@ -10,13 +10,13 @@ const FullSection = {
       width: "100vw",
       alignItems: "center",
       bg: "red.200",
-      h: "50rem",
-      flexDirection: "column",
+      flexDir: "column",
+      _last: { flex: "1 1 auto" },
     },
     constrainer: {
       width: width,
       bg: "blue.600",
-      h: "50rem",
+      h: "100%",
     },
   },
   // The size styles for each part
@@ -48,8 +48,8 @@ const FullSection = {
   },
   // The variant styles for each part
   variants: {
-    fullSize: {
-      constrainer: {},
+    fullNoGrow: {
+      container: { _last: { flex: "0 1 auto" } },
     },
     constrained: {
       container: {
@@ -58,7 +58,7 @@ const FullSection = {
     },
   },
   // The default `size` or `variant` values
-  defaultProps: { variant: "fullSize" },
+  defaultProps: { variant: "" },
 };
 
 export default FullSection;
