@@ -1,6 +1,6 @@
 import { Global, css } from "@emotion/react";
 
-const GlobalStyle = ({ children }) => {
+export default function GlobalStyle({ children }) {
   return (
     <>
       <Global
@@ -26,6 +26,4 @@ const GlobalStyle = ({ children }) => {
       {children}
     </>
   );
-};
-
-export default GlobalStyle;
+}

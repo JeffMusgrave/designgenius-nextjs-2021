@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Contact = () => {
+export default function Contact() {
   return (
     <>
       <Head>
@@ -10,6 +10,4 @@ const Contact = () => {
       </Head>
     </>
   );
-};
-
-export default Contact;
+}

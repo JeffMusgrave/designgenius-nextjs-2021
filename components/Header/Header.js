@@ -12,7 +12,7 @@ import LogoSection from "./LogoSection";
 import { NavDesktop, NavMobile } from "./Navigation";
 import { bigHero, width } from "../../styles/designgenius/stylevars";
 
-const HeaderComponent = (props) => {
+export default function HeaderComponent(props) {
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
   const headerPos = bigHero === true ? "fixed" : "sticky";
@@ -54,6 +54,4 @@ const HeaderComponent = (props) => {
       </Flex>
     </Box>
   );
-};
-
-export default HeaderComponent;
+}

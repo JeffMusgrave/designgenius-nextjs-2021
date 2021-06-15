@@ -1,8 +1,8 @@
 import { VisuallyHidden, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { useColorMode, IconButton } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 
-const Logo = () => {
+export default function Logo() {
   const { colorMode, toggleColorMode } = useColorMode();
   const iconColor = {
     light: "#4d4d4d",
@@ -108,6 +108,4 @@ const Logo = () => {
       </g>
     </svg>
   );
-};
-
-export default Logo;
+}

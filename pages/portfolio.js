@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Portfolio = () => {
+export default function Portfolio() {
   return (
     <>
       <Head>
@@ -10,6 +10,4 @@ const Portfolio = () => {
       </Head>
     </>
   );
-};
-
-export default Portfolio;
+}

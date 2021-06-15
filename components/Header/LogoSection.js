@@ -1,9 +1,8 @@
 import { VisuallyHidden, Link, Box } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { useColorMode } from "@chakra-ui/react";
-
 import Logo from "./Logo";
-const LogoSection = () => {
+
+export default function LogoSection() {
   return (
     <NextLink href="/">
       <Link
@@ -20,22 +19,4 @@ const LogoSection = () => {
       </Link>
     </NextLink>
   );
-};
-
-// const Logo = () => {
-//   const { colorMode } = useColorMode();
-//   const iconColor = {
-//     light: "#4d4d4d",
-//     dark: "#fff",
-//   };
-//   return (
-//     <img
-//       style={{ fill: iconColor[colorMode] }}
-//       src="/logo.svg"
-//       alt="Design Genius logo"
-//       aria-label="Design Genius!"
-//     />
-//   );
-// };
-
-export default LogoSection;
+}

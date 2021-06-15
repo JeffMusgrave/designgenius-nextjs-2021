@@ -1,7 +1,5 @@
 import MainContainer from "./Main";
 
-const Main = ({ children }) => {
+export default function Main({ children }) {
   return <MainContainer>{children}</MainContainer>;
-};
-
-export default Main;
+}

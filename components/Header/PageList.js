@@ -1,6 +1,6 @@
 import NavButton from "./NavButton";
 
-const PageList = () => {
+export default function PageList() {
   return (
     <>
       <NavButton link="/portfolio">Portfolio</NavButton>
@@ -8,6 +8,4 @@ const PageList = () => {
       <NavButton link="/contact">Contact</NavButton>
     </>
   );
-};
-
-export default PageList;
+}

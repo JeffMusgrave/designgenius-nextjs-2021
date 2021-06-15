@@ -1,7 +1,5 @@
 import FooterContainer from "./Footer";
 
-const Footer = (props) => {
+export default function Footer(props) {
   return <FooterContainer {...props} />;
-};
-
-export default Footer;
+}

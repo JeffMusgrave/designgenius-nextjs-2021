@@ -3,7 +3,7 @@ import {
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
 
-const FooterComponent = (props) => {
+export default function FooterComponent(props) {
   return (
     <FullSection variant="fullNoGrow">
       <ContentConstrainer>
@@ -11,6 +11,4 @@ const FooterComponent = (props) => {
       </ContentConstrainer>
     </FullSection>
   );
-};
-
-export default FooterComponent;
+}

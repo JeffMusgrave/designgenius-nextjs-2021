@@ -1,7 +1,7 @@
 import { HStack, VStack, CloseButton } from "@chakra-ui/react";
 import PageList from "./PageList";
 
-export const NavDesktop = () => {
+export function NavDesktop() {
   return (
     <>
       <HStack
@@ -14,9 +14,9 @@ export const NavDesktop = () => {
       </HStack>
     </>
   );
-};
+}
 
-export const NavMobile = ({ mobileNav, bg }) => {
+export function NavMobile({ mobileNav, bg }) {
   return (
     <VStack
       pos="absolute"
@@ -39,4 +39,4 @@ export const NavMobile = ({ mobileNav, bg }) => {
       <PageList />
     </VStack>
   );
-};
+}

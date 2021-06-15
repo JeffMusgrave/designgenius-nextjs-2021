@@ -1,7 +1,5 @@
 import HeroComponent from "./Hero";
 
-const Hero = (props) => {
+export default function Hero(props) {
   return <HeroComponent {...props} />;
-};
-
-export default Hero;
+}

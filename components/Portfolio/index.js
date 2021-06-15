@@ -1,7 +1,5 @@
 import PortfolioComponent from "./Portfolio";
 
-const Portfolio = (props) => {
+export default function Portfolio(props) {
   return <PortfolioComponent {...props} />;
-};
-
-export default Portfolio;
+}

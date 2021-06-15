@@ -1,7 +1,7 @@
 import { useColorMode, IconButton } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
-const ColourModeSwitch = () => {
+export default function ColourModeSwitch() {
   const { colorMode, toggleColorMode } = useColorMode();
   const iconColor = {
     light: "black",
@@ -16,6 +16,4 @@ const ColourModeSwitch = () => {
       variant="ghost"
     />
   );
-};
-
-export default ColourModeSwitch;
+}

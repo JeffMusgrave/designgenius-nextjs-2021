@@ -1,7 +1,5 @@
 import HeaderComponent from "./Header";
 
-const Header = (props) => {
+export default function Header(props) {
   return <HeaderComponent {...props} />;
-};
-
-export default Header;
+}
