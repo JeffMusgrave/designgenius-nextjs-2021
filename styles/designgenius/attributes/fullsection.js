@@ -11,9 +11,9 @@ const FullSection = {
       alignItems: "center",
       flexDir: "column",
       _last: { flex: "1 1 auto" },
-      py: "5rem",
-      // border: "1px",
-      // borderColor: "white",
+      py: { base: "2.5rem", sm: "5rem", md: "5rem" },
+      border: "1px",
+      borderColor: "white",
     },
     constrainer: {
       width: width,
@@ -24,25 +24,21 @@ const FullSection = {
   sizes: {
     sm: {
       constrainer: {
-        py: 5,
         fontSize: "5rem",
       },
     },
     md: {
       constrainer: {
-        py: 7,
         fontSize: "7rem",
       },
     },
     lg: {
       constrainer: {
-        py: 10,
         fontSize: "10rem",
       },
     },
     xl: {
       constrainer: {
-        py: 15,
         fontSize: "15rem",
       },
     },

@@ -8,25 +8,32 @@ export default function PortfolioComponent(props) {
   return (
     <FullSection>
       <ContentConstrainer>
-        <Heading as="h2">Portfolio</Heading>
-        <SimpleGrid columns={3} spacing={10} mt={10}>
+        <Heading as="h2">Our Work</Heading>
+        <Heading as="h3">Digital Design</Heading>
+        <SimpleGrid columns={4} spacing={0} mt={10}>
           <AspectRatio ratio={1 / 1}>
-            <Box bg="tomato" height="80px" borderRadius="3xl"></Box>
+            <Box bg="gray.400" height="80px"></Box>
           </AspectRatio>
           <AspectRatio ratio={1 / 1}>
-            <Box bg="tomato" height="80px" borderRadius="3xl"></Box>
+            <Box bg="gray.600" height="80px"></Box>
           </AspectRatio>
           <AspectRatio ratio={1 / 1}>
-            <Box bg="tomato" height="80px" borderRadius="3xl"></Box>
+            <Box bg="gray.500" height="80px"></Box>
           </AspectRatio>
           <AspectRatio ratio={1 / 1}>
-            <Box bg="tomato" height="80px" borderRadius="3xl"></Box>
+            <Box bg="gray.400" height="80px"></Box>
           </AspectRatio>
           <AspectRatio ratio={1 / 1}>
-            <Box bg="tomato" height="80px" borderRadius="3xl"></Box>
+            <Box bg="gray.600" height="80px"></Box>
           </AspectRatio>
           <AspectRatio ratio={1 / 1}>
-            <Box bg="tomato" height="80px" borderRadius="3xl"></Box>
+            <Box bg="gray.500" height="80px"></Box>
+          </AspectRatio>
+          <AspectRatio ratio={1 / 1}>
+            <Box bg="gray.400" height="80px"></Box>
+          </AspectRatio>
+          <AspectRatio ratio={1 / 1}>
+            <Box bg="gray.600" height="80px"></Box>
           </AspectRatio>
         </SimpleGrid>
       </ContentConstrainer>
