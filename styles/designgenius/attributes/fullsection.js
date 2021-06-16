@@ -11,9 +11,9 @@ const FullSection = {
       alignItems: "center",
       flexDir: "column",
       _last: { flex: "1 1 auto" },
-      pt: "2.5rem",
-      border: "1px",
-      borderColor: "white",
+      py: "5rem",
+      // border: "1px",
+      // borderColor: "white",
     },
     constrainer: {
       width: width,
