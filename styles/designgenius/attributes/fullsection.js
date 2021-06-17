@@ -12,11 +12,14 @@ const FullSection = {
       flexDir: "column",
       _last: { flex: "1 1 auto" },
       py: { base: "2.5rem", sm: "5rem", md: "5rem" },
-      border: "1px",
-      borderColor: "white",
+      // border: "1px",
+      // borderColor: "white",
     },
     constrainer: {
+      display: "flex",
+      flexDir: "column",
       width: width,
+
       h: "100%",
     },
   },
@@ -52,6 +55,9 @@ const FullSection = {
       container: {
         bg: "transparent",
       },
+    },
+    center: {
+      constrainer: {},
     },
     constrainedBox: {
       container: {
