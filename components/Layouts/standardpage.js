@@ -10,10 +10,11 @@ import {
 export default function StandardPageLayout({ children, frontMatter }) {
   const router = useRouter();
   const slug = router.asPath.replace("/info", "");
+
   return (
     <Container>
       <Head>
-        <title>{slug} - Design Genius</title>
+        <title>{frontMatter.title} - Design Genius</title>
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
