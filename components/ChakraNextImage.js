@@ -1,11 +1,19 @@
-import { Box } from "@chakra-ui/react";
+import { AspectRatio, Skeleton } from "@chakra-ui/react";
 import Image from "next/image";
 
 export default function ChakraNextImage(props) {
-  const { src, alt, ...rest } = props;
+  const { src, alt, ratio, ...rest } = props;
+
   return (
-    <Box position="relative" {...rest}>
-      <Image objectFit="cover" layout="fill" src={src} alt={alt} />
-    </Box>
+    <AspectRatio ratio={ratio} {...rest}>
+      <Image
+        objectFit="cover"
+        layout="fill"
+        src={src}
+        alt={alt}
+        srl_gallery_image="true"
+        placeholder="blur"
+      />
+    </AspectRatio>
   );
 }

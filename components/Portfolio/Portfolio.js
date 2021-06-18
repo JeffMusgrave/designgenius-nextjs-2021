@@ -5,18 +5,9 @@ import {
 } from "../../styles/designgenius/components/Fullsection";
 import Gallery from "../Gallery";
 
-export default function PortfolioComponent(props) {
-  const dir = "/images/portfolio/web";
-  const images = [
-    "arXivConcept",
-    "NelsonDailyStyle",
-    "PML",
-    "ReebeeContestSpread",
-    "SmallGraphicsSpread",
-    "UniversitySPread",
-    "WhitewaterStyle",
-  ];
+import { digPrintThumbs, digPrintImages } from "../../data/imagelist/imagelist";
 
+export default function PortfolioComponent(props) {
   return (
     <>
       <FullSection>
@@ -25,11 +16,19 @@ export default function PortfolioComponent(props) {
             Our Work
           </Heading>
           <Heading as="h3" variant="body">
-            Digital Design
+            Digital &#38; Print
           </Heading>
-          <Gallery dir={dir} images={images} />
+          <Gallery images={digPrintImages} thumbs={digPrintThumbs} />
         </ContentConstrainer>
       </FullSection>
+      {/* <FullSection bg="gray.600">
+        <ContentConstrainer>
+          <Heading as="h3" variant="body">
+            Album Art
+          </Heading>
+          <Gallery dir={albumArtDir} images={albumArtImages} />
+        </ContentConstrainer>
+      </FullSection> */}
     </>
   );
 }
