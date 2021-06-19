@@ -1,5 +1,16 @@
-const path = "public/images/portfolio/digitalprint/";
-const imageList = [
+// import imageImporter from "../../lib/imageImporter";
+
+async function imageImporter(path, imageList) {
+  return await Promise.all([
+    await Promise.all(imageList.map((e) => import(`../../${path}${e}.jpg`))),
+    await Promise.all(
+      imageList.map((e) => import(`../../${path}thumbs/${e}_200.jpg`))
+    ),
+  ]);
+}
+
+const dpiPath = "public/images/portfolio/digitalprint/";
+const dpiImageList = [
   "arXivConcept",
   "NelsonDailyStyle",
   "PML",
@@ -11,9 +22,19 @@ const imageList = [
   "WhitePaperSpread",
 ];
 
-export const digPrintImages = await Promise.all(
-  imageList.map((e) => import(`../../${path}${e}.jpg`))
-);
+export const DPI = await imageImporter(dpiPath, dpiImageList);
+
+// console.log("DPI", DPI);
+// export const digPrintImages = await DPI[0];
+// export const digPrintThumbs = await DPI[1];
+
+// export const digPrintImages = await Promise.all(
+//   dpiImageList.map((e) => import(`../../${dpiPath}${e}.jpg`))
+// );
+
+// export const digPrintThumbs = await Promise.all(
+//   dpiImageList.map((e) => import(`../../${dpiPath}thumbs/${e}_200.jpg`))
+// );
 
 // import NelsonDailyStyle from "../../public/images/portfolio/digitalprint/NelsonDailyStyle.jpg";
 // import PML from "../../public/images/portfolio/digitalprint/PML.jpg";

@@ -5,7 +5,7 @@ import {
 } from "../../styles/designgenius/components/Fullsection";
 import Gallery from "../Gallery";
 
-import { digPrintImages } from "../../data/imagelist/imagelist";
+import { DPI } from "../../data/imagelist/imagelist";
 
 export default function PortfolioComponent(props) {
   return (
@@ -18,7 +18,7 @@ export default function PortfolioComponent(props) {
           <Heading as="h3" variant="body">
             Digital &#38; Print
           </Heading>
-          <Gallery images={digPrintImages} thumbs={digPrintImages} />
+          <Gallery images={DPI[0]} thumbs={DPI[1]} />
         </ContentConstrainer>
       </FullSection>
       {/* <FullSection bg="gray.600">
