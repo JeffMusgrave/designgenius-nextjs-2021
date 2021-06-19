@@ -2,7 +2,6 @@ const Heading = {
   variants: {
     section: {
       fontSize: "3rem",
-      color: "gray.200",
     },
 
     body: {

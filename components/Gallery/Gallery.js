@@ -8,29 +8,22 @@ export default function GalleryComponent(props) {
 
   return (
     <SRLWrapper>
-      <SimpleGrid columns={{ base: "2", sm: "3", md: "4" }} spacing={0} mt={10}>
+      <SimpleGrid
+        columns={{ base: "2", sm: "4", md: "5" }}
+        spacing={10}
+        mt={10}
+      >
         {images.map((e, idx) => (
           <a href={e.src} key={`image-${e.src}-${idx}`}>
-            <ChakraNextImage src={thumbs[idx]} alt={e} ratio="1" />
+            <ChakraNextImage
+              src={thumbs[idx]}
+              alt={e}
+              ratio="1"
+              borderRadius="3xl"
+            />
           </a>
         ))}
       </SimpleGrid>
     </SRLWrapper>
   );
-}
-
-{
-  /* <SRLWrapper>
-<SimpleGrid columns={{ base: "2", sm: "3", md: "4" }} spacing={0} mt={10}>
-  {images.map((e) => (
-    <a href={`${dir}/${e}.jpg`} key={e}>
-      <ChakraNextImage
-        src={`${dir}/thumbs/${e}_200.jpg`}
-        alt={e}
-        ratio="1"
-      />
-    </a>
-  ))}
-</SimpleGrid>
-</SRLWrapper> */
 }

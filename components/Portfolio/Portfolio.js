@@ -1,13 +1,19 @@
-import { SimpleGrid, AspectRatio, Box, Heading } from "@chakra-ui/react";
+import { Heading, useColorMode } from "@chakra-ui/react";
 import {
   FullSection,
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
 import Gallery from "../Gallery";
 
-import { DPI } from "../../data/imagelist/imagelist";
+import { DPI, AA } from "../../data/imagelist/imagelist";
 
 export default function PortfolioComponent(props) {
+  const { colorMode } = useColorMode();
+  const bgColor = {
+    light: "gray.50",
+    dark: "gray.900",
+  };
+
   return (
     <>
       <FullSection>
@@ -21,14 +27,14 @@ export default function PortfolioComponent(props) {
           <Gallery images={DPI[0]} thumbs={DPI[1]} />
         </ContentConstrainer>
       </FullSection>
-      {/* <FullSection bg="gray.600">
+      <FullSection bg={bgColor[colorMode]}>
         <ContentConstrainer>
           <Heading as="h3" variant="body">
             Album Art
           </Heading>
-          <Gallery dir={albumArtDir} images={albumArtImages} />
+          <Gallery images={AA[0]} thumbs={AA[1]} />
         </ContentConstrainer>
-      </FullSection> */}
+      </FullSection>
     </>
   );
 }

@@ -1,12 +1,24 @@
-import { Text, Flex, Heading, Box, VStack, Wrap } from "@chakra-ui/react";
+import {
+  Text,
+  Heading,
+  Box,
+  VStack,
+  Wrap,
+  useColorMode,
+} from "@chakra-ui/react";
 import {
   FullSection,
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
 
 export default function AboutComponent(props) {
+  const { colorMode } = useColorMode();
+  const bgColor = {
+    light: "gray.100",
+    dark: "gray.800",
+  };
   return (
-    <FullSection bg="gray.700">
+    <FullSection bg={bgColor[colorMode]}>
       <ContentConstrainer alignItems="center">
         <Wrap
           w={{ base: "100%", md: "60%" }}

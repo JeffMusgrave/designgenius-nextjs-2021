@@ -5,6 +5,7 @@ import {
   HStack,
   Box,
   IconButton,
+  useColorMode,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -12,10 +13,14 @@ import ColourModeSwitch from "../ColorModeSwitch";
 import LogoSection from "./LogoSection";
 import { NavDesktop, NavMobile } from "./Navigation";
 import { bigHero, width } from "../../styles/designgenius/stylevars";
-import { motion, useViewportScroll } from "framer-motion";
 
 export default function HeaderComponent(props) {
-  const bg = useColorModeValue("white", "gray.800");
+  // const bg = useColorModeValue("white", "gray.800");
+  const { colorMode } = useColorMode();
+  const bgColor = {
+    light: "gray.100",
+    dark: "gray.800",
+  };
   const mobileNav = useDisclosure();
   const headerPos = bigHero === true ? "fixed" : "sticky";
   const widthSize = bigHero === true ? "100%" : width;
@@ -42,7 +47,7 @@ export default function HeaderComponent(props) {
       position={headerPos}
       top="0"
       zIndex="10"
-      bg={scrollDown ? "gray.900" : "whiteAlpha"}
+      bg={scrollDown ? bgColor[colorMode] : "whiteAlpha"}
       opacity={scrollDown ? "0.95" : "1"}
     >
       <Flex
@@ -54,7 +59,7 @@ export default function HeaderComponent(props) {
         <LogoSection />
         <HStack display="flex" alignItems="center" spacing={1}>
           <NavDesktop />
-          <NavMobile mobileNav={mobileNav} bg={bg} />
+          <NavMobile mobileNav={mobileNav} bg={bgColor[colorMode]} />
 
           <ColourModeSwitch />
           <IconButton
