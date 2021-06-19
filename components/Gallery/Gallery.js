@@ -5,7 +5,7 @@ import ChakraNextImage from "../ChakraNextImage";
 export default function GalleryComponent(props) {
   const thumbs = props.thumbs;
   const images = props.images;
-  console.log(thumbs);
+
   return (
     <SRLWrapper>
       <SimpleGrid columns={{ base: "2", sm: "3", md: "4" }} spacing={0} mt={10}>
