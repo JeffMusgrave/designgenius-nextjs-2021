@@ -10,10 +10,10 @@ export default function ContactComponent(props) {
     <FullSection>
       <ContentConstrainer display="flex">
         <Stack
-          spacing={{ base: "2.5rem", sm: "5rem" }}
+          spacing={{ base: "2.5rem", md: "5rem" }}
           align="stretch"
           w="100%"
-          direction={{ base: "column", sm: "row" }}
+          direction={{ base: "column", md: "row" }}
         >
           <VStack align="stretch" flex="3">
             <Heading as="h2">Let's work together</Heading>
