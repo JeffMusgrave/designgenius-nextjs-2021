@@ -18,7 +18,7 @@ export default function StandardPageLayout({ children, frontMatter }) {
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <FullSection variant="fullNoGrow" bg="gray.700" backgroundSize="cover">
+      <FullSection variant="fullNoGrow">
         <ContentConstrainer
           display="flex"
           flexDir="column"
