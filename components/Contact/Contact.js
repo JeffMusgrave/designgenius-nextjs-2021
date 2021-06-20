@@ -1,4 +1,4 @@
-import { Heading, HStack, VStack, Text } from "@chakra-ui/react";
+import { Heading, Stack, VStack, Text } from "@chakra-ui/react";
 import {
   FullSection,
   ContentConstrainer,
@@ -9,7 +9,12 @@ export default function ContactComponent(props) {
   return (
     <FullSection>
       <ContentConstrainer display="flex">
-        <HStack spacing="5rem" align="stretch" w="100%">
+        <Stack
+          spacing={{ base: "2.5rem", sm: "5rem" }}
+          align="stretch"
+          w="100%"
+          direction={{ base: "column", sm: "row" }}
+        >
           <VStack align="stretch" flex="3">
             <Heading as="h2">Let's work together</Heading>
             <Text>
@@ -28,7 +33,7 @@ export default function ContactComponent(props) {
           </VStack>
 
           <ContactForm flex="4" />
-        </HStack>
+        </Stack>
       </ContentConstrainer>
     </FullSection>
   );

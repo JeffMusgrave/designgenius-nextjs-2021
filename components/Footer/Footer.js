@@ -8,7 +8,7 @@ export default function FooterComponent(props) {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "gray.100",
-    dark: "gray.800",
+    dark: "gray.900",
   };
 
   return (

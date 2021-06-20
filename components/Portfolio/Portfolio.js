@@ -24,7 +24,7 @@ export default function PortfolioComponent(props) {
           <Heading as="h3" variant="body">
             Digital &#38; Print
           </Heading>
-          <Gallery images={DPI[0]} thumbs={DPI[1]} />
+          <Gallery images={DPI[0]} thumbs={DPI[1]} altVals={DPI[2]} />
         </ContentConstrainer>
       </FullSection>
       <FullSection bg={bgColor[colorMode]}>
@@ -32,7 +32,13 @@ export default function PortfolioComponent(props) {
           <Heading as="h3" variant="body">
             Album Art
           </Heading>
-          <Gallery images={AA[0]} thumbs={AA[1]} />
+          <Gallery
+            images={AA[0]}
+            thumbs={AA[1]}
+            altVals={AA[2]}
+            borderRadius="none"
+            spacing="0"
+          />
         </ContentConstrainer>
       </FullSection>
     </>

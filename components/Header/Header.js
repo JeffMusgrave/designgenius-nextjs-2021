@@ -8,14 +8,13 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { HiMenu, HiX } from "react-icons/hi";
 import ColourModeSwitch from "../ColorModeSwitch";
 import LogoSection from "./LogoSection";
 import { NavDesktop, NavMobile } from "./Navigation";
 import { bigHero, width } from "../../styles/designgenius/stylevars";
 
 export default function HeaderComponent(props) {
-  // const bg = useColorModeValue("white", "gray.800");
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "gray.100",
@@ -57,7 +56,11 @@ export default function HeaderComponent(props) {
         mx="auto"
       >
         <LogoSection />
-        <HStack display="flex" alignItems="center" spacing={1}>
+        <HStack
+          display="flex"
+          alignItems="center"
+          spacing={{ base: "0", md: "1" }}
+        >
           <NavDesktop />
           <NavMobile mobileNav={mobileNav} bg={bgColor[colorMode]} />
 
@@ -68,8 +71,14 @@ export default function HeaderComponent(props) {
             fontSize="20px"
             color={useColorModeValue("gray.800", "white")}
             variant="ghost"
-            icon={<AiOutlineMenu />}
-            onClick={mobileNav.onOpen}
+            icon={
+              mobileNav.isOpen ? (
+                <HiX aria-label="Close menu" />
+              ) : (
+                <HiMenu aria-label="Open menu" />
+              )
+            }
+            onClick={mobileNav.onToggle}
           />
         </HStack>
       </Flex>

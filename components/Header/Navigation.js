@@ -24,18 +24,15 @@ export function NavMobile({ mobileNav, bg }) {
       left={0}
       right={0}
       display={{ base: mobileNav.isOpen ? "flex" : "none", md: "none" }}
-      flexDirection="column"
       p={2}
       pb={4}
       m={2}
       bg={bg}
       h="100vh"
-      spacing={3}
-      rounded="sm"
-      shadow="sm"
+      w="100vw"
+      spacing={20}
+      justifyContent="center"
     >
-      <CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
-
       <PageList />
     </VStack>
   );

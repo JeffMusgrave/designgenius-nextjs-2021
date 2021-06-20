@@ -3,7 +3,7 @@ import {
   Heading,
   Box,
   VStack,
-  Wrap,
+  Stack,
   useColorMode,
 } from "@chakra-ui/react";
 import {
@@ -20,11 +20,11 @@ export default function AboutComponent(props) {
   return (
     <FullSection bg={bgColor[colorMode]}>
       <ContentConstrainer alignItems="center">
-        <Wrap
+        <Stack
           w={{ base: "100%", md: "60%" }}
           py={{ base: "0", md: "10rem" }}
           spacing="24px"
-          flexDirection={{ base: "column", md: "row" }}
+          direction={{ base: "column", sm: "row" }}
         >
           <VStack flex="2" direction="column" align="stretch">
             <Heading as="h2">About</Heading>
@@ -36,8 +36,12 @@ export default function AboutComponent(props) {
             </Text>
           </VStack>
 
-          <Box flex="1" minH="100%" bg="gray.800" />
-        </Wrap>
+          <Box
+            flex="1"
+            minH="clamp(5rem, 20vh, 10rem)"
+            bg={bgColor[colorMode === "dark" ? "light" : "dark"]}
+          />
+        </Stack>
       </ContentConstrainer>
     </FullSection>
   );

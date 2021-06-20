@@ -6,15 +6,13 @@ export default function ChakraNextImage(props) {
 
   return (
     <AspectRatio ratio={ratio}>
-      <Box {...rest} cursor="pointer">
-        <Image
-          layout="fill"
-          src={src}
-          alt={alt}
-          srl_gallery_image="true"
-          // placeholder="blur"
-        />
-      </Box>
+      <Image
+        layout="fill"
+        src={src}
+        alt={alt}
+        srl_gallery_image="true"
+        // placeholder="blur"
+      />
     </AspectRatio>
   );
 }

@@ -8,6 +8,7 @@ export default function NavButton(props) {
         w={{ base: "full", md: "auto" }}
         variant="ghost"
         navigation="true"
+        size={{ base: "xl", md: "md" }}
       >
         {props.children}
       </Button>
