@@ -1,7 +1,6 @@
 import { SimpleGrid, chakra } from "@chakra-ui/react";
-import { SRLWrapper } from "simple-react-lightbox-pro";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox-pro";
 import ChakraNextImage from "../ChakraNextImage";
-import SimpleReactLightbox from "simple-react-lightbox-pro";
 
 export default function GalleryComponent({
   images,

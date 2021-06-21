@@ -1,9 +1,10 @@
-import { Heading, useColorMode } from "@chakra-ui/react";
+import { Heading, Text, useColorMode } from "@chakra-ui/react";
 import {
   FullSection,
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
 import Gallery from "../Gallery";
+import Featured from "../Featured";
 
 import { DPI, AA } from "../../data/imagelist/imagelist";
 
@@ -24,6 +25,17 @@ export default function PortfolioComponent(props) {
           <Heading as="h3" variant="body">
             Digital &#38; Print
           </Heading>
+          <Featured
+            direction={false}
+            src="/images/portfolio/digitalprint/arXivConcept.jpg"
+            alt="arXiv Concept"
+            thumb="/images/portfolio/digitalprint/thumbs/arXivConcept_200.jpg"
+            heading="Take a look"
+            ratio={16 / 9}
+            borderRadius="3xl"
+          >
+            <Text>Some text here</Text>
+          </Featured>
           <Gallery images={DPI[0]} thumbs={DPI[1]} altVals={DPI[2]} />
         </ContentConstrainer>
       </FullSection>
