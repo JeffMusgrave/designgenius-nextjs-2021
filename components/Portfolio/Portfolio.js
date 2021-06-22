@@ -17,6 +17,17 @@ export default function PortfolioComponent(props) {
 
   return (
     <>
+      <Featured
+        direction={false}
+        src="/images/portfolio/digitalprint/arXivConcept.jpg"
+        alt="arXiv Concept"
+        thumb="/images/portfolio/digitalprint/thumbs/arXivConcept_200.jpg"
+        heading="Take a look"
+        ratio={16 / 9}
+        borderRadius="3xl"
+      >
+        <Text>Some text here</Text>
+      </Featured>
       <FullSection>
         <ContentConstrainer>
           <Heading as="h2" variant="section">
@@ -25,17 +36,7 @@ export default function PortfolioComponent(props) {
           <Heading as="h3" variant="body">
             Digital &#38; Print
           </Heading>
-          <Featured
-            direction={false}
-            src="/images/portfolio/digitalprint/arXivConcept.jpg"
-            alt="arXiv Concept"
-            thumb="/images/portfolio/digitalprint/thumbs/arXivConcept_200.jpg"
-            heading="Take a look"
-            ratio={16 / 9}
-            borderRadius="3xl"
-          >
-            <Text>Some text here</Text>
-          </Featured>
+
           <Gallery images={DPI[0]} thumbs={DPI[1]} altVals={DPI[2]} />
         </ContentConstrainer>
       </FullSection>

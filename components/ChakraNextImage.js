@@ -8,6 +8,7 @@ export default function ChakraNextImage(props) {
     <AspectRatio ratio={ratio}>
       <Image
         layout="fill"
+        objectFit="cover"
         src={src}
         alt={alt}
         srl_gallery_image="true"

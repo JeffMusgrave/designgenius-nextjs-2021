@@ -51,7 +51,7 @@ export default function FeaturedComponent(props) {
                 colStart={4}
                 colSpan={8}
                 rowStart={1}
-                rowEnd={11}
+                rowEnd={9}
                 overflow="hidden"
                 borderRadius={borderRadius}
               >
