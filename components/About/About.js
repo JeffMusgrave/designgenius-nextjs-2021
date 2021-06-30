@@ -1,24 +1,12 @@
-import {
-  Text,
-  Heading,
-  Box,
-  VStack,
-  Stack,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Text, Heading, Box, VStack, Stack } from "@chakra-ui/react";
 import {
   FullSection,
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
 
 export default function AboutComponent(props) {
-  const { colorMode } = useColorMode();
-  const bgColor = {
-    light: "gray.100",
-    dark: "gray.800",
-  };
   return (
-    <FullSection bg={bgColor[colorMode]}>
+    <FullSection light="gray.50" dark="gray.900">
       <ContentConstrainer alignItems="center">
         <Stack
           w={{ base: "100%", md: "60%" }}
@@ -27,7 +15,9 @@ export default function AboutComponent(props) {
           direction={{ base: "column", sm: "row" }}
         >
           <VStack flex="2" direction="column" align="stretch">
-            <Heading as="h2">About</Heading>
+            <Heading as="h2" id={props.id}>
+              About
+            </Heading>
             <Text fontSize="xl">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               voluptates maiores dolor possimus earum dolorum perferendis odio
@@ -36,11 +26,7 @@ export default function AboutComponent(props) {
             </Text>
           </VStack>
 
-          <Box
-            flex="1"
-            minH="clamp(5rem, 20vh, 10rem)"
-            bg={bgColor[colorMode === "dark" ? "light" : "dark"]}
-          />
+          <Box flex="1" minH="clamp(5rem, 20vh, 10rem)" bg="blue.50" />
         </Stack>
       </ContentConstrainer>
     </FullSection>

@@ -21,7 +21,6 @@ export default function HeaderComponent(props) {
     dark: "gray.800",
   };
   const mobileNav = useDisclosure();
-  const headerPos = bigHero === true ? "fixed" : "sticky";
   const widthSize = bigHero === true ? "100%" : width;
 
   const [scrollDown, setScrollDown] = useState(false);
@@ -42,12 +41,13 @@ export default function HeaderComponent(props) {
     <Box
       as="header"
       w={widthSize}
-      py={4}
-      position={headerPos}
+      py={{ base: 3, md: scrollDown ? 2 : 10 }}
+      position="fixed"
       top="0"
       zIndex="10"
       bg={scrollDown ? bgColor[colorMode] : "whiteAlpha"}
       opacity={scrollDown ? "0.95" : "1"}
+      transition="0.2s"
     >
       <Flex
         w={width}

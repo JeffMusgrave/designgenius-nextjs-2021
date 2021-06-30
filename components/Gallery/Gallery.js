@@ -9,7 +9,7 @@ export default function GalleryComponent({
   borderRadius = "xl",
   spacing = 10,
   ratio,
-  ...props
+  columns = { base: "2", sm: "3", md: "3" },
 }) {
   const options = {
     buttons: {
@@ -21,11 +21,7 @@ export default function GalleryComponent({
   return (
     <SimpleReactLightbox>
       <SRLWrapper options={options}>
-        <SimpleGrid
-          columns={{ base: "2", sm: "3", md: "3" }}
-          spacing={spacing}
-          mt={10}
-        >
+        <SimpleGrid columns={columns} spacing={spacing} mt={10}>
           {images.map((e, idx) => (
             <chakra.a
               href={e.default.src}
@@ -39,7 +35,7 @@ export default function GalleryComponent({
               <ChakraNextImage
                 src={thumbs[idx]}
                 alt={altVals[idx]}
-                ratio={16 / 9}
+                ratio={ratio}
               />
             </chakra.a>
           ))}

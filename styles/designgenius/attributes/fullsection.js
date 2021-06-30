@@ -1,3 +1,4 @@
+import { useAriaHidden } from "@chakra-ui/react";
 import { width } from "../stylevars";
 
 const FullSection = {
@@ -50,6 +51,14 @@ const FullSection = {
   variants: {
     fullNoGrow: {
       container: { _last: { flex: "0 1 auto" } },
+    },
+    hero: {
+      container: {
+        overflow: "hidden",
+      },
+      constrainer: {
+        display: "inline-block",
+      },
     },
     constrained: {
       container: {
