@@ -6,8 +6,8 @@ import {
 import Gallery from "../Gallery";
 
 export default function PortfolioComponent(props) {
-  const { images, ratio, columns, spacing, light, dark, id, heading } = props;
-
+  const { images, ratio, columns, spacing, light, dark, id, heading, outline } =
+    props;
   return (
     <>
       <FullSection light={light} dark={dark}>
@@ -22,6 +22,7 @@ export default function PortfolioComponent(props) {
             ratio={ratio}
             columns={columns}
             spacing={spacing}
+            outline={outline}
           />
         </ContentConstrainer>
       </FullSection>

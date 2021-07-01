@@ -14,6 +14,7 @@ export default function ChakraNextImage(props) {
   } = props;
 
   function Img() {
+    const regex = /(\.svg)/gm;
     return (
       <Image
         layout={!imgWidth && "fill"}
@@ -23,6 +24,7 @@ export default function ChakraNextImage(props) {
         src={src}
         alt={alt}
         srl_gallery_image="true"
+        placeholder={!regex.test(src) && "blur"}
       />
     );
   }

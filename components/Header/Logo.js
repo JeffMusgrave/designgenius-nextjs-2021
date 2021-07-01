@@ -1,5 +1,3 @@
-import { VisuallyHidden, Link } from "@chakra-ui/react";
-import NextLink from "next/link";
 import { useColorMode } from "@chakra-ui/react";
 
 export default function Logo() {

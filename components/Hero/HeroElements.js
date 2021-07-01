@@ -4,12 +4,18 @@ import ChakraNextImage from "../ChakraNextImage";
 export default function HeroElements() {
   return (
     <>
-      <Flex flexDir="column" position="relative" zIndex="3" h="100%">
+      <Flex
+        flexDir="column"
+        position="relative"
+        zIndex="3"
+        h="100%"
+        dropShadow=""
+      >
         <Spacer />
         <Heading as="h1" size="4xl" mb="2.5rem">
           Inspired Design
         </Heading>
-        <Text fontSize="3xl" lineHeight={8}>
+        <Text marginBottom="1rem" fontSize="3xl" lineHeight={8}>
           Make a great first impression.
         </Text>
         <Text fontSize="3xl" lineHeight={8}>
@@ -22,7 +28,7 @@ export default function HeroElements() {
         zIndex="1"
         right="-20rem"
         top="-19rem"
-        src="/images/site/YellowLightBulbGlow.svg"
+        src="/images/site/YellowLightBulb.svg"
         constrain={false}
         imgWidth={1150}
         imgHeight={1150}

@@ -6,10 +6,10 @@ export default function GalleryComponent({
   images,
   thumbs,
   altVals,
-  borderRadius = "xl",
   spacing = 10,
   ratio,
   columns = { base: "2", sm: "3", md: "3" },
+  borderRadius = "xl",
 }) {
   const options = {
     buttons: {
@@ -29,8 +29,9 @@ export default function GalleryComponent({
               cursor="pointer"
               overflow="hidden"
               borderRadius={borderRadius}
-              border="1rem"
-              borderColor="gray.900"
+              transition="transform 0.1s"
+              transitionTimingFunction="ease-in-out"
+              _hover={{ transform: "scale(1.1)" }}
             >
               <ChakraNextImage
                 src={thumbs[idx]}
