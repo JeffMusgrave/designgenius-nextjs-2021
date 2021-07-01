@@ -17,6 +17,12 @@ export default function GalleryComponent({
       showAutoplayButton: false,
       showThumbnailsButton: false,
     },
+    caption: {
+      showCaption: false,
+    },
+    thumbnails: {
+      showThumbnails: false,
+    },
   };
   return (
     <SimpleReactLightbox>
