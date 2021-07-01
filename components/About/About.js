@@ -15,7 +15,7 @@ export default function AboutComponent(props) {
           direction={{ base: "column", sm: "row" }}
         >
           <VStack flex="2" direction="column" align="stretch">
-            <Heading as="h2" id={props.id}>
+            <Heading variant="section" as="h2" id={props.id}>
               About
             </Heading>
             <Text fontSize="xl">

@@ -8,11 +8,12 @@ export default function Logo() {
     light: "#4d4d4d",
     dark: "#fff",
   };
+  // {`.outline-color{ fill: ${iconColor[colorMode]} }`}
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.03 131.89">
       <defs>
         <style>
-          {`.outline-color{ fill: ${iconColor[colorMode]} }`}
+          {`.outline-color{ fill: #fff }`}
           {`.light-on-color { fill: #fcc921; opacity: 0; }`}
         </style>
       </defs>

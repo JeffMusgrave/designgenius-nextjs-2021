@@ -6,6 +6,7 @@ import {
   Box,
   IconButton,
   useColorMode,
+  DarkMode,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -46,6 +47,7 @@ export default function HeaderComponent(props) {
       top="0"
       zIndex="10"
       bg={scrollDown ? bgColor[colorMode] : "whiteAlpha"}
+      bg={scrollDown && "gray.800"}
       opacity={scrollDown ? "0.95" : "1"}
       transition="0.2s"
     >
@@ -62,24 +64,30 @@ export default function HeaderComponent(props) {
           spacing={{ base: "0", md: "1" }}
         >
           <NavDesktop />
-          <NavMobile mobileNav={mobileNav} bg={bgColor[colorMode]} />
+          <NavMobile
+            mobileNav={mobileNav}
+            bg="gray.800"
+            // bg={bgColor[colorMode]}
+          />
 
           <ColourModeSwitch />
-          <IconButton
-            display={{ base: "flex", md: "none" }}
-            aria-label="Open menu"
-            fontSize="20px"
-            color={useColorModeValue("gray.800", "white")}
-            variant="ghost"
-            icon={
-              mobileNav.isOpen ? (
-                <HiX aria-label="Close menu" />
-              ) : (
-                <HiMenu aria-label="Open menu" />
-              )
-            }
-            onClick={mobileNav.onToggle}
-          />
+          <DarkMode>
+            <IconButton
+              display={{ base: "flex", md: "none" }}
+              aria-label="Open menu"
+              fontSize="20px"
+              // color={useColorModeValue("gray.800", "white")}
+              variant="ghost"
+              icon={
+                mobileNav.isOpen ? (
+                  <HiX aria-label="Close menu" />
+                ) : (
+                  <HiMenu aria-label="Open menu" />
+                )
+              }
+              onClick={mobileNav.onToggle}
+            />
+          </DarkMode>
         </HStack>
       </Flex>
     </Box>

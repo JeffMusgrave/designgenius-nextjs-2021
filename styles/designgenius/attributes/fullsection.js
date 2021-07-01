@@ -13,6 +13,7 @@ const FullSection = {
       flexDir: "column",
       _last: { flex: "1 1 auto" },
       py: { base: "2.5rem", sm: "5rem", md: "5rem" },
+
       // border: "1px",
       // borderColor: "white",
     },
@@ -58,6 +59,7 @@ const FullSection = {
       },
       constrainer: {
         display: "inline-block",
+        color: "white",
       },
     },
     constrained: {

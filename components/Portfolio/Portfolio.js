@@ -6,14 +6,14 @@ import {
 import Gallery from "../Gallery";
 
 export default function PortfolioComponent(props) {
-  const { images, ratio, columns, spacing, light, dark } = props;
+  const { images, ratio, columns, spacing, light, dark, id, heading } = props;
 
   return (
     <>
       <FullSection light={light} dark={dark}>
         <ContentConstrainer>
-          <Heading as="h2" size="lg" id={props.id}>
-            {props.heading}
+          <Heading variant="section" as="h2" size="lg" id={id}>
+            {heading}
           </Heading>
           <Gallery
             images={images[0]}

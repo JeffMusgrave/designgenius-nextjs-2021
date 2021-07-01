@@ -16,7 +16,7 @@ export default function ContactComponent(props) {
           direction={{ base: "column", md: "row" }}
         >
           <VStack align="stretch" flex="3">
-            <Heading as="h2" id={props.id}>
+            <Heading variant="section" as="h2" id={props.id}>
               Let's work together
             </Heading>
             <Text>
