@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import {
   chakra,
+  useToast,
   Textarea,
   Input,
   FormErrorMessage,
@@ -14,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 
 export default function ContactForm(props) {
+  const toast = useToast();
   const {
     handleSubmit,
     register,
@@ -97,6 +99,14 @@ export default function ContactForm(props) {
           <Button mt={4} isLoading={isSubmitting} type="submit">
             Submit
           </Button>
+          {!!thanks &&
+            toast({
+              title: "Email Sent!",
+              description: "Your email has been sent! Thank you!",
+              status: "success",
+              duration: 9000,
+              isClosable: true,
+            })}
         </VStack>
       </chakra.form>
     </Box>
