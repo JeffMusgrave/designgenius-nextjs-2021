@@ -9,7 +9,6 @@ import {
   useColorMode,
   Button,
 } from "@chakra-ui/react";
-// import { jsx } from "@emotion/react";
 import NextLink from "next/link";
 
 const CustomLink = (props) => {

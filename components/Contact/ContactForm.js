@@ -94,12 +94,7 @@ export default function ContactForm(props) {
               {errors.message && errors.message.message}
             </FormErrorMessage>
           </FormControl>
-          <Button
-            mt={4}
-            colorScheme="teal"
-            isLoading={isSubmitting}
-            type="submit"
-          >
+          <Button mt={4} isLoading={isSubmitting} type="submit">
             Submit
           </Button>
         </VStack>

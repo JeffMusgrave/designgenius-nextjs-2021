@@ -18,7 +18,6 @@ export function NavDesktop() {
 
 export function NavMobile(props) {
   const { bg, mobileNav } = props;
-  // console.log("NAV MOBILE mobileNav", mobileNav);
   return (
     <VStack
       pos="absolute"
@@ -26,7 +25,6 @@ export function NavMobile(props) {
       left={0}
       right={0}
       display={{ base: mobileNav.isOpen ? "flex" : "none", md: "none" }}
-      // p={2}
       pb={4}
       m={2}
       bg={bg}

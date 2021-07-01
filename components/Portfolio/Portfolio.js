@@ -1,4 +1,4 @@
-import { Heading, Text, useColorMode } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import {
   FullSection,
   ContentConstrainer,

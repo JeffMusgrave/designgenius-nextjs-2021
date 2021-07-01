@@ -12,7 +12,7 @@ export default function HeroComponent({
   bgColor,
   children,
 }) {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   return (
     <FullSection
       variant="hero"

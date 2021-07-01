@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button, DarkMode } from "@chakra-ui/react";
 import Link from "next/link";
 
