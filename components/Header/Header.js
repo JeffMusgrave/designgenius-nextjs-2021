@@ -76,6 +76,8 @@ export default function HeaderComponent(props) {
               display={{ base: "flex", md: "none" }}
               aria-label="Open menu"
               fontSize="20px"
+              borderRadius="lg"
+              size="lg"
               // color={useColorModeValue("gray.800", "white")}
               variant="ghost"
               icon={

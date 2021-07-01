@@ -14,6 +14,8 @@ export default function ColourModeSwitch() {
         icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         onClick={toggleColorMode}
         variant="ghost"
+        borderRadius="lg"
+        size="lg"
       />
     </DarkMode>
   );
