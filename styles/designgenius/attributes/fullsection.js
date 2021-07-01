@@ -1,7 +1,7 @@
 import { useAriaHidden } from "@chakra-ui/react";
 import { width } from "../stylevars";
 
-const FullSection = {
+const fullsection = {
   // The parts of the component
   parts: ["container", "constrainer"],
   // The base styles for each part
@@ -87,4 +87,4 @@ const FullSection = {
   defaultProps: { variant: "" },
 };
 
-export default FullSection;
+export default fullsection;
