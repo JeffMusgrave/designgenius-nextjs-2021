@@ -2,7 +2,7 @@ import {
   FullSection,
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
-import { Box, useColorMode } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export default function FooterComponent(props) {
   return (
