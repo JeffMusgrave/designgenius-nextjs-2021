@@ -1,13 +1,13 @@
 import { Heading, Stack, VStack, Text } from "@chakra-ui/react";
 import {
-  FullSection,
+  Fullsection,
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
 import ContactForm from "./ContactForm";
 
 export default function ContactComponent(props) {
   return (
-    <FullSection light="gray.50" dark="gray.900">
+    <Fullsection light="gray.50" dark="gray.900">
       <ContentConstrainer display="flex">
         <Stack
           spacing={{ base: "2.5rem", md: "5rem" }}
@@ -27,6 +27,6 @@ export default function ContactComponent(props) {
           <ContactForm flex="4" />
         </Stack>
       </ContentConstrainer>
-    </FullSection>
+    </Fullsection>
   );
 }

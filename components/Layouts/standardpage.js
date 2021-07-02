@@ -3,7 +3,7 @@ import { Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Container from "../Container";
 import {
-  FullSection,
+  Fullsection,
   ContentConstrainer,
 } from "../../styles/designgenius/components/Fullsection";
 
@@ -18,7 +18,7 @@ export default function StandardPageLayout({ children, frontMatter }) {
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <FullSection variant="fullNoGrow">
+      <Fullsection variant="fullNoGrow">
         <ContentConstrainer
           display="flex"
           flexDir="column"
@@ -34,7 +34,7 @@ export default function StandardPageLayout({ children, frontMatter }) {
 
           {children}
         </ContentConstrainer>
-      </FullSection>
+      </Fullsection>
     </Container>
   );
 }

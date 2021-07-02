@@ -15,7 +15,7 @@ export function Fullsection(props) {
     dark: dark,
   };
 
-  const styles = useMultiStyleConfig("FullSection", { size, variant });
+  const styles = useMultiStyleConfig("Fullsection", { size, variant });
   return (
     <Box
       as="section"
