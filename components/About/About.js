@@ -2,7 +2,7 @@ import { Text, Heading, Box, VStack, Stack } from "@chakra-ui/react";
 import {
   FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/FullSectionComponentComponent";
+} from "../../styles/designgenius/components/FullSectionComponent";
 
 export default function AboutComponent(props) {
   return (

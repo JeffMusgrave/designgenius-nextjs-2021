@@ -1,4 +1,3 @@
-import { useAriaHidden } from "@chakra-ui/react";
 import { width } from "../stylevars";
 
 const fullsection = {

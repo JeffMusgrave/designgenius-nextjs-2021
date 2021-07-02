@@ -1,7 +1,7 @@
 import {
   FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/FullSectionComponentComponent";
+} from "../../styles/designgenius/components/FullSectionComponent";
 import { Box } from "@chakra-ui/react";
 
 export default function FooterComponent(props) {
