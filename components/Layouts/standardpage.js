@@ -5,7 +5,7 @@ import Container from "../Container";
 import {
   FullSection,
   ContentConstrainer,
-} from "../../styles/designgenius/components/Fullsection";
+} from "../../styles/designgenius/components/FullSection";
 
 export default function StandardPageLayout({ children, frontMatter }) {
   const router = useRouter();
