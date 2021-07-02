@@ -1,12 +1,12 @@
 import { Text, Heading, Box, VStack, Stack } from "@chakra-ui/react";
 import {
-  Fullsection,
+  FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/fullsection";
+} from "../../styles/designgenius/components/FullSectionComponentComponent";
 
 export default function AboutComponent(props) {
   return (
-    <Fullsection light="gray.50" dark="gray.900">
+    <FullSectionComponent light="gray.50" dark="gray.900">
       <ContentConstrainer alignItems="center">
         <Stack
           w={{ base: "100%", md: "60%" }}
@@ -29,6 +29,6 @@ export default function AboutComponent(props) {
           <Box flex="1" minH="clamp(5rem, 20vh, 10rem)" bg="blue.50" />
         </Stack>
       </ContentConstrainer>
-    </Fullsection>
+    </FullSectionComponent>
   );
 }

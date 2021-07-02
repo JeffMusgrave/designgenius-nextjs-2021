@@ -1,8 +1,8 @@
 import { Heading } from "@chakra-ui/react";
 import {
-  Fullsection,
+  FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/Fullsection";
+} from "../../styles/designgenius/components/FullSectionComponent";
 import Gallery from "../Gallery";
 
 export default function PortfolioComponent(props) {
@@ -10,7 +10,7 @@ export default function PortfolioComponent(props) {
     props;
   return (
     <>
-      <Fullsection light={light} dark={dark}>
+      <FullSectionComponent light={light} dark={dark}>
         <ContentConstrainer>
           <Heading variant="section" as="h2" size="lg" id={id}>
             {heading}
@@ -25,7 +25,7 @@ export default function PortfolioComponent(props) {
             outline={outline}
           />
         </ContentConstrainer>
-      </Fullsection>
+      </FullSectionComponent>
     </>
   );
 }

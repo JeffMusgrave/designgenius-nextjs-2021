@@ -7,7 +7,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 
-export function fullsection(props) {
+export function FullSectionComponent(props) {
   const { colorMode } = useColorMode();
   const { size, variant, children, light, dark, ...rest } = props;
   const bgColor = {

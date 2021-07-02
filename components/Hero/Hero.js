@@ -1,7 +1,7 @@
 import {
-  Fullsection,
+  FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/Fullsection";
+} from "../../styles/designgenius/components/FullSectionComponent";
 import { useColorMode } from "@chakra-ui/react";
 import HeroElements from "./HeroElements";
 
@@ -14,7 +14,7 @@ export default function HeroComponent({
 }) {
   const { colorMode } = useColorMode();
   return (
-    <Fullsection
+    <FullSectionComponent
       variant="hero"
       minH={{ base: "10rem", sm: "20rem", md: "30rem", lg: "45rem" }}
       light="gray.200"
@@ -37,6 +37,6 @@ export default function HeroComponent({
         <HeroElements />
         {children}
       </ContentConstrainer>
-    </Fullsection>
+    </FullSectionComponent>
   );
 }
