@@ -15,13 +15,14 @@ export function FullSectionComponent(props) {
     dark: dark,
   };
 
-  const styles = useMultiStyleConfig("Fullsection", { size, variant });
+  const styles = useMultiStyleConfig("fullsection", { size, variant });
   return (
     <Box
       as="section"
       __css={styles.container}
       bg={bgColor[colorMode]}
       {...rest}
+      className="SECTION"
     >
       <StylesProvider value={styles}>{children}</StylesProvider>
     </Box>
@@ -29,5 +30,5 @@ export function FullSectionComponent(props) {
 }
 export function ContentConstrainer(props) {
   const styles = useStyles();
-  return <Flex __css={styles.constrainer} {...props} />;
+  return <Flex className="" __css={styles.constrainer} {...props} />;
 }
