@@ -11,8 +11,8 @@ const fullsection = {
       alignItems: "center",
       flexDir: "column",
       _last: { flex: "1 1 auto" },
-      py: { base: "2.5rem", sm: "5rem", md: "5rem" },
-
+      pt: { base: "2.5rem", sm: "5rem", md: "5rem" },
+      pb: { base: "2.5rem", sm: "5rem", md: "5rem" },
       // border: "1px",
       // borderColor: "white",
     },
@@ -59,6 +59,20 @@ const fullsection = {
       constrainer: {
         display: "inline-block",
         color: "white",
+      },
+    },
+    heroFull: {
+      container: {
+        overflow: "hidden",
+        py: { base: "2.5rem", sm: "5rem", md: "0rem" },
+        height: { base: "10rem", sm: "20rem", lg: "100vh" },
+        minHeight: "20rem",
+        maxHeight: "100vh",
+      },
+      constrainer: {
+        display: "inline-block",
+        color: "white",
+        mt: { sm: "7rem", md: "0rem" },
       },
     },
     constrained: {
