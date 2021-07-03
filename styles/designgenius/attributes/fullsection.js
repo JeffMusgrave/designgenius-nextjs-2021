@@ -13,14 +13,11 @@ const fullsection = {
       _last: { flex: "1 1 auto" },
       pt: { base: "2.5rem", sm: "5rem", md: "5rem" },
       pb: { base: "2.5rem", sm: "5rem", md: "5rem" },
-      // border: "1px",
-      // borderColor: "white",
     },
     constrainer: {
       display: "flex",
       flexDir: "column",
       width: width,
-
       h: "100%",
     },
   },
@@ -63,16 +60,21 @@ const fullsection = {
     },
     heroFull: {
       container: {
+        position: "relative",
         overflow: "hidden",
-        py: { base: "2.5rem", sm: "5rem", md: "0rem" },
-        height: { base: "10rem", sm: "20rem", lg: "100vh" },
-        minHeight: "20rem",
+        pt: "0rem",
+        pb: "0rem",
+        height: { base: "auto", sm: "30rem", lg: "100vh" },
+        minHeight: "10rem",
         maxHeight: "100vh",
       },
       constrainer: {
-        display: "inline-block",
+        position: "relative",
+        display: { base: "flex", sm: "grid" },
+        gridTemplateRows: "repeat(7, 1fr)",
+        gridTemplateColumns: "1fr",
         color: "white",
-        mt: { sm: "7rem", md: "0rem" },
+        mt: "0rem",
       },
     },
     constrained: {

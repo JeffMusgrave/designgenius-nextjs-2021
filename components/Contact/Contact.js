@@ -26,6 +26,17 @@ export default function ContactComponent(props) {
 
           <ContactForm flex="4" />
         </Stack>
+        {/* <ChakraNextImage
+        position="absolute"
+        zIndex="1"
+        right="-20rem"
+        top="-19rem"
+        src="/images/site/YellowLightBulb.svg"
+        constrain={false}
+        imgWidth={1150}
+        imgHeight={1150}
+        display={{ base: "none", lg: "inline-block" }}
+      /> */}
       </ContentConstrainer>
     </FullSectionComponent>
   );

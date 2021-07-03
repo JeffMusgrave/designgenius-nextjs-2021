@@ -1,12 +1,22 @@
-import { Heading, Text, Flex, Stack, Box, Spacer } from "@chakra-ui/react";
-
+import { Heading, Text, Flex, Stack, Spacer } from "@chakra-ui/react";
+import BigPillButton from "./BigPillButton";
 export default function HeroElements() {
   return (
     <>
-      <Stack flexDir="column">
-        <Flex flexDir="column">
+      <Flex
+        flexDir="row"
+        pt={{ base: "10rem", sm: "0" }}
+        pb={{ base: "2.5rem", sm: "0" }}
+        flexDir={{ md: "column", lg: "row" }}
+      >
+        <Flex flexDir="column" width="100%">
           <Spacer />
-          <Heading as="h1" size="4xl" mb="2.5rem">
+          <Heading
+            as="h1"
+            size="4xl"
+            fontSize={["34pt", "40pt", "50pt"]}
+            mb="2.5rem"
+          >
             Inspired Design
           </Heading>
           <Text marginBottom="1rem" fontSize="3xl" lineHeight={8}>
@@ -16,20 +26,11 @@ export default function HeroElements() {
             Reach your customers and close the sale.
           </Text>
         </Flex>
-        <Box>Take A Look!</Box>
-      </Stack>
-
-      {/* <ChakraNextImage
-        position="absolute"
-        zIndex="1"
-        right="-20rem"
-        top="-19rem"
-        src="/images/site/YellowLightBulb.svg"
-        constrain={false}
-        imgWidth={1150}
-        imgHeight={1150}
-        display={{ base: "none", lg: "inline-block" }}
-      /> */}
+        <Spacer />
+        <BigPillButton href="#portfolio">
+          <Heading as="h2">Take A Look!</Heading>
+        </BigPillButton>
+      </Flex>
     </>
   );
 }
