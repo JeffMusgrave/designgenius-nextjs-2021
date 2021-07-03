@@ -27,7 +27,7 @@ export default function HeroElements() {
           </Text>
         </Flex>
         <Spacer />
-        <BigPillButton href="#portfolio">
+        <BigPillButton href="#design">
           <Heading as="h2">Take A Look!</Heading>
         </BigPillButton>
       </Flex>

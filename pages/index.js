@@ -15,20 +15,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Portfolio
-        id="portfolio"
+        id="design"
         heading={"Digital & Print"}
         images={DPI}
         ratio={{ base: 21 / 9, md: 16 / 9 }}
         columns={{ base: "1", sm: "2", md: "3" }}
+        light="glacier.50"
+        dark="punch.500"
       />
-      <About id="about" />
+      {/* <About id="about" light="glacier.50" dark="salmon.500" /> */}
       <Portfolio
+        id="albumart"
         heading={"Album Art"}
         images={AA}
         ratio={1}
         columns={{ base: "2", sm: "3", md: "6" }}
+        light="glacier.50"
+        dark="salmon.500"
       />
-      <Contact id="contact" />
+      <Contact id="contact" light="glacier.50" dark="#0D0128" />
     </Container>
   );
 }

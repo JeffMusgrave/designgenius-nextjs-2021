@@ -6,7 +6,7 @@ import {
 
 export default function AboutComponent(props) {
   return (
-    <FullSectionComponent light="gray.50" dark="gray.900">
+    <FullSectionComponent light={props.light} dark={props.dark}>
       <ContentConstrainer alignItems="center">
         <Stack
           w={{ base: "100%", md: "60%" }}

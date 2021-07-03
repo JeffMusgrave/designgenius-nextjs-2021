@@ -4,11 +4,11 @@ export default function PageList(props) {
   const { mobileNav } = props;
   return (
     <>
-      <NavButton link="#portfolio" mobileNav={mobileNav}>
-        Portfolio
+      <NavButton link="#design" mobileNav={mobileNav}>
+        Design
       </NavButton>
-      <NavButton link="#about" mobileNav={mobileNav}>
-        About
+      <NavButton link="#albumart" mobileNav={mobileNav}>
+        Album Art
       </NavButton>
       <NavButton link="#contact" mobileNav={mobileNav}>
         Contact

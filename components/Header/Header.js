@@ -19,7 +19,7 @@ export default function HeaderComponent(props) {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "gray.100",
-    dark: "gray.800",
+    dark: "salmon.500",
   };
   const mobileNav = useDisclosure();
   const widthSize = bigHero === true ? "100%" : width;
@@ -42,12 +42,11 @@ export default function HeaderComponent(props) {
     <Box
       as="header"
       w={widthSize}
-      py={{ base: 3, md: scrollDown ? 2 : 10 }}
+      py={{ base: 3, md: scrollDown ? 2 : 20 }}
       position="fixed"
       top="0"
       zIndex="10"
       bg={scrollDown ? bgColor[colorMode] : "whiteAlpha"}
-      bg={scrollDown && "gray.800"}
       opacity={scrollDown ? "0.95" : "1"}
       transition="0.2s"
     >
