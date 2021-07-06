@@ -6,26 +6,53 @@ import {
 import Gallery from "../Gallery";
 
 export default function PortfolioComponent(props) {
-  const { images, ratio, columns, spacing, light, dark, id, heading, outline } =
-    props;
+  const { images, ...rest } = props;
   return (
-    <>
-      <FullSectionComponent light={light} dark={dark}>
-        <ContentConstrainer>
-          <Heading variant="section" as="h2" size="lg" id={id}>
-            {heading}
-          </Heading>
-          <Gallery
-            images={images[0]}
-            thumbs={images[1]}
-            altVals={images[2]}
-            ratio={ratio}
-            columns={columns}
-            spacing={spacing}
-            outline={outline}
-          />
-        </ContentConstrainer>
-      </FullSectionComponent>
-    </>
+    <LayoutSwitch {...rest}>
+      <Gallery
+        images={images[0]}
+        thumbs={images[1]}
+        altVals={images[2]}
+        {...rest}
+      />
+    </LayoutSwitch>
   );
+}
+
+function LayoutSwitch(props) {
+  const { light, dark, id, heading = null, layout = null, children } = props;
+
+  switch (layout) {
+    case "single":
+      return (
+        <>
+          <FullSectionComponent light={light} dark={dark} pb="0">
+            <ContentConstrainer>
+              {heading && (
+                <Heading variant="section" as="h2" size="lg" id={id}>
+                  {heading}
+                </Heading>
+              )}
+            </ContentConstrainer>
+          </FullSectionComponent>
+          {children}
+        </>
+      );
+      break;
+
+    default:
+      return (
+        <FullSectionComponent light={light} dark={dark}>
+          <ContentConstrainer>
+            {heading && (
+              <Heading variant="section" as="h2" size="lg" id={id}>
+                {heading}
+              </Heading>
+            )}
+            {children}
+          </ContentConstrainer>
+        </FullSectionComponent>
+      );
+      break;
+  }
 }

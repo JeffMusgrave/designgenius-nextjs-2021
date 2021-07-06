@@ -2,7 +2,6 @@ import Head from "next/head";
 import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Portfolio from "../components/Portfolio";
-import About from "../components/About";
 import Contact from "../components/Contact";
 import { DPI, AA } from "../data/imagelist/imagelist";
 
@@ -17,23 +16,26 @@ export default function Home() {
       <Portfolio
         id="design"
         heading={"Digital & Print"}
+        galleryType="description"
         images={DPI}
         ratio={{ base: 21 / 9, md: 16 / 9 }}
-        columns={{ base: "1", sm: "2", md: "3" }}
-        light="glacier.50"
-        dark="punch.500"
+        columns={{ base: "1", sm: "2", md: "2" }}
+        light="white"
+        dark="#150833"
+        borderRadius="3rem"
+        layout="single"
       />
-      {/* <About id="about" light="glacier.50" dark="salmon.500" /> */}
       <Portfolio
         id="albumart"
         heading={"Album Art"}
         images={AA}
         ratio={1}
-        columns={{ base: "2", sm: "3", md: "6" }}
-        light="glacier.50"
+        columns={{ base: "2", sm: "2", md: "3" }}
+        light="white"
         dark="salmon.500"
+        spacing="5rem"
       />
-      <Contact id="contact" light="glacier.50" dark="#0D0128" />
+      <Contact id="contact" light="white" dark="#0D0128" />
     </Container>
   );
 }

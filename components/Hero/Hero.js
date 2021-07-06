@@ -26,6 +26,7 @@ export default function HeroComponent(props) {
       bgColor={colorMode === "dark" ? "salmon.500" : "white"}
       bgGradient={colorMode === "light" ? gradient : ""}
       {...props}
+      minH={{ md: "35rem" }}
     >
       <ContentConstrainer>
         <HeroGridItem
@@ -72,22 +73,20 @@ export default function HeroComponent(props) {
   );
 }
 
-function HeroGridItem(props) {
-  const { rowS = "1", rowE = "8", winW = true } = props;
-
+function HeroGridItem({
+  rowS = "1",
+  rowE = "8",
+  winW = true,
+  children,
+  ...rest
+}) {
   if (winW) {
     return (
-      <GridItem
-        rowStart={rowS}
-        rowEnd={rowE}
-        colStart="1"
-        colEnd="2"
-        {...props}
-      >
-        {props.children}
+      <GridItem rowStart={rowS} rowEnd={rowE} colStart="1" colEnd="2" {...rest}>
+        {children}
       </GridItem>
     );
   } else {
-    return <>{props.children}</>;
+    return <>{children}</>;
   }
 }

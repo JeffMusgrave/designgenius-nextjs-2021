@@ -10,6 +10,7 @@ export default function ChakraNextImage(props) {
     imgWidth = null,
     imgHeight = null,
     objectFit = "cover",
+    borderRadius = "xl",
     ...rest
   } = props;
 
@@ -31,13 +32,13 @@ export default function ChakraNextImage(props) {
 
   if (constrain) {
     return (
-      <AspectRatio ratio={ratio}>
+      <AspectRatio ratio={ratio} overflow="hidden" borderRadius={borderRadius}>
         <Img />
       </AspectRatio>
     );
   } else {
     return (
-      <Box {...rest}>
+      <Box {...rest} overflow="hidden" borderRadius={borderRadius}>
         <Img />
       </Box>
     );

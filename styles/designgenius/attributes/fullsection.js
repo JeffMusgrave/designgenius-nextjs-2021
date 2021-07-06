@@ -77,6 +77,12 @@ const fullsection = {
         mt: "0rem",
       },
     },
+    imageDesc: {
+      container: {
+        pt: { base: "2.5rem", sm: "5rem", md: "8rem" },
+        pb: { base: "2.5rem", sm: "5rem", md: "8rem" },
+      },
+    },
     constrained: {
       container: {
         bg: "transparent",

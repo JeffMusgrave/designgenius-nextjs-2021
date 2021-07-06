@@ -13,9 +13,9 @@ export default function HeroElements() {
           <Spacer />
           <Heading
             as="h1"
-            size="4xl"
-            fontSize={["34pt", "40pt", "50pt"]}
+            fontSize={["34pt", "50pt", "clamp(60pt,  3.5vw, 80pt)"]}
             mb="2.5rem"
+            lineHeight="5rem"
           >
             Inspired Design
           </Heading>
@@ -27,9 +27,7 @@ export default function HeroElements() {
           </Text>
         </Flex>
         <Spacer />
-        <BigPillButton href="#design">
-          <Heading as="h2">Take A Look!</Heading>
-        </BigPillButton>
+        <BigPillButton href="#design">Take A Look!</BigPillButton>
       </Flex>
     </>
   );
