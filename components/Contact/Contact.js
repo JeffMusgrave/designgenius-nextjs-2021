@@ -14,7 +14,14 @@ export default function ContactComponent(props) {
           width={{ base: "100%", md: "clamp(25rem, 40vw, 40rem)" }}
           pt={{ base: "0", md: "10rem" }}
         >
-          <Heading variant="section" as="h2" fontSize="32pt" id={props.id}>
+          <Heading
+            variant="section"
+            as="h2"
+            fontSize="32pt"
+            mb="5rem"
+            id={props.id}
+            textAlign="center"
+          >
             Let's work together
           </Heading>
           <ContactForm />

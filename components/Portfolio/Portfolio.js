@@ -6,6 +6,7 @@ import {
 import Gallery from "../Gallery";
 
 export default function PortfolioComponent(props) {
+  console.log(props.borderRadius);
   const { images, ...rest } = props;
   return (
     <LayoutSwitch {...rest}>

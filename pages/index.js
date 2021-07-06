@@ -22,7 +22,7 @@ export default function Home() {
         columns={{ base: "1", sm: "2", md: "2" }}
         light="white"
         dark="#150833"
-        borderRadius="3rem"
+        borderRadius="random"
         layout="single"
       />
       <Portfolio
@@ -34,6 +34,7 @@ export default function Home() {
         light="white"
         dark="salmon.500"
         spacing="5rem"
+        borderRadius="random"
       />
       <Contact id="contact" light="white" dark="#0D0128" />
     </Container>

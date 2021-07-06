@@ -10,7 +10,11 @@ export default function ImageWithDescription({ images, altVals, ...rest }) {
   return (
     <>
       {images.map((e, idx) => (
-        <FullSectionSwitch {...rest} idx={idx}>
+        <FullSectionSwitch
+          {...rest}
+          idx={idx}
+          key={`desc-${altVals[idx].title}`}
+        >
           <Stack
             direction={{
               base: "column",
@@ -18,8 +22,8 @@ export default function ImageWithDescription({ images, altVals, ...rest }) {
             }}
             spacing={12}
             key={`imgdesc-${idx}`}
-            pt={idx > 0 && "5rem"}
-            pb="5rem"
+            pt={{ sm: "0rem", md: idx > 0 && "5rem" }}
+            pb={{ sm: "0rem", md: "5rem" }}
           >
             <VStack align="stretch" flexGrow="1">
               <Heading
