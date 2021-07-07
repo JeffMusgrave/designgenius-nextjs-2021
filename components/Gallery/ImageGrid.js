@@ -10,7 +10,7 @@ export default function ImageGrid(props) {
   } = props;
 
   return (
-    <SimpleGrid columns={columns} spacing={spacing} mt={10}>
+    <SimpleGrid columns={columns} spacing={spacing} mt={10} mb={20}>
       {images.map((e, idx) => (
         <ChakraImage
           e={e}

@@ -1,10 +1,6 @@
 import { AspectRatio, Box } from "@chakra-ui/react";
 import Image from "next/image";
 
-function r() {
-  return Math.floor(Math.random() * 90 + 10);
-}
-
 export default function ChakraNextImage(props) {
   const {
     src,
@@ -18,10 +14,7 @@ export default function ChakraNextImage(props) {
     ...rest
   } = props;
 
-  const BR =
-    borderRadius === "random"
-      ? `${r()}% ${r()}% ${r()}% ${r()}% / ${r()}% ${r()}% ${r()}% ${r()}%`
-      : borderRadius;
+  // const BR = borderRadius === "random" ? ` ` : borderRadius;
 
   function Img() {
     const regex = /(\.svg)/gm;
@@ -41,13 +34,13 @@ export default function ChakraNextImage(props) {
 
   if (constrain) {
     return (
-      <AspectRatio ratio={ratio} overflow="hidden" borderRadius={BR}>
+      <AspectRatio ratio={ratio} overflow="hidden">
         <Img />
       </AspectRatio>
     );
   } else {
     return (
-      <Box {...rest} overflow="hidden" borderRadius={BR}>
+      <Box {...rest} overflow="hidden">
         <Img />
       </Box>
     );

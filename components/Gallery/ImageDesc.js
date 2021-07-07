@@ -20,23 +20,23 @@ export default function ImageWithDescription({ images, altVals, ...rest }) {
               base: "column",
               md: idx % 2 === 0 ? "row-reverse" : "row",
             }}
-            spacing={12}
+            spacing="6rem"
             key={`imgdesc-${idx}`}
             pt={{ sm: "0rem", md: idx > 0 && "5rem" }}
             pb={{ sm: "0rem", md: "5rem" }}
           >
-            <VStack align="stretch" flexGrow="1">
+            <VStack align="stretch" flexGrow="1" zIndex="2">
               <Heading
-                fontSize="4rem"
+                fontSize="3rem"
                 letterSpacing="tight"
                 lineHeight="none"
                 mb="2rem"
               >
                 {altVals[idx].title}
               </Heading>
-              <Text fontSize="2xl">{altVals[idx].description}</Text>
+              <Text fontSize="3xl">{altVals[idx].description}</Text>
             </VStack>
-            <Box minW={{ base: "100%", md: "40%" }}>
+            <Box minW={{ base: "100%", md: "60%" }}>
               <ChakraImage e={e} idx={idx} altVals={altVals} {...rest} />
             </Box>
           </Stack>

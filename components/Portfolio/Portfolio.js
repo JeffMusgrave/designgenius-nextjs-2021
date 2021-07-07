@@ -6,7 +6,6 @@ import {
 import Gallery from "../Gallery";
 
 export default function PortfolioComponent(props) {
-  console.log(props.borderRadius);
   const { images, ...rest } = props;
   return (
     <LayoutSwitch {...rest}>
@@ -30,7 +29,14 @@ function LayoutSwitch(props) {
           <FullSectionComponent light={light} dark={dark} pb="0">
             <ContentConstrainer>
               {heading && (
-                <Heading variant="section" as="h2" size="lg" id={id}>
+                <Heading
+                  id={id}
+                  variant="section"
+                  as="h2"
+                  size="3xl"
+                  // fontFamily="Montserrat"
+                  color="prince.50"
+                >
                   {heading}
                 </Heading>
               )}
@@ -46,7 +52,13 @@ function LayoutSwitch(props) {
         <FullSectionComponent light={light} dark={dark}>
           <ContentConstrainer>
             {heading && (
-              <Heading variant="section" as="h2" size="lg" id={id}>
+              <Heading
+                variant="section"
+                id={id}
+                as="h2"
+                size="3xl"
+                // fontFamily="Montserrat"
+              >
                 {heading}
               </Heading>
             )}
