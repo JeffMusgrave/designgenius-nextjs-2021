@@ -6,7 +6,12 @@ import {
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
 
-export default function ImageWithDescription({ images, altVals, ...rest }) {
+export default function ImageWithDescription({
+  images,
+  altVals,
+  headingDescColor = null,
+  ...rest
+}) {
   return (
     <>
       {images.map((e, idx) => (
@@ -27,16 +32,17 @@ export default function ImageWithDescription({ images, altVals, ...rest }) {
           >
             <VStack align="stretch" flexGrow="1" zIndex="2">
               <Heading
-                fontSize="3rem"
                 letterSpacing="tight"
                 lineHeight="none"
                 mb="2rem"
+                color={headingDescColor}
+                variant="section"
               >
                 {altVals[idx].title}
               </Heading>
               <Text fontSize="3xl">{altVals[idx].description}</Text>
             </VStack>
-            <Box minW={{ base: "100%", md: "60%" }}>
+            <Box minW={{ base: "100%", md: "40%" }}>
               <ChakraImage e={e} idx={idx} altVals={altVals} {...rest} />
             </Box>
           </Stack>

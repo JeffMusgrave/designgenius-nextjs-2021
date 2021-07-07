@@ -20,22 +20,32 @@ export default function PortfolioComponent(props) {
 }
 
 function LayoutSwitch(props) {
-  const { light, dark, id, heading = null, layout = null, children } = props;
+  const {
+    light,
+    dark,
+    id,
+    heading = null,
+    headingColor = null,
+    layout = null,
+    children,
+  } = props;
 
   switch (layout) {
     case "single":
       return (
         <>
           <FullSectionComponent light={light} dark={dark} pb="0">
-            <ContentConstrainer>
+            <ContentConstrainer
+              id={!heading && id}
+              sx={{ scrollMarginTop: "100px", scrollSnapMargin: "100px" }}
+            >
               {heading && (
                 <Heading
                   id={id}
                   variant="section"
                   as="h2"
-                  size="3xl"
                   // fontFamily="Montserrat"
-                  color="prince.50"
+                  color={headingColor}
                 >
                   {heading}
                 </Heading>

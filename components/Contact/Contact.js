@@ -1,4 +1,4 @@
-import { Heading, Flex, VStack, Text, Image } from "@chakra-ui/react";
+import { Heading, VStack, Text, Image } from "@chakra-ui/react";
 import {
   FullSectionComponent,
   ContentConstrainer,
@@ -18,12 +18,16 @@ export default function ContactComponent(props) {
             variant="section"
             as="h2"
             fontSize="32pt"
-            mb="5rem"
+            mb="1rem"
             id={props.id}
             textAlign="center"
+            color="#9769FF"
           >
             Let's work together
           </Heading>
+          <Text pb="5rem" textAlign="center">
+            Like what you see? Get in touch!
+          </Text>
           <ContactForm />
         </VStack>
       </ContentConstrainer>

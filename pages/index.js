@@ -18,17 +18,18 @@ export default function Home() {
       </Head>
       <Portfolio
         id="design"
-        heading={"Digital & Print"}
+        // heading={"Digital & Print"}
         galleryType="description"
         images={DPI}
-        ratio={{ base: 21 / 9, md: 21 / 9 }}
+        ratio={{ base: 21 / 9, md: 16 / 9 }}
         columns={{ base: "1", sm: "2", md: "2" }}
         light="white"
         dark="#150833"
-        // borderRadius="xl"
+        borderRadius="2.5rem"
         layout="single"
-        borderWidthVar="2rem"
-        borderColorVar={["rgb(42, 27, 80)", salmon[500]]}
+        borderWidthVar="1.75rem"
+        borderColorVar={["#25144D", punch[500]]}
+        headingDescColor="#9769FF"
         // transformVar="scale(1.025)"
       />
       <Portfolio
@@ -39,9 +40,10 @@ export default function Home() {
         columns={{ base: "2", sm: "2", md: "3" }}
         light="white"
         dark="salmon.500"
-        spacing="10rem"
-        borderWidthVar="2rem"
+        spacing="8rem"
+        borderWidthVar="1.75rem"
         borderColorVar={[salmon[300], prince[500]]}
+        headingColor=""
         // borderRadius="0"
       />
       <Contact id="contact" light="white" dark="#0D0128" />
