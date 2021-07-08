@@ -21,10 +21,8 @@ export default function HeroComponent(props) {
   return (
     <FullSectionComponent
       variant="heroFull"
-      light="gray.200"
-      dark="gray.900"
-      bgColor={colorMode === "dark" ? "salmon.500" : "white"}
-      bgGradient={colorMode === "light" ? gradient : ""}
+      bgColor={colorMode === "dark" ? "salmon.500" : "#A6FFFA"}
+      // bgGradient={colorMode === "light" ? gradient : ""}
       {...props}
       minH={{ md: "35rem" }}
     >
@@ -44,7 +42,8 @@ export default function HeroComponent(props) {
           >
             <Image
               alignItems="center"
-              mixBlendMode="soft-light"
+              mixBlendMode={colorMode === "dark" && "soft-light"}
+              opacity={colorMode === "dark" ? "1" : "0.25"}
               src="/images/site/BlueLightBulb.svg"
             />
           </Box>
@@ -63,7 +62,8 @@ export default function HeroComponent(props) {
       </ContentConstrainer>
       <Box
         display={{ base: "none", sm: "inline-block" }}
-        bg="prince.500"
+        bgColor={colorMode === "dark" ? "prince.500" : "#C8FE41"}
+        // bg="prince.500"
         position="absolute"
         right="0"
         width={{ base: "12vw", lg: "55vw" }}

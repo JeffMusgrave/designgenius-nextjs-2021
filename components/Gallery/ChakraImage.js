@@ -23,19 +23,22 @@ export default function ChakraImage({
         transition="transform 0.1s"
         transitionTimingFunction="ease-in-out"
         _hover={{
-          transform: transformVar,
-          boxShadow:
+          transform: { base: "", md: transformVar },
+          boxShadow: {
+            base: "",
+            md:
+              borderColorVar &&
+              borderWidthVar &&
+              `0 0 0 ${borderWidthVar} ${borderColorVar[1]}`,
+          },
+        }}
+        boxShadow={{
+          base: "",
+          md:
             borderColorVar &&
             borderWidthVar &&
-            `0 0 0 ${borderWidthVar} ${borderColorVar[1]}`,
+            `0 0 0 ${borderWidthVar} ${borderColorVar[0]}`,
         }}
-        // outlineColor={borderColorVar && borderColorVar[0]}
-        // outlineWidth={borderWidthVar && borderWidthVar}
-        boxShadow={
-          borderColorVar &&
-          borderWidthVar &&
-          `0 0 0 ${borderWidthVar} ${borderColorVar[0]}`
-        }
       >
         <ChakraNextImage
           src={thumbs[idx]}

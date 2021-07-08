@@ -1,12 +1,10 @@
 import {
-  useColorModeValue,
   useDisclosure,
   Flex,
   HStack,
   Box,
   IconButton,
   useColorMode,
-  DarkMode,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -18,7 +16,7 @@ import { bigHero, width } from "../../styles/designgenius/stylevars";
 export default function HeaderComponent(props) {
   const { colorMode } = useColorMode();
   const bgColor = {
-    light: "gray.100",
+    light: "#A6FFEA",
     dark: "salmon.500",
   };
   const mobileNav = useDisclosure();
@@ -66,29 +64,28 @@ export default function HeaderComponent(props) {
           <NavMobile
             mobileNav={mobileNav}
             bg="gray.800"
-            // bg={bgColor[colorMode]}
+            bg={bgColor[colorMode]}
           />
 
-          <ColourModeSwitch />
-          <DarkMode>
-            <IconButton
-              display={{ base: "flex", md: "none" }}
-              aria-label="Open menu"
-              fontSize="20px"
-              borderRadius="lg"
-              size="lg"
-              // color={useColorModeValue("gray.800", "white")}
-              variant="ghost"
-              icon={
-                mobileNav.isOpen ? (
-                  <HiX aria-label="Close menu" />
-                ) : (
-                  <HiMenu aria-label="Open menu" />
-                )
-              }
-              onClick={mobileNav.onToggle}
-            />
-          </DarkMode>
+          {/* <ColourModeSwitch /> */}
+
+          <IconButton
+            display={{ base: "flex", md: "none" }}
+            aria-label="Open menu"
+            fontSize="20px"
+            borderRadius="lg"
+            size="lg"
+            // color={useColorModeValue("gray.800", "white")}
+            variant="ghost"
+            icon={
+              mobileNav.isOpen ? (
+                <HiX aria-label="Close menu" />
+              ) : (
+                <HiMenu aria-label="Open menu" />
+              )
+            }
+            onClick={mobileNav.onToggle}
+          />
         </HStack>
       </Flex>
     </Box>

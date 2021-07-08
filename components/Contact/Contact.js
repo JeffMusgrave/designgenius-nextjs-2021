@@ -6,8 +6,9 @@ import {
 import ContactForm from "./ContactForm";
 
 export default function ContactComponent(props) {
+  const { light, dark, id, descHeadingColor } = props;
   return (
-    <FullSectionComponent light={props.light} dark={props.dark}>
+    <FullSectionComponent light={light} dark={dark}>
       <ContentConstrainer display="flex" alignItems="center">
         <VStack
           align="stretch"
@@ -19,9 +20,9 @@ export default function ContactComponent(props) {
             as="h2"
             fontSize="32pt"
             mb="1rem"
-            id={props.id}
+            id={id}
             textAlign="center"
-            color="#9769FF"
+            color={descHeadingColor}
           >
             Let's work together
           </Heading>

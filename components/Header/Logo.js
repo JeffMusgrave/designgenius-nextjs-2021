@@ -1,17 +1,19 @@
-// import { useColorMode } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 
 export default function Logo() {
-  // const { colorMode, toggleColorMode } = useColorMode();
-  // const iconColor = {
-  //   light: "#4d4d4d",
-  //   dark: "#fff",
-  // };
-  // {`.outline-color{ fill: ${iconColor[colorMode]} }`}
+  const { colorMode, toggleColorMode } = useColorMode();
+  const iconColor = {
+    light: "#322659",
+    dark: "#fff",
+  };
+  // {
+  //   `.outline-color{ fill: ${iconColor[colorMode]} }`;
+  // }
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.03 131.89">
       <defs>
         <style>
-          {`.outline-color{ fill: #fff }`}
+          {`.outline-color{ fill: ${iconColor[colorMode]} }`}
           {`.light-on-color { fill: #fcc921; opacity: 0; }`}
         </style>
       </defs>

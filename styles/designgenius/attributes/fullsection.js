@@ -4,6 +4,7 @@ const fullsection = {
   // The parts of the component
   parts: ["container", "constrainer"],
   // The base styles for each part
+
   baseStyle: {
     container: {
       display: "flex",
@@ -55,7 +56,7 @@ const fullsection = {
       },
       constrainer: {
         display: "inline-block",
-        color: "white",
+        // color: "white",
       },
     },
     heroFull: {
@@ -73,7 +74,7 @@ const fullsection = {
         display: { base: "flex", sm: "grid" },
         gridTemplateRows: "repeat(7, 1fr)",
         gridTemplateColumns: "1fr",
-        color: "white",
+        // color: "white",
         mt: "0rem",
       },
     },

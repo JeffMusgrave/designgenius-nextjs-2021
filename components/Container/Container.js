@@ -10,7 +10,7 @@ export default function ContainerComponent(props) {
       <Header />
       {props.hero}
       <Main>{props.children}</Main>
-      <Footer light="gray.50" dark="#0D0128" />
+      <Footer light="white" dark="#0D0128" />
     </Flex>
   );
 }

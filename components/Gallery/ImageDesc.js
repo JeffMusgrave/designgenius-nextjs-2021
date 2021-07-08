@@ -1,15 +1,15 @@
 import { Heading, Text, VStack, Box, Stack } from "@chakra-ui/react";
-import { darken } from "@chakra-ui/theme-tools";
 import ChakraImage from "./ChakraImage";
 import {
   FullSectionComponent,
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
+import colourAltSwitch from "../../lib/colourAltSwitch";
 
 export default function ImageWithDescription({
   images,
   altVals,
-  headingDescColor = null,
+  descHeadingColor = null,
   ...rest
 }) {
   return (
@@ -25,7 +25,7 @@ export default function ImageWithDescription({
               base: "column",
               md: idx % 2 === 0 ? "row-reverse" : "row",
             }}
-            spacing="6rem"
+            spacing={{ base: "1rem", md: "6rem" }}
             key={`imgdesc-${idx}`}
             pt={{ sm: "0rem", md: idx > 0 && "5rem" }}
             pb={{ sm: "0rem", md: "5rem" }}
@@ -34,8 +34,8 @@ export default function ImageWithDescription({
               <Heading
                 letterSpacing="tight"
                 lineHeight="none"
-                mb="2rem"
-                color={headingDescColor}
+                mb={{ base: "0", md: "2rem" }}
+                color={descHeadingColor}
                 variant="section"
               >
                 {altVals[idx].title}
@@ -52,13 +52,19 @@ export default function ImageWithDescription({
   );
 }
 
-function FullSectionSwitch({ light, dark, children, layout, idx }) {
+function FullSectionSwitch({
+  light = null,
+  dark = null,
+  children,
+  layout,
+  idx,
+}) {
   switch (layout) {
     case "single":
       return (
         <FullSectionComponent
-          light={idx % 2 === 0 ? light : darken(light, 2)}
-          dark={idx % 2 === 0 ? dark : darken(dark, 2)}
+          light={colourAltSwitch(light, "lighten", 4, idx)}
+          dark={colourAltSwitch(dark, "darken", 2, idx)}
         >
           <ContentConstrainer>{children}</ContentConstrainer>
         </FullSectionComponent>

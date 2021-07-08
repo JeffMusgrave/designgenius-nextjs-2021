@@ -1,6 +1,7 @@
-import { Heading, Box } from "@chakra-ui/react";
+import { Heading, Box, useColorModeValue, DarkMode } from "@chakra-ui/react";
 import NextLink from "next/link";
 export default function BigPillButton(props) {
+  const bgColor = useColorModeValue("prince.900", "prince.300");
   return (
     <NextLink href={props.href}>
       <Box
@@ -8,7 +9,7 @@ export default function BigPillButton(props) {
         as="button"
         px={{ sm: "2.5 rem", md: "4rem", lg: "5rem" }}
         borderRadius="full"
-        bg="prince.300"
+        bg={bgColor}
         cursor="pointer"
         transition="0.1s ease-in-out"
         _hover={{ background: "prince.200" }}
@@ -22,7 +23,9 @@ export default function BigPillButton(props) {
         }}
         whiteSpace={{ base: "wrap", lg: "nowrap" }}
       >
-        <Heading as="h2">{props.children}</Heading>
+        <Heading as="h2" color="white">
+          {props.children}
+        </Heading>
       </Box>
     </NextLink>
   );

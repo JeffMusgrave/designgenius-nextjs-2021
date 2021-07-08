@@ -4,6 +4,7 @@ import { ColorModeScript } from "@chakra-ui/react";
 
 export default class MyDocument extends NextDocument {
   render() {
+    console.log(theme.config.initialColorMode);
     return (
       <Html lang="en">
         <Head />

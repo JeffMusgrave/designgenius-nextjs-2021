@@ -1,6 +1,10 @@
 import { Global, css } from "@emotion/react";
+// import { useColorMode } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 export default function GlobalStyle({ children }) {
+  // const { colorMode } = useColorMode();
+  const bgColor = useColorModeValue("#322659", "white");
   return (
     <>
       <Global
@@ -20,6 +24,9 @@ export default function GlobalStyle({ children }) {
           #__next {
             display: flex;
             justify-content: center;
+          }
+          body {
+            color: ${bgColor};
           }
         `}
       />

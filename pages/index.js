@@ -1,3 +1,4 @@
+import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import Container from "../components/Container";
 import Hero from "../components/Hero";
@@ -6,9 +7,10 @@ import Contact from "../components/Contact";
 import { DPI, AA } from "../data/imagelist/imagelist";
 import colors from "../styles/designgenius/attributes/colors";
 
-const { prince, salmon, punch } = colors;
+const { prince, salmon, punch, glacier } = colors;
 
 export default function Home() {
+  const { colorMode } = useColorMode();
   return (
     <Container hero={<Hero />}>
       <Head>
@@ -18,35 +20,43 @@ export default function Home() {
       </Head>
       <Portfolio
         id="design"
-        // heading={"Digital & Print"}
         galleryType="description"
         images={DPI}
         ratio={{ base: 21 / 9, md: 16 / 9 }}
         columns={{ base: "1", sm: "2", md: "2" }}
-        light="white"
+        light={["white", "black"]}
         dark="#150833"
-        borderRadius="2.5rem"
+        borderRadius={{ base: "0", md: "2.5rem" }}
         layout="single"
-        borderWidthVar="1.75rem"
-        borderColorVar={["#25144D", punch[500]]}
-        headingDescColor="#9769FF"
-        // transformVar="scale(1.025)"
+        descHeadingColor={colorMode === "dark" ? "#9769FF" : "#4C823D"}
+        // secHeadingColor={colorMode === "light" && "#00A9A5"}
+        borderWidthVar="2rem"
+        borderColorVar={
+          colorMode === "light" ? ["white", "#A6FFFA"] : ["#25144D", punch[500]]
+        }
       />
       <Portfolio
         id="albumart"
         heading={"Album Art"}
         images={AA}
         ratio={1}
-        columns={{ base: "2", sm: "2", md: "3" }}
-        light="white"
+        columns={{ base: "2", sm: "3", md: "3" }}
+        light="#C8FE41"
         dark="salmon.500"
-        spacing="8rem"
+        spacing={{ base: "1.5rem", sm: "2rem", md: "8rem" }}
         borderWidthVar="1.75rem"
-        borderColorVar={[salmon[300], prince[500]]}
-        headingColor=""
-        // borderRadius="0"
+        borderColorVar={
+          colorMode === "light"
+            ? [prince[500], "#A6FFFA"]
+            : [salmon[300], prince[500]]
+        }
       />
-      <Contact id="contact" light="white" dark="#0D0128" />
+      <Contact
+        id="contact"
+        light="white"
+        dark="#0D0128"
+        descHeadingColor={colorMode === "dark" && "#9769FF"}
+      />
     </Container>
   );
 }

@@ -25,7 +25,7 @@ function LayoutSwitch(props) {
     dark,
     id,
     heading = null,
-    headingColor = null,
+    secHeadingColor = null,
     layout = null,
     children,
   } = props;
@@ -45,7 +45,7 @@ function LayoutSwitch(props) {
                   variant="section"
                   as="h2"
                   // fontFamily="Montserrat"
-                  color={headingColor}
+                  color={secHeadingColor}
                 >
                   {heading}
                 </Heading>
