@@ -10,7 +10,7 @@ export default function HeroComponent(props) {
   const size = useWindowSize();
   const pad = Math.max(0, (30 * (1000 - size.height)) / 1000);
   const { colorMode } = useColorMode();
-  const winH = size && size.height > 1000;
+  // const winH = size && size.height > 1000;
   // const winW = size && size.width > 350;
 
   return (
@@ -51,11 +51,11 @@ export default function HeroComponent(props) {
         <GridItem
           zIndex="3"
           size={size}
-          rowStart={{ base: "2", lg: winH ? "4" : "5" }}
-          rowEnd={{ base: "7", lg: winH ? "5" : "6" }}
+          rowStart={{ base: "2", lg: "4" }}
+          rowEnd={{ base: "7", lg: "6" }}
           colStart="1"
           colEnd="2"
-          alignSelf={{ base: "center", lg: "" }}
+          alignSelf={{ base: "center", lg: "flex-end", xl: "flex-start" }}
           w="inherit"
           {...props}
         >
