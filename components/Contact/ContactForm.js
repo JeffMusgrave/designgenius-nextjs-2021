@@ -96,7 +96,7 @@ export default function ContactForm(props) {
               {errors.message && errors.message.message}
             </FormErrorMessage>
           </FormControl>
-          <Button mt={4} isLoading={isSubmitting} type="submit">
+          <Button py={6} mt={6} isLoading={isSubmitting} type="submit">
             Submit
           </Button>
           {!!thanks &&

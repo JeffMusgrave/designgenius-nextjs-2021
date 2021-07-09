@@ -26,7 +26,7 @@ export default function ContactComponent(props) {
           >
             Let's work together
           </Heading>
-          <Text pb="5rem" textAlign="center">
+          <Text pb="5rem" fontSize="xl" textAlign="center">
             Like what you see? Get in touch!
           </Text>
           <ContactForm />

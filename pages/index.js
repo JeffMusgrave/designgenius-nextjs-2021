@@ -26,7 +26,7 @@ export default function Home() {
         columns={{ base: "1", sm: "2", md: "2" }}
         light={["white", "black"]}
         dark="#150833"
-        borderRadius={{ base: "0", md: "2.5rem" }}
+        borderRadius={{ base: "1rem", md: "2.5rem" }}
         layout="single"
         descHeadingColor={colorMode === "dark" ? "#9769FF" : "#4C823D"}
         // secHeadingColor={colorMode === "light" && "#00A9A5"}

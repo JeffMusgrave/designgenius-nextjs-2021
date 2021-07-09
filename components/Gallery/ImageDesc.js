@@ -37,10 +37,13 @@ export default function ImageWithDescription({
                 mb={{ base: "0", md: "2rem" }}
                 color={descHeadingColor}
                 variant="section"
+                fontSize={{ base: "4xl", md: "5xl" }}
               >
                 {altVals[idx].title}
               </Heading>
-              <Text fontSize="3xl">{altVals[idx].description}</Text>
+              <Text fontSize={{ base: "xl", md: "3xl" }}>
+                {altVals[idx].description}
+              </Text>
             </VStack>
             <Box minW={{ base: "100%", md: "40%" }}>
               <ChakraImage e={e} idx={idx} altVals={altVals} {...rest} />

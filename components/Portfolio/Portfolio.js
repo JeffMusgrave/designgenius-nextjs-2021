@@ -34,7 +34,12 @@ function LayoutSwitch(props) {
     case "single":
       return (
         <>
-          <FullSectionComponent light={light} dark={dark} pb="0">
+          <FullSectionComponent
+            light={light}
+            dark={dark}
+            pb="0"
+            pt={{ base: !heading && "0rem", md: "5rem" }}
+          >
             <ContentConstrainer
               id={!heading && id}
               sx={{ scrollMarginTop: "100px", scrollSnapMargin: "100px" }}

@@ -23,7 +23,7 @@ export default function GalleryComponent(props) {
         <VStack
           spacing={normLayout && "10rem"}
           align="stretch"
-          mt={normLayout && "5rem"}
+          mt={{ base: "0rem", md: normLayout && "3rem" }}
         >
           <GallerySwitch {...props} />
         </VStack>
