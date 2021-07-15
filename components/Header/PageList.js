@@ -5,29 +5,24 @@ export default function PageList(props) {
   const router = useRouter();
   const pathCheck = router.pathname === "/";
   const { mobileNav } = props;
+
+  const pathList = {
+    "#design": "Design",
+    "#albumart": "Album Art",
+    "#contact": "Contact",
+  };
+
   return (
     <>
-      <NavButton
-        link={`${pathCheck && "/"}#design`}
-        mobileNav={mobileNav}
-        pathCheck={pathCheck}
-      >
-        Design
-      </NavButton>
-      <NavButton
-        link={`${pathCheck && "/"}#albumart`}
-        mobileNav={mobileNav}
-        pathCheck={pathCheck}
-      >
-        Album Art
-      </NavButton>
-      <NavButton
-        link={`${pathCheck && "/"}#contact`}
-        mobileNav={mobileNav}
-        pathCheck={pathCheck}
-      >
-        Contact
-      </NavButton>
+      {Object.keys(pathList).map((e, idx) => (
+        <NavButton
+          link={`${pathCheck && "/"}${e}`}
+          mobileNav={mobileNav}
+          pathCheck={pathCheck}
+        >
+          {pathList[e]}
+        </NavButton>
+      ))}
     </>
   );
 }
