@@ -8,20 +8,23 @@ export default function PageList(props) {
   return (
     <>
       <NavButton
-        link={pathCheck ? "#design" : "/#design"}
+        link={`${pathCheck && "/"}#design`}
         mobileNav={mobileNav}
+        pathCheck={pathCheck}
       >
         Design
       </NavButton>
       <NavButton
-        link={pathCheck ? "#albumart" : "/#albumart"}
+        link={`${pathCheck && "/"}#albumart`}
         mobileNav={mobileNav}
+        pathCheck={pathCheck}
       >
         Album Art
       </NavButton>
       <NavButton
-        link={pathCheck ? "#contact" : "/#contact"}
+        link={`${pathCheck && "/"}#contact`}
         mobileNav={mobileNav}
+        pathCheck={pathCheck}
       >
         Contact
       </NavButton>

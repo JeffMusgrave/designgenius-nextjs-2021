@@ -5,12 +5,15 @@ import Hero from "../components/Hero";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import { DPI, AA } from "../data/imagelist/imagelist";
+// import { useContext } from "react";
+// import ImageContext from "../data/imagelist/ImageContext";
 import colors from "../styles/designgenius/attributes/colors";
 
 const { prince, salmon, punch, glacier } = colors;
 
 export default function Home() {
   const { colorMode } = useColorMode();
+  // const { DPI, AA } = useContext(ImageContext);
   return (
     <Container hero={<Hero />}>
       <Head>
