@@ -21,7 +21,7 @@ export default function PageList(props) {
     <>
       {Object.keys(pathList).map((e, idx) => (
         <NavButton
-          link={`${!pathCheck && "/"}${e}`}
+          link={`${!!pathCheck && "/"}${e}`}
           mobileNav={mobileNav}
           pathCheck={pathCheck}
           key={`${e}`}
