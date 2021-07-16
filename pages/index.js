@@ -32,7 +32,9 @@ export default function Home() {
         // secHeadingColor={colorMode === "light" && "#00A9A5"}
         borderWidthVar="2rem"
         borderColorVar={
-          colorMode === "light" ? ["white", "#A6FFFA"] : ["#25144D", punch[500]]
+          colorMode === "light"
+            ? ["white", "#A6FFFA"]
+            : ["#25144D", salmon[500]]
         }
       />
       <Portfolio

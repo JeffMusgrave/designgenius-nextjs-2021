@@ -49,7 +49,6 @@ function LayoutSwitch(props) {
                   id={id}
                   variant="section"
                   as="h2"
-                  // fontFamily="Montserrat"
                   color={secHeadingColor}
                 >
                   {heading}
@@ -67,13 +66,7 @@ function LayoutSwitch(props) {
         <FullSectionComponent light={light} dark={dark}>
           <ContentConstrainer>
             {heading && (
-              <Heading
-                variant="section"
-                id={id}
-                as="h2"
-                size="3xl"
-                // fontFamily="Montserrat"
-              >
+              <Heading variant="section" id={id} as="h2" size="3xl">
                 {heading}
               </Heading>
             )}

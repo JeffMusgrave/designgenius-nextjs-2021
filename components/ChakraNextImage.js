@@ -14,8 +14,6 @@ export default function ChakraNextImage(props) {
     ...rest
   } = props;
 
-  // const BR = borderRadius === "random" ? ` ` : borderRadius;
-
   function Img() {
     const regex = /(\.svg)/gm;
     return (
