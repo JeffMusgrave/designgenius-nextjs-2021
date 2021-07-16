@@ -26,7 +26,11 @@ export default function BigPillButton(props) {
         px={{ base: "2.5rem", md: "4rem", lg: "5rem" }}
         whiteSpace="nowrap"
       >
-        <Heading as="h2" color="white">
+        <Heading
+          fontSize={{ base: "xl", md: "3xl", lg: "4xl" }}
+          as="h2"
+          color="white"
+        >
           {props.children}
         </Heading>
       </Box>

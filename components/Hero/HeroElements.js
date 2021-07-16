@@ -12,10 +12,17 @@ export default function HeroElements() {
         >
           Inspired Design
         </Heading>
-        <Text marginBottom="1rem" fontSize="3xl" lineHeight={8}>
+        <Text
+          marginBottom="1rem"
+          fontSize={{ base: "xl", md: "3xl" }}
+          lineHeight={{ base: 6, md: 8 }}
+        >
           Make a great first impression.
         </Text>
-        <Text fontSize="3xl" lineHeight={8}>
+        <Text
+          fontSize={{ base: "xl", md: "3xl" }}
+          lineHeight={{ base: 6, md: 8 }}
+        >
           Reach your customers and close the sale.
         </Text>
       </Flex>

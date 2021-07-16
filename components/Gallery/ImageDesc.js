@@ -25,12 +25,17 @@ export default function ImageWithDescription({
               base: "column",
               md: idx % 2 === 0 ? "row-reverse" : "row",
             }}
-            spacing={{ base: "1rem", md: "6rem" }}
+            spacing={{ base: "2rem", md: "6rem" }}
             key={`imgdesc-${idx}`}
             pt={{ sm: "0rem", md: idx > 0 && "5rem" }}
             pb={{ sm: "0rem", md: "5rem" }}
           >
-            <VStack align="stretch" flexGrow="1" zIndex="2">
+            <VStack
+              align="stretch"
+              flexGrow="1"
+              zIndex="2"
+              spacing={{ base: "1rem", md: "0" }}
+            >
               <Heading
                 letterSpacing="tight"
                 lineHeight="none"
