@@ -12,13 +12,14 @@ const dpiPath = "public/images/portfolio/digitalprint/";
 const dpiImageList = {
   arXivConcept: {
     title: "arXiv.org",
-    alt: "An exploration into the venerable blah blah",
-    description: "Concept for arXiv.org",
+    alt: "Concept for arXiv.org",
+    description:
+      "An exploration of the academic paper respository, arXiv.org, spruced up with modern design conventions.",
   },
   PML: {
     title: "Pytorch Metric Learning",
     alt: "Logo for Pytorch Metric Learning library.",
-    description: "lorem ipsum",
+    description: "",
   },
   // ReebeeContestSpread: {
   //   title: "reebee Mother's Day Contest Spread",

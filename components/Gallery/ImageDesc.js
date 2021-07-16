@@ -41,7 +41,7 @@ export default function ImageWithDescription({
               >
                 {altVals[idx].title}
               </Heading>
-              <Text fontSize={{ base: "xl", md: "3xl" }}>
+              <Text fontSize={{ base: "xl", md: "2xl" }}>
                 {altVals[idx].description}
               </Text>
             </VStack>
