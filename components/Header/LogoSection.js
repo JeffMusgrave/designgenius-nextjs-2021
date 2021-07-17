@@ -11,7 +11,7 @@ export default function LogoSection() {
         display="flex"
         alignItems="center"
       >
-        <Box w="8rem">
+        <Box w={{ base: "6rem", md: "8rem" }}>
           <Logo />
         </Box>
 

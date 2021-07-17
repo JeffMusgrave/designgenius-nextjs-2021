@@ -1,89 +1,31 @@
-import { SimpleGrid, AspectRatio, Box, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import {
-  FullSection,
+  FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/Fullsection";
+} from "../../styles/designgenius/components/FullSectionComponent";
+import Gallery from "../Gallery";
 
 export default function PortfolioComponent(props) {
+  const { images, ratio, columns, spacing, light, dark, id, heading, outline } =
+    props;
   return (
     <>
-      <FullSection>
+      <FullSectionComponent light={light} dark={dark}>
         <ContentConstrainer>
-          <Heading as="h2" variant="section">
-            Our Work
+          <Heading variant="section" as="h2" size="lg" id={id}>
+            {heading}
           </Heading>
-          <Heading as="h3" variant="body">
-            Digital Design
-          </Heading>
-          <SimpleGrid
-            columns={{ base: "2", sm: "3", md: "4" }}
-            spacing={0}
-            mt={10}
-          >
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.400" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.600" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.500" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.400" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.600" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.500" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.400" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.600" height="80px"></Box>
-            </AspectRatio>
-          </SimpleGrid>
+          <Gallery
+            images={images[0]}
+            thumbs={images[1]}
+            altVals={images[2]}
+            ratio={ratio}
+            columns={columns}
+            spacing={spacing}
+            outline={outline}
+          />
         </ContentConstrainer>
-      </FullSection>
-      <FullSection bg="gray.900">
-        <ContentConstrainer>
-          <Heading as="h3" variant="body">
-            Print Design
-          </Heading>
-          <SimpleGrid
-            columns={{ base: "2", sm: "3", md: "4" }}
-            spacing={0}
-            mt={10}
-          >
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.400" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.600" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.500" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.400" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.600" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.500" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.400" height="80px"></Box>
-            </AspectRatio>
-            <AspectRatio ratio={1 / 1}>
-              <Box bg="gray.600" height="80px"></Box>
-            </AspectRatio>
-          </SimpleGrid>
-        </ContentConstrainer>
-      </FullSection>
+      </FullSectionComponent>
     </>
   );
 }

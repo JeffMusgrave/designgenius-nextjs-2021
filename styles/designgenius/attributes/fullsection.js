@@ -1,6 +1,6 @@
 import { width } from "../stylevars";
 
-const FullSection = {
+const fullsection = {
   // The parts of the component
   parts: ["container", "constrainer"],
   // The base styles for each part
@@ -12,6 +12,7 @@ const FullSection = {
       flexDir: "column",
       _last: { flex: "1 1 auto" },
       py: { base: "2.5rem", sm: "5rem", md: "5rem" },
+
       // border: "1px",
       // borderColor: "white",
     },
@@ -51,6 +52,15 @@ const FullSection = {
     fullNoGrow: {
       container: { _last: { flex: "0 1 auto" } },
     },
+    hero: {
+      container: {
+        overflow: "hidden",
+      },
+      constrainer: {
+        display: "inline-block",
+        color: "white",
+      },
+    },
     constrained: {
       container: {
         bg: "transparent",
@@ -76,4 +86,4 @@ const FullSection = {
   defaultProps: { variant: "" },
 };
 
-export default FullSection;
+export default fullsection;

@@ -1,4 +1,4 @@
-import { HStack, VStack, CloseButton } from "@chakra-ui/react";
+import { HStack, VStack } from "@chakra-ui/react";
 import PageList from "./PageList";
 
 export function NavDesktop() {
@@ -16,7 +16,8 @@ export function NavDesktop() {
   );
 }
 
-export function NavMobile({ mobileNav, bg }) {
+export function NavMobile(props) {
+  const { bg, mobileNav } = props;
   return (
     <VStack
       pos="absolute"
@@ -24,19 +25,14 @@ export function NavMobile({ mobileNav, bg }) {
       left={0}
       right={0}
       display={{ base: mobileNav.isOpen ? "flex" : "none", md: "none" }}
-      flexDirection="column"
-      p={2}
       pb={4}
       m={2}
       bg={bg}
       h="100vh"
-      spacing={3}
-      rounded="sm"
-      shadow="sm"
+      spacing={20}
+      justifyContent="center"
     >
-      <CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
-
-      <PageList />
+      <PageList mobileNav={mobileNav} />
     </VStack>
   );
 }

@@ -1,21 +1,23 @@
-import { Text, Flex, Heading, Box, VStack, Wrap } from "@chakra-ui/react";
+import { Text, Heading, Box, VStack, Stack } from "@chakra-ui/react";
 import {
-  FullSection,
+  FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/Fullsection";
+} from "../../styles/designgenius/components/FullSectionComponent";
 
 export default function AboutComponent(props) {
   return (
-    <FullSection bg="gray.700">
+    <FullSectionComponent light="gray.50" dark="gray.900">
       <ContentConstrainer alignItems="center">
-        <Wrap
+        <Stack
           w={{ base: "100%", md: "60%" }}
           py={{ base: "0", md: "10rem" }}
           spacing="24px"
-          flexDirection={{ base: "column", md: "row" }}
+          direction={{ base: "column", sm: "row" }}
         >
           <VStack flex="2" direction="column" align="stretch">
-            <Heading as="h2">About</Heading>
+            <Heading variant="section" as="h2" id={props.id}>
+              About
+            </Heading>
             <Text fontSize="xl">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               voluptates maiores dolor possimus earum dolorum perferendis odio
@@ -24,9 +26,9 @@ export default function AboutComponent(props) {
             </Text>
           </VStack>
 
-          <Box flex="1" minH="100%" bg="gray.800" />
-        </Wrap>
+          <Box flex="1" minH="clamp(5rem, 20vh, 10rem)" bg="blue.50" />
+        </Stack>
       </ContentConstrainer>
-    </FullSection>
+    </FullSectionComponent>
   );
 }

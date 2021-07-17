@@ -1,35 +1,32 @@
-import { Heading, HStack, VStack, Text } from "@chakra-ui/react";
+import { Heading, Stack, VStack, Text } from "@chakra-ui/react";
 import {
-  FullSection,
+  FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/Fullsection";
+} from "../../styles/designgenius/components/FullSectionComponent";
 import ContactForm from "./ContactForm";
 
 export default function ContactComponent(props) {
   return (
-    <FullSection>
+    <FullSectionComponent light="gray.50" dark="gray.900">
       <ContentConstrainer display="flex">
-        <HStack spacing="5rem" align="stretch" w="100%">
+        <Stack
+          spacing={{ base: "2.5rem", md: "5rem" }}
+          align="stretch"
+          w="100%"
+          direction={{ base: "column", md: "row" }}
+        >
           <VStack align="stretch" flex="3">
-            <Heading as="h2">Let's work together</Heading>
+            <Heading variant="section" as="h2" id={props.id}>
+              Let's work together
+            </Heading>
             <Text>
-              We'd love to hear from you or something. Lorem ipsum dolor sit,
-              amet consectetur adipisicing elit. Sunt omnis voluptates ratione
-              inventore dignissimos? Doloremque quasi culpa eligendi aliquid
-              amet, assumenda alias perspiciatis molestias sint unde dolorum
-              sunt error quo?
-            </Text>
-            <Text>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              officiis nulla quasi sit tempore repellendus saepe, minus corrupti
-              debitis ex ipsam magnam quibusdam voluptate libero eos,
-              necessitatibus laudantium alias optio.
+              Are you ready to take your product or service to the next level?
             </Text>
           </VStack>
 
           <ContactForm flex="4" />
-        </HStack>
+        </Stack>
       </ContentConstrainer>
-    </FullSection>
+    </FullSectionComponent>
   );
 }

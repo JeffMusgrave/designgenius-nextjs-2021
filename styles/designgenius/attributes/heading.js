@@ -1,8 +1,8 @@
 const Heading = {
   variants: {
     section: {
-      fontSize: "3rem",
-      color: "gray.200",
+      scrollMarginTop: "100px",
+      scrollSnapMargin: "100px", // Safari
     },
 
     body: {

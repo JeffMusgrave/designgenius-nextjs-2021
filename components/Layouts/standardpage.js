@@ -3,21 +3,22 @@ import { Heading, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Container from "../Container";
 import {
-  FullSection,
+  FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/Fullsection";
+} from "../../styles/designgenius/components/FullSectionComponent";
 
 export default function StandardPageLayout({ children, frontMatter }) {
   const router = useRouter();
   const slug = router.asPath.replace("/info", "");
+
   return (
     <Container>
       <Head>
-        <title>{slug} - Design Genius</title>
+        <title>{frontMatter.title} - Design Genius</title>
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <FullSection variant="fullNoGrow" bg="gray.700" backgroundSize="cover">
+      <FullSectionComponent variant="fullNoGrow">
         <ContentConstrainer
           display="flex"
           flexDir="column"
@@ -33,7 +34,7 @@ export default function StandardPageLayout({ children, frontMatter }) {
 
           {children}
         </ContentConstrainer>
-      </FullSection>
+      </FullSectionComponent>
     </Container>
   );
 }
