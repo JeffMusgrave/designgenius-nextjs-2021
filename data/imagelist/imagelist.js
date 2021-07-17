@@ -14,12 +14,13 @@ const dpiImageList = {
     title: "arXiv.org",
     alt: "Concept for arXiv.org",
     description:
-      "An exploration of the academic paper respository, arXiv.org, spruced up with modern design conventions.",
+      "How can an academic research website look serious yet stylish? Here is a more visually appealing upgrade I designed for arXiv.org, which is a website devoted to academic research papers.",
   },
   PML: {
     title: "Pytorch Metric Learning",
     alt: "Logo for Pytorch Metric Learning library.",
-    description: "",
+    description:
+      "Even a codebase on Github can be branded with a distinctive logo design. I designed this logo with eyes to suggest artificial intelligence, and with prominent, unequal ears to suggest interconnected datasets.",
   },
   // ReebeeContestSpread: {
   //   title: "reebee Mother's Day Contest Spread",
@@ -29,24 +30,27 @@ const dpiImageList = {
   SmallGraphicsSpread: {
     title: "Pay Per Click Ads",
     alt: "",
-    description: "Pay-per-click ads for Google adwords placements",
+    description:
+      "Here are some ad designs I created for several clients who wanted to advertise with Google AdWords.",
   },
   UniversitySpread: {
     title: "University of Guelph FARE",
     alt: "",
     description:
-      "Custom graphic design and wordpress theme development for University of Guelph FARE department",
+      "For this website, I used images of food and agriculture to visually communicate the focus of research for a professor at the University of Guelph. ",
   },
 
   WhitewaterStyle: {
     title: "Whitewater Ski Resort",
     alt: "",
-    description: "Whitewater redesign concept.",
+    description:
+      "When Whitewater Ski Resort asked for a new website, I created this design, which helped them look more attractive for their customers.",
   },
   WhitePaperSpread: {
     title: "KCM Whitepaper",
     alt: "",
-    description: "Marketing whitepaper for KCM SaaS provider.",
+    description:
+      "How can a designer make a whitepaper look appealing? Here is the approach I used for presenting a marketing whitepaper from KCM.",
   },
 };
 

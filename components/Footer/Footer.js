@@ -8,7 +8,6 @@ export default function FooterComponent(props) {
   return (
     <FullSectionComponent
       variant="fullNoGrow"
-      py="2.5rem"
       light={props.light}
       dark={props.dark}
     >

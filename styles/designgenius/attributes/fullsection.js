@@ -48,7 +48,7 @@ const fullsection = {
   // The variant styles for each part
   variants: {
     fullNoGrow: {
-      container: { _last: { flex: "0 1 auto" } },
+      container: { _last: { flex: "0 1 auto", paddingTop: "0" } },
     },
     hero: {
       container: {

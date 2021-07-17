@@ -70,7 +70,11 @@ export default function HeroComponent(props) {
         position="absolute"
         right="0"
         width={{ base: "12vw", lg: "55vw" }}
-        height="100vh"
+        minH="100vh"
+        height="100%"
+        // backgroundImage="/images/site/bg.jpg"
+        // backgroundSize="cover"
+        // boxShadow="inset 0 0 0 1000px rgba(107, 70, 193,.9);"
       />
     </FullSectionComponent>
   );
