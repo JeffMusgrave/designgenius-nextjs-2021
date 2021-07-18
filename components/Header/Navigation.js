@@ -3,16 +3,14 @@ import PageList from "./PageList";
 
 export function NavDesktop() {
   return (
-    <>
-      <HStack
-        spacing={1}
-        mr={1}
-        color="brand.500"
-        display={{ base: "none", md: "inline-flex" }}
-      >
-        <PageList />
-      </HStack>
-    </>
+    <HStack
+      spacing={1}
+      mr={1}
+      color="brand.500"
+      display={{ base: "none", md: "inline-flex" }}
+    >
+      <PageList />
+    </HStack>
   );
 }
 

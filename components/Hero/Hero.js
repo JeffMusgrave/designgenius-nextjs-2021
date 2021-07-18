@@ -2,41 +2,80 @@ import {
   FullSectionComponent,
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
-import { useColorMode } from "@chakra-ui/react";
+import { Box, GridItem, Image, useColorMode } from "@chakra-ui/react";
 import HeroElements from "./HeroElements";
+import useWindowSize from "../../lib/useWindowSize";
 
-export default function HeroComponent({
-  bgImage,
-  bgSize = "cover",
-  bgGradient,
-  bgColor,
-  children,
-}) {
+export default function HeroComponent(props) {
+  const size = useWindowSize();
+  const pad = Math.max(0, (30 * (1000 - size.height)) / 1000);
   const { colorMode } = useColorMode();
+  // const winH = size && size.height > 1000;
+  // const winW = size && size.width > 350;
+
   return (
     <FullSectionComponent
-      variant="hero"
-      minH={{ base: "10rem", sm: "20rem", md: "30rem", lg: "45rem" }}
-      light="gray.200"
-      dark="gray.900"
-      bgImage={`url(${bgImage})`}
-      bgGradient={bgGradient}
-      bgSize={bgSize}
-      bgColor={bgColor}
-      pt="0"
-      bgColor={colorMode === "dark" ? `#FE5C41` : "white"}
-      bgGradient={
-        colorMode === "light"
-          ? `background-size: 100% 100%;
-      background-position: 0px 0px,0px 0px,0px 0px;
-      background-image: radial-gradient(40% 40% at 2% 97%, #576ED2 0%, #FFFFFF00 100%), radial-gradient(60% 60% at 97% 12%, #5E2A9F 0%, #FFFFFF00 100%), linear-gradient(125deg, #2B3EC9 1%, #5825B2 55%);`
-          : " "
-      }
+      variant="heroFull"
+      bgColor={colorMode === "dark" ? "salmon.500" : "#A6FFFA"}
+      {...props}
+      minH={{ md: "35rem" }}
     >
-      <ContentConstrainer mt="7.5rem" position="relative">
-        <HeroElements />
-        {children}
+      <ContentConstrainer>
+        <GridItem
+          display="grid"
+          alignContent="center"
+          justifyContent={{ base: "flex-end", lg: "flex-start" }}
+          rowStart="1"
+          rowEnd="8"
+          colStart="1"
+          colEnd="2"
+          {...props}
+        >
+          <Box
+            id="LIGHT"
+            h="clamp(10rem, 100vh, 70rem)"
+            minW={{ base: "20rem", sm: "30rem", lg: "70rem" }}
+            display="flex"
+            justifyContent={{ base: "flex-end", lg: "flex-start" }}
+            pl={{ base: "auto", lg: `${pad}rem` }}
+            mr={{ base: "-30vw", sm: "auto" }}
+          >
+            <Image
+              alignItems="center"
+              mixBlendMode={colorMode === "dark" && "soft-light"}
+              opacity={colorMode === "dark" ? "1" : "0.25"}
+              src="/images/site/BlueLightBulb.svg"
+            />
+          </Box>
+        </GridItem>
+
+        <GridItem
+          zIndex="3"
+          size={size}
+          rowStart={{ base: "2", lg: "4" }}
+          rowEnd={{ base: "7", lg: "6" }}
+          colStart="1"
+          colEnd="2"
+          alignSelf={{ base: "center", lg: "flex-end", xl: "flex-start" }}
+          w="inherit"
+          {...props}
+        >
+          <HeroElements />
+          {props.children}
+        </GridItem>
       </ContentConstrainer>
+      <Box
+        display={{ base: "none", sm: "inline-block" }}
+        bgColor={colorMode === "dark" ? "prince.500" : "#C8FE41"}
+        position="absolute"
+        right="0"
+        width={{ base: "12vw", lg: "55vw" }}
+        minH="100vh"
+        height="100%"
+        // backgroundImage="/images/site/bg.jpg"
+        // backgroundSize="cover"
+        // boxShadow="inset 0 0 0 1000px rgba(107, 70, 193,.9);"
+      />
     </FullSectionComponent>
   );
 }

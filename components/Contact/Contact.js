@@ -1,4 +1,4 @@
-import { Heading, Stack, VStack, Text } from "@chakra-ui/react";
+import { Heading, VStack, Text, Image } from "@chakra-ui/react";
 import {
   FullSectionComponent,
   ContentConstrainer,
@@ -6,26 +6,31 @@ import {
 import ContactForm from "./ContactForm";
 
 export default function ContactComponent(props) {
+  const { light, dark, id, descHeadingColor } = props;
   return (
-    <FullSectionComponent light="gray.50" dark="gray.900">
-      <ContentConstrainer display="flex">
-        <Stack
-          spacing={{ base: "2.5rem", md: "5rem" }}
+    <FullSectionComponent light={light} dark={dark}>
+      <ContentConstrainer display="flex" alignItems="center">
+        <VStack
           align="stretch"
-          w="100%"
-          direction={{ base: "column", md: "row" }}
+          width={{ base: "100%", md: "clamp(25rem, 40vw, 40rem)" }}
+          pt={{ base: "0", md: "10rem" }}
         >
-          <VStack align="stretch" flex="3">
-            <Heading variant="section" as="h2" id={props.id}>
-              Let's work together
-            </Heading>
-            <Text>
-              Are you ready to take your product or service to the next level?
-            </Text>
-          </VStack>
-
-          <ContactForm flex="4" />
-        </Stack>
+          <Heading
+            variant="section"
+            as="h2"
+            fontSize="32pt"
+            mb="1rem"
+            id={id}
+            textAlign="center"
+            color={descHeadingColor}
+          >
+            Let's work together
+          </Heading>
+          <Text pb="5rem" fontSize="xl" textAlign="center">
+            Like what you see? Get in touch!
+          </Text>
+          <ContactForm />
+        </VStack>
       </ContentConstrainer>
     </FullSectionComponent>
   );

@@ -22,7 +22,6 @@ export function FullSectionComponent(props) {
       __css={styles.container}
       bg={bgColor[colorMode]}
       {...rest}
-      className="SECTION"
     >
       <StylesProvider value={styles}>{children}</StylesProvider>
     </Box>
@@ -30,5 +29,5 @@ export function FullSectionComponent(props) {
 }
 export function ContentConstrainer(props) {
   const styles = useStyles();
-  return <Flex className="" __css={styles.constrainer} {...props} />;
+  return <Flex __css={styles.constrainer} {...props} />;
 }
