@@ -82,7 +82,7 @@ export default function ContactForm(props) {
           <FormControl isInvalid={errors.message}>
             <FormLabel htmlFor="mail">Message</FormLabel>
             <Textarea
-              placeholder="Here is a sample placeholder"
+              placeholder="Please type your message here."
               size="sm"
               {...register("message", {
                 required: "This is required",
@@ -99,7 +99,7 @@ export default function ContactForm(props) {
           <Button py={6} mt={6} isLoading={isSubmitting} type="submit">
             Submit
           </Button>
-          {!!thanks &&
+          {!thanks &&
             toast({
               title: "Email Sent!",
               description: "Your email has been sent! Thank you!",

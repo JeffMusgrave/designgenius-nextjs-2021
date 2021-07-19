@@ -19,12 +19,6 @@ export default function HeroElements() {
         >
           Make a great first impression.
         </Text>
-        <Text
-          fontSize={{ base: "xl", md: "3xl" }}
-          lineHeight={{ base: 6, md: 8 }}
-        >
-          Reach your customers and close the sale.
-        </Text>
       </Flex>
       <Spacer />
       <BigPillButton href="#design">Take A Look!</BigPillButton>
