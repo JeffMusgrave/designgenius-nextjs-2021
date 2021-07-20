@@ -1,17 +1,14 @@
-// import { useState, useEffect } from "react";
-import NavButton from "./NavButton";
-import { useRouter } from "next/router";
+import { Button } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function PageList(props) {
-  const { asPath } = useRouter();
-
-  const pathCheck = asPath === "/";
   const { mobileNav } = props;
-  // const [prefix, setPrefix] = useState("/");
 
-  // useEffect(() => {
-  //   setPrefix(pathCheck ? "/" : "");
-  // });
+  const MobileDetect = (e) => {
+    if (mobileNav) {
+      mobileNav.onClose(e);
+    }
+  };
 
   const pathList = {
     "#design": "Design",
@@ -22,14 +19,24 @@ export default function PageList(props) {
   return (
     <>
       {Object.keys(pathList).map((e, idx) => (
-        <NavButton
-          link={`${pathCheck ? "/" : ""}${e}`}
-          mobileNav={mobileNav}
-          pathCheck={pathCheck}
-          key={`${e}`}
+        <Link
+          href={`/${e}`}
+          shallow={true}
+          key={`${pathList[e]}+${idx}`}
+          passHref
         >
-          {pathList[e]}
-        </NavButton>
+          <Button
+            as="a"
+            w={{ base: "full", md: "auto" }}
+            variant="ghost"
+            navigation="true"
+            size="lg"
+            fontSize={{ base: "4xl", md: "md" }}
+            onClick={MobileDetect}
+          >
+            {pathList[e]}
+          </Button>
+        </Link>
       ))}
     </>
   );
