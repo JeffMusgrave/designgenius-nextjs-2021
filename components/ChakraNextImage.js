@@ -1,45 +1,43 @@
 import { AspectRatio, Box } from "@chakra-ui/react";
 import Image from "next/image";
 
-export default function ChakraNextImage(props) {
+function Img(props) {
   const {
     src,
     alt,
-    ratio,
-    constrain = true,
     imgWidth = null,
     imgHeight = null,
     objectFit = "cover",
-    borderRadius = "xl",
-    ...rest
   } = props;
 
-  function Img() {
-    const regex = /(\.svg)/gm;
-    return (
-      <Image
-        layout={!imgWidth && "fill"}
-        objectFit={objectFit}
-        width={imgWidth}
-        height={imgHeight}
-        src={src}
-        alt={alt}
-        srl_gallery_image="true"
-        placeholder={!regex.test(src) && "blur"}
-      />
-    );
-  }
+  const regex = /(\.svg)/gm;
+  return (
+    <Image
+      layout={!imgWidth && "fill"}
+      objectFit={objectFit}
+      width={imgWidth}
+      height={imgHeight}
+      src={src}
+      alt={alt}
+      srl_gallery_image="true"
+      placeholder={!regex.test(src) && "blur"}
+    />
+  );
+}
+
+export default function ChakraNextImage(props) {
+  const { ratio, constrain = true, ...rest } = props;
 
   if (constrain) {
     return (
       <AspectRatio ratio={ratio} overflow="hidden">
-        <Img />
+        <Img {...props} />
       </AspectRatio>
     );
   } else {
     return (
       <Box {...rest} overflow="hidden">
-        <Img />
+        <Img {...props} />
       </Box>
     );
   }

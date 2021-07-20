@@ -20,7 +20,7 @@ export default function PageList(props) {
     <>
       {Object.keys(pathList).map((e, idx) => (
         <Link
-          href={`/${e}`}
+          href={`${e}`}
           shallow={true}
           key={`${pathList[e]}+${idx}`}
           passHref
