@@ -99,7 +99,7 @@ export default function ContactForm(props) {
           <Button py={6} mt={6} isLoading={isSubmitting} type="submit">
             Submit
           </Button>
-          {!thanks &&
+          {!!thanks &&
             toast({
               title: "Email Sent!",
               description: "Your email has been sent! Thank you!",
