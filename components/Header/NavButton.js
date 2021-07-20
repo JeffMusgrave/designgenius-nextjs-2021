@@ -15,7 +15,7 @@ export default function NavButton(props) {
       <Button
         w={{ base: "full", md: "auto" }}
         variant="ghost"
-        // navigation="true"
+        navigation="true"
         size="lg"
         fontSize={{ base: "4xl", md: "md" }}
         onClick={MobileDetect}
