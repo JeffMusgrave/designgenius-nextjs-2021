@@ -29,7 +29,11 @@ export default function NavButton(props) {
 function PathSwitch(props) {
   const { link, pathCheck, children } = props;
   if (!pathCheck) {
-    return <Link href={link}>{children}</Link>;
+    return (
+      <Link href={link} shallow={true}>
+        {children}
+      </Link>
+    );
   } else {
     return <a href={link}>{children}</a>;
   }

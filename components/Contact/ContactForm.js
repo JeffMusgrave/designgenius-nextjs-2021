@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import {
@@ -22,11 +21,6 @@ export default function ContactForm(props) {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const [thanks, setThanks] = useState(false);
-  const thanksMsg = () => {
-    setThanks(!thanks);
-  };
-
   const onSubmit = (data, e) => {
     axios({
       method: "POST",
@@ -35,7 +29,15 @@ export default function ContactForm(props) {
     });
 
     e.target.reset();
-    thanksMsg();
+
+    toast({
+      position: "bottom",
+      title: "Email Sent!",
+      description: "Your email has been sent! Thank you!",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
   };
 
   return (
@@ -82,7 +84,7 @@ export default function ContactForm(props) {
           <FormControl isInvalid={errors.message}>
             <FormLabel htmlFor="mail">Message</FormLabel>
             <Textarea
-              placeholder="Here is a sample placeholder"
+              placeholder="Please type your message here."
               size="sm"
               {...register("message", {
                 required: "This is required",
@@ -99,14 +101,6 @@ export default function ContactForm(props) {
           <Button py={6} mt={6} isLoading={isSubmitting} type="submit">
             Submit
           </Button>
-          {!!thanks &&
-            toast({
-              title: "Email Sent!",
-              description: "Your email has been sent! Thank you!",
-              status: "success",
-              duration: 9000,
-              isClosable: true,
-            })}
         </VStack>
       </chakra.form>
     </Box>
