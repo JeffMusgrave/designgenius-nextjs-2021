@@ -50,6 +50,14 @@ const fullsection = {
     fullNoGrow: {
       container: { _last: { flex: "0 1 auto", paddingTop: "0" } },
     },
+    postPage: {
+      container: {
+        _last: { flex: "0 1 auto", paddingTop: "0" },
+      },
+      constrainer: {
+        paddingTop: { base: "8rem", md: "14rem" },
+      },
+    },
     hero: {
       container: {
         overflow: "hidden",

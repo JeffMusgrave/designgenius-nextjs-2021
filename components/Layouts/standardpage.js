@@ -18,12 +18,11 @@ export default function StandardPageLayout({ children, frontMatter }) {
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <FullSectionComponent variant="fullNoGrow">
+      <FullSectionComponent variant="postPage">
         <ContentConstrainer
           display="flex"
           flexDir="column"
           justifyContent="flex-end"
-          mt="7.5rem"
         >
           <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
             {frontMatter.title}
