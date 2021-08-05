@@ -10,11 +10,17 @@ async function imageImporter(path, imageList, altVals) {
 
 const dpiPath = "public/images/portfolio/digitalprint/";
 const dpiImageList = {
+  WhitewaterStyle: {
+    title: "Whitewater Ski Resort",
+    alt: "",
+    description:
+      "When Whitewater Ski Resort asked for a new website, I created this design, which helped them look more exciting and sophisticated.",
+  },
   arXivConcept: {
     title: "arXiv.org",
     alt: "Concept for arXiv.org",
     description:
-      "How can an academic research website look serious yet stylish? Here is a more visually appealing upgrade I designed for arXiv.org, which is a website devoted to academic research papers.",
+      "How can an academic research website look serious yet stylish? Consider arXiv.org, for example. Here is how I would redesign the site to look more visually appealing, while retaining enough of the original to be recognizable.",
   },
   PML: {
     title: "Pytorch Metric Learning",
@@ -39,18 +45,11 @@ const dpiImageList = {
     description:
       "For this website, I used images of food and agriculture to visually communicate the focus of research for a professor at the University of Guelph. ",
   },
-
-  WhitewaterStyle: {
-    title: "Whitewater Ski Resort",
-    alt: "",
-    description:
-      "When Whitewater Ski Resort asked for a new website, I created this design, which helped them look more attractive for their customers.",
-  },
   WhitePaperSpread: {
     title: "KCM Whitepaper",
     alt: "",
     description:
-      "How can a designer make a whitepaper look appealing? Here is the approach I used for presenting a marketing whitepaper from KCM.",
+      "How can a designer make a whitepaper look appealing? Here is an attractive design I created for a marketing whitepaper from KCM.",
   },
 };
 
