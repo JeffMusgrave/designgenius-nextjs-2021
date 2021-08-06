@@ -4,24 +4,6 @@ import ImageWithDescription from "./ImageDesc";
 import { VStack } from "@chakra-ui/react";
 
 export default function GalleryComponent(props) {
-  // const options = {
-  //   settings: {
-  //     overlayColor: "rgba(30, 30, 30, 1)",
-  //   },
-  //   buttons: {
-  //     showDownloadButton: false,
-  //     showAutoplayButton: false,
-  //     showThumbnailsButton: false,
-  //   },
-
-  //   thumbnails: {
-  //     showThumbnails: false,
-  //   },
-  //   caption: {
-  //     showCaption: false,
-  //   },
-  // };
-
   const normLayout = props.layout !== "single";
   return (
     <VStack
