@@ -27,7 +27,7 @@ export default function ContactComponent(props) {
             Let's work together
           </Heading>
           <Text pb="5rem" fontSize="xl" textAlign="center">
-            Like what you see? Get in touch!
+            Contact me to learn more.
           </Text>
           <ContactForm />
         </VStack>

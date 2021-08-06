@@ -9,6 +9,7 @@ export default function HeroElements() {
           fontSize={["34pt", "50pt", "clamp(60pt,  3.5vw, 80pt)"]}
           mb="2.5rem"
           lineHeight="1em"
+          fontWeight="300"
         >
           Inspired Design
         </Heading>
