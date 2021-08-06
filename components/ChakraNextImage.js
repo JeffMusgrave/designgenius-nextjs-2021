@@ -21,7 +21,7 @@ function Img(props) {
       alt={alt}
       srl_gallery_image="true"
       loading="eager"
-      placeholder={!regex.test(src) && "blur"}
+      // placeholder={!regex.test(src) && "blur"}
     />
   );
 }
