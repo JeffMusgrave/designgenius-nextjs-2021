@@ -17,7 +17,10 @@ export default function FooterComponent(props) {
             src="/images/site/YellowLightBulb.svg"
             w="clamp(10rem, 20vw, 40rem)"
           />
-          <Text fontSize="sm">Created by Design Genius. &copy; 2021</Text>
+          <Text fontSize="sm">
+            Created by <a href="https://www.jeffmusgrave.com/">Jeff Musgrave</a>
+            &copy; 2021
+          </Text>
         </Flex>
       </ContentConstrainer>
     </FullSectionComponent>

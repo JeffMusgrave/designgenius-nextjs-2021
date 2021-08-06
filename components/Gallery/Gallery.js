@@ -5,6 +5,9 @@ import { VStack } from "@chakra-ui/react";
 
 export default function GalleryComponent(props) {
   const options = {
+    settings: {
+      overlayColor: "rgba(30, 30, 30, 1)",
+    },
     buttons: {
       showDownloadButton: false,
       showAutoplayButton: false,
@@ -13,6 +16,9 @@ export default function GalleryComponent(props) {
 
     thumbnails: {
       showThumbnails: false,
+    },
+    caption: {
+      showCaption: false,
     },
   };
 

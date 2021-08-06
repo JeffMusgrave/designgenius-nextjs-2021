@@ -30,6 +30,7 @@ export default function BigPillButton(props) {
           fontSize={{ base: "xl", md: "3xl", lg: "4xl" }}
           as="h2"
           color="white"
+          fontWeight="300"
         >
           {props.children}
         </Heading>
