@@ -20,7 +20,8 @@ function Img(props) {
       src={src}
       alt={alt}
       srl_gallery_image="true"
-      placeholder={!regex.test(src) && "blur"}
+      loading="eager"
+      // placeholder={!regex.test(src) && "blur"}
     />
   );
 }

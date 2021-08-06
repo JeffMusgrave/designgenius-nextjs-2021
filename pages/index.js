@@ -6,11 +6,14 @@ import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import { DPI, AA } from "../data/imagelist/imagelist";
 import colors from "../styles/designgenius/attributes/colors";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox-pro";
+import GalleryWrapper from "../components/GalleryWrapper";
 
 const { prince, salmon, punch, glacier } = colors;
 
 export default function Home() {
   const { colorMode } = useColorMode();
+
   return (
     <Container hero={<Hero />}>
       <Head>
@@ -18,41 +21,43 @@ export default function Home() {
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Portfolio
-        id="design"
-        galleryType="description"
-        images={DPI}
-        ratio={{ base: 21 / 9, md: 16 / 9 }}
-        columns={{ base: "1", sm: "2", md: "2" }}
-        light={["white", "black"]}
-        dark="#150833"
-        borderRadius={{ base: "1rem", md: "2.5rem" }}
-        layout="single"
-        descHeadingColor={colorMode === "dark" ? "#9769FF" : "#4C823D"}
-        // secHeadingColor={colorMode === "light" && "#00A9A5"}
-        borderWidthVar="2rem"
-        borderColorVar={
-          colorMode === "light"
-            ? ["white", "#A6FFFA"]
-            : ["#25144D", salmon[500]]
-        }
-      />
-      <Portfolio
-        id="albumart"
-        heading={"Album Art"}
-        images={AA}
-        ratio={1}
-        columns={{ base: "2", sm: "3", md: "3" }}
-        light="#C8FE41"
-        dark="salmon.500"
-        spacing={{ base: "1.5rem", sm: "2rem", md: "8rem" }}
-        borderWidthVar="1.75rem"
-        borderColorVar={
-          colorMode === "light"
-            ? [prince[500], "#A6FFFA"]
-            : [salmon[300], prince[500]]
-        }
-      />
+      <GalleryWrapper>
+        <Portfolio
+          id="design"
+          galleryType="description"
+          images={DPI}
+          ratio={{ base: 21 / 9, md: 16 / 9 }}
+          columns={{ base: "1", sm: "2", md: "2" }}
+          light={["white", "black"]}
+          dark="#150833"
+          borderRadius={{ base: "1rem", md: "2.5rem" }}
+          layout="single"
+          descHeadingColor={colorMode === "dark" ? "#9769FF" : "#4C823D"}
+          // secHeadingColor={colorMode === "light" && "#00A9A5"}
+          borderWidthVar="2rem"
+          borderColorVar={
+            colorMode === "light"
+              ? ["white", "#A6FFFA"]
+              : ["#25144D", salmon[500]]
+          }
+        />
+        <Portfolio
+          id="albumart"
+          heading={"Album Art"}
+          images={AA}
+          ratio={1}
+          columns={{ base: "2", sm: "3", md: "3" }}
+          light="#C8FE41"
+          dark="salmon.500"
+          spacing={{ base: "1.5rem", sm: "2rem", md: "8rem" }}
+          borderWidthVar="1.75rem"
+          borderColorVar={
+            colorMode === "light"
+              ? [prince[500], "#A6FFFA"]
+              : [salmon[300], prince[500]]
+          }
+        />
+      </GalleryWrapper>
       <Contact
         id="contact"
         light="white"
