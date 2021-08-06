@@ -1,5 +1,5 @@
 const title = "Design Genius";
-const description = "Design for web and print.";
+const description = "Inspired Design: Make a great first impression.";
 
 export default {
   title,
