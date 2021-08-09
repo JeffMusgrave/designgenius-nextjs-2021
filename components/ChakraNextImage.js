@@ -10,6 +10,8 @@ function Img(props) {
     objectFit = "cover",
   } = props;
 
+  // console.log(src.alt);
+
   const regex = /(\.svg)/gm;
   return (
     <Image

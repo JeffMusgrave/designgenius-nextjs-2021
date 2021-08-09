@@ -4,10 +4,10 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
-import { DPI, AA } from "../data/imagelist/imagelist";
+import { DPI, AA, VID } from "../data/imagelist/imagelist";
 import colors from "../styles/designgenius/attributes/colors";
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox-pro";
 import GalleryWrapper from "../components/GalleryWrapper";
+import About from "../components/About";
 
 const { prince, salmon, punch, glacier } = colors;
 
@@ -22,6 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GalleryWrapper>
+        <About light="#C8FE41" dark="punch.500" />
         <Portfolio
           id="design"
           galleryType="description"
@@ -57,13 +58,26 @@ export default function Home() {
               : [salmon[300], prince[500]]
           }
         />
+        <Portfolio
+          id="video"
+          galleryType="description"
+          images={VID}
+          ratio={{ base: 21 / 9, md: 16 / 9 }}
+          columns={{ base: "1", sm: "2", md: "2" }}
+          light={["white", "black"]}
+          dark="#150833"
+          borderRadius={{ base: "1rem", md: "2.5rem" }}
+          layout="single"
+          descHeadingColor={colorMode === "dark" ? "#9769FF" : "#4C823D"}
+          // secHeadingColor={colorMode === "light" && "#00A9A5"}
+          borderWidthVar="2rem"
+          borderColorVar={
+            colorMode === "light"
+              ? ["white", "#A6FFFA"]
+              : ["#25144D", salmon[500]]
+          }
+        />
       </GalleryWrapper>
-      <Contact
-        id="contact"
-        light="white"
-        dark="#0D0128"
-        descHeadingColor={colorMode === "dark" && "#9769FF"}
-      />
     </Container>
   );
 }

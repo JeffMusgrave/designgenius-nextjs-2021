@@ -66,7 +66,8 @@ export default function HeroComponent(props) {
       </ContentConstrainer>
       <Box
         display={{ base: "none", sm: "inline-block" }}
-        bgColor={colorMode === "dark" ? "prince.500" : "#C8FE41"}
+        // bgColor={colorMode === "dark" ? "prince.500" : "#C8FE41"}
+        background="linear-gradient(90deg, rgba(67,30,153,1) 0%, rgba(107,70,193,1) 50%);"
         position="absolute"
         right="0"
         width={{ base: "12vw", lg: "55vw" }}

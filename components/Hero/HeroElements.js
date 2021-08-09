@@ -18,7 +18,8 @@ export default function HeroElements() {
           fontSize={{ base: "xl", md: "3xl" }}
           lineHeight={{ base: 6, md: 8 }}
         >
-          Make a great first impression.
+          Visually appealing and easy to use designs that showcase your products
+          and services.
         </Text>
       </Flex>
       <Spacer />
