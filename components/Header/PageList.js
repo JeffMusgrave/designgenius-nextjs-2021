@@ -11,8 +11,10 @@ export default function PageList(props) {
   };
 
   const pathList = {
+    "#youredge": "Your Edge",
     "#design": "Design",
     "#albumart": "Album Art",
+    // "#video": "Video",
     "#contact": "Contact",
   };
 
@@ -33,6 +35,7 @@ export default function PageList(props) {
             size="lg"
             fontSize={{ base: "4xl", md: "md" }}
             onClick={MobileDetect}
+            letterSpacing="tight"
           >
             {pathList[e]}
           </Button>

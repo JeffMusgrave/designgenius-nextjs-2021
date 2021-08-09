@@ -12,10 +12,15 @@ export default function ChakraImage({
   borderColorVar = null,
   transformVar = null,
 }) {
+  const regex = /(youtube)/gm;
   return (
     <>
       <chakra.a
         href={e.default.src}
+        srl_video_thumbnail={thumbs[idx]}
+        srl_video_loop="true"
+        srl_video_scale="80"
+        srl_video_caption="youtube video"
         display="block"
         cursor="pointer"
         overflow="hidden"
@@ -40,11 +45,24 @@ export default function ChakraImage({
             `0 0 0 ${borderWidthVar} ${borderColorVar[0]}`,
         }}
       >
-        <ChakraNextImage
-          src={thumbs[idx]}
-          alt={altVals[idx].alt}
-          ratio={ratio}
-        />
+        {/* temporary fix to get videos to load */}
+        {regex.test(e.default.src) ? (
+          <img
+            src={thumbs[idx].default.src}
+            width="100%"
+            style={{
+              aspectRatio: "16 / 9",
+              objectFit: "cover",
+              layout: "fill",
+            }}
+          />
+        ) : (
+          <ChakraNextImage
+            src={thumbs[idx].default.src}
+            alt={altVals[idx].alt}
+            ratio={ratio}
+          />
+        )}
       </chakra.a>
     </>
   );

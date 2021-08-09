@@ -28,6 +28,8 @@ function LayoutSwitch(props) {
     secHeadingColor = null,
     layout = null,
     children,
+    backgroundColor,
+    backgroundImage,
   } = props;
 
   switch (layout) {
@@ -37,6 +39,8 @@ function LayoutSwitch(props) {
           <FullSectionComponent
             light={light}
             dark={dark}
+            backgroundColor={backgroundColor}
+            backgroundImage={backgroundImage}
             pb="0"
             pt={{ base: !heading && "0rem", md: "5rem" }}
           >
@@ -63,7 +67,12 @@ function LayoutSwitch(props) {
 
     default:
       return (
-        <FullSectionComponent light={light} dark={dark}>
+        <FullSectionComponent
+          light={light}
+          dark={dark}
+          backgroundColor={backgroundColor}
+          backgroundImage={backgroundImage}
+        >
           <ContentConstrainer>
             {heading && (
               <Heading variant="section" id={id} as="h2" size="3xl">

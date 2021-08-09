@@ -8,6 +8,16 @@ async function imageImporter(path, imageList, altVals) {
   ]);
 }
 
+async function videoImporter(path, imageList, altVals) {
+  return await Promise.all([
+    imageList.map((e, idx) => altVals[idx]),
+    await Promise.all(
+      imageList.map((e) => import(`../../${path}thumbs/${e}_200.jpg`))
+    ),
+    altVals,
+  ]);
+}
+
 const dpiPath = "public/images/portfolio/digitalprint/";
 const dpiImageList = {
   WhitewaterStyle: {
@@ -119,4 +129,38 @@ export const AA = await imageImporter(
   aaPath,
   Object.keys(aaImageList),
   Object.values(aaImageList)
+);
+
+const vidPath = "public/images/portfolio/video/";
+const vidImageList = {
+  MachineLearning: {
+    title: "Machine Learning Video Effects Production",
+    default: {
+      src: "https://www.youtube.com/watch?v=oRcMz-f1wv0",
+    },
+    alt: "",
+    description:
+      "Here is a reel of some live action videos I shot and edited. After shooting the videos, I employed specialized machine learning technology to create an animated, “rotoscoped” appearance. This customized “style transfer” technique gives these videos a surreal and painterly look.",
+  },
+  MacroVideo: {
+    title: "Macro Video",
+    default: { src: "https://www.youtube.com/watch?v=IYqJrWVOYAo" },
+    alt: "",
+    description:
+      "This series of abstract, nebula-esque visuals were created by filming close up shots of various paints on oil. To enhance the colors, custom LUTs were created in Adobe Photoshop and fine tuned in Adobe Premiere.",
+  },
+
+  Claymation: {
+    title: "Stop Motion Animation",
+    default: { src: "https://www.youtube.com/watch?v=BI3r2FiCMCQ" },
+    alt: "",
+    description:
+      "This “claymation” animated video was created with plasticine, wire, and a technique known as “stop motion”. This involved photographing small changes in the characters and sets, one frame at a time. After taking thousands of photos like this, I sequenced, edited, and color graded the footage to create a fluid video.",
+  },
+};
+
+export const VID = await videoImporter(
+  vidPath,
+  Object.keys(vidImageList),
+  Object.values(vidImageList)
 );

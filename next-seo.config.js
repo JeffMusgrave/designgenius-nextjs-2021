@@ -1,5 +1,6 @@
 const title = "Design Genius";
-const description = "Inspired Design: Make a great first impression.";
+const description =
+  "A professionally designed brochure, business card, logo, and website can attract customers and add profit to your bottom line. I can help you with that. Contact me now for a free consultation.";
 
 export default {
   title,

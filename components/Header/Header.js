@@ -17,7 +17,7 @@ export default function HeaderComponent(props) {
   const { colorMode } = useColorMode();
   const bgColor = {
     light: "#A6FFEA",
-    dark: "salmon.500",
+    dark: "prince.900",
   };
   const mobileNav = useDisclosure();
   const widthSize = bigHero === true ? "100%" : width;
