@@ -1,7 +1,7 @@
 import { Heading, Box, useColorModeValue, DarkMode } from "@chakra-ui/react";
 import NextLink from "next/link";
 export default function BigPillButton(props) {
-  const bgColor = useColorModeValue("prince.900", "prince.300");
+  const bgColor = useColorModeValue("prince.900", "prince.500");
   return (
     <NextLink href={props.href}>
       <Box
