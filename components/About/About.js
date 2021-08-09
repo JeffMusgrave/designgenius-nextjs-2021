@@ -1,4 +1,4 @@
-import { Text, Heading, Box, VStack, Stack, Image } from "@chakra-ui/react";
+import { Text, Heading, VStack, Link } from "@chakra-ui/react";
 import {
   FullSectionComponent,
   ContentConstrainer,
@@ -32,9 +32,12 @@ export default function AboutComponent(props) {
             remember and trust.
           </Text>
           <Text fontSize="2xl">
-            <a href="#contact">Contact me</a> now for a free consultation. I
-            will help you make a great first impression, so that you can attract
-            customers, grow your sales, and increase your profits.
+            <Link fontWeight="900" href="#contact">
+              Contact me
+            </Link>{" "}
+            now for a free consultation. I will help you make a great first
+            impression, so that you can attract customers, grow your sales, and
+            increase your profits.
           </Text>
         </VStack>
       </ContentConstrainer>
