@@ -2,7 +2,7 @@ import {
   FullSectionComponent,
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
-import { Flex, Text, Image, useColorMode } from "@chakra-ui/react";
+import { Flex, Text, Image, Link, useColorMode } from "@chakra-ui/react";
 import Contact from "../Contact";
 
 export default function FooterComponent(props) {
@@ -28,8 +28,14 @@ export default function FooterComponent(props) {
             />
             <Text fontSize="sm">
               Created by{" "}
-              <a href="https://www.jeffmusgrave.com/">Jeff Musgrave</a> &copy;
-              2021
+              <Link
+                color="punch.500"
+                fontWeight="bold"
+                href="https://www.jeffmusgrave.com/"
+              >
+                Jeff Musgrave
+              </Link>{" "}
+              &copy; 2021
             </Text>
           </Flex>
         </ContentConstrainer>

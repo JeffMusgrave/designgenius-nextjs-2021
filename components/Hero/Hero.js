@@ -17,6 +17,9 @@ export default function HeroComponent(props) {
     <FullSectionComponent
       variant="heroFull"
       bgColor={colorMode === "dark" ? "salmon.500" : "#A6FFFA"}
+      // backgroundSize="100% 100%"
+      // backgroundPosition="0px 0px,0px 0px"
+      // backgroundImage="linear-gradient(179deg, #FE5C41FF 49%, #febc41 100%)"
       {...props}
       minH={{ md: "35rem" }}
     >
@@ -42,9 +45,10 @@ export default function HeroComponent(props) {
           >
             <Image
               alignItems="center"
-              mixBlendMode={colorMode === "dark" && "soft-light"}
+              mixBlendMode={colorMode === "dark" && "overlay"}
               opacity={colorMode === "dark" ? "1" : "0.25"}
               src="/images/site/BlueLightBulb.svg"
+              dropShadow="lg"
             />
           </Box>
         </GridItem>
@@ -67,12 +71,19 @@ export default function HeroComponent(props) {
       <Box
         display={{ base: "none", sm: "inline-block" }}
         // bgColor={colorMode === "dark" ? "prince.500" : "#C8FE41"}
-        background="linear-gradient(90deg, rgba(67,30,153,1) 0%, rgba(107,70,193,1) 50%);"
+        background={{
+          md: "rgba(107,70,193,1)",
+          lg: "linear-gradient(90deg, rgba(67,30,153,1) 0%, rgba(107,70,193,1) 50%);",
+        }}
         position="absolute"
         right="0"
         width={{ base: "12vw", lg: "55vw" }}
         minH="100vh"
         height="100%"
+        boxShadow={{
+          md: "none",
+          lg: "inset 3px 0 5px #19044b, inset 3px 0 20px #240a5f, inset 3px 0 50px #290877, inset 3px 0 100px #37128f",
+        }}
         // backgroundImage="/images/site/bg.jpg"
         // backgroundSize="cover"
         // boxShadow="inset 0 0 0 1000px rgba(107, 70, 193,.9);"

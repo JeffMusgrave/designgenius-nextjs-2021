@@ -14,7 +14,7 @@ export default function PageList(props) {
     "#youredge": "Your Edge",
     "#design": "Design",
     "#albumart": "Album Art",
-    "#video": "Video",
+    // "#video": "Video",
     "#contact": "Contact",
   };
 

@@ -58,7 +58,7 @@ export default function Home() {
               : [salmon[300], prince[500]]
           }
         />
-        <Portfolio
+        {/* <Portfolio
           id="video"
           galleryType="description"
           images={VID}
@@ -76,7 +76,7 @@ export default function Home() {
               ? ["white", "#A6FFFA"]
               : ["#25144D", salmon[500]]
           }
-        />
+        /> */}
       </GalleryWrapper>
     </Container>
   );
