@@ -16,7 +16,7 @@ export default function HeroComponent(props) {
   return (
     <FullSectionComponent
       variant="heroFull"
-      bgColor={colorMode === "dark" ? "salmon.500" : "#A6FFFA"}
+      bgColor={colorMode === "dark" ? "sunny.500" : "#A6FFFA"}
       // backgroundSize="100% 100%"
       // backgroundPosition="0px 0px,0px 0px"
       // backgroundImage="linear-gradient(179deg, #FE5C41FF 49%, #febc41 100%)"

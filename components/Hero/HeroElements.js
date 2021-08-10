@@ -17,6 +17,8 @@ export default function HeroElements() {
           marginBottom="1rem"
           fontSize={{ base: "xl", md: "3xl" }}
           lineHeight={{ base: 6, md: 8 }}
+          fontWeight="600"
+          letterSpacing="tight"
         >
           Make a great first impression.
         </Text>
