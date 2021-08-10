@@ -35,7 +35,14 @@ export default function FooterComponent(props) {
               >
                 Jeff Musgrave
               </Link>{" "}
-              &copy; 2021
+              &copy; 2021. View site code on{" "}
+              <Link
+                color="punch.500"
+                fontWeight="bold"
+                href="https://github.com/JeffMusgrave/designgenius-nextjs-2021"
+              >
+                Github.
+              </Link>
             </Text>
           </Flex>
         </ContentConstrainer>

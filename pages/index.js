@@ -9,7 +9,7 @@ import colors from "../styles/designgenius/attributes/colors";
 import GalleryWrapper from "../components/GalleryWrapper";
 import About from "../components/About";
 
-const { prince, salmon, punch, glacier } = colors;
+const { prince, salmon, sunny, punch } = colors;
 
 export default function Home() {
   const { colorMode } = useColorMode();
@@ -39,7 +39,7 @@ export default function Home() {
           borderColorVar={
             colorMode === "light"
               ? ["white", "#A6FFFA"]
-              : ["#25144D", salmon[500]]
+              : ["#25144D", punch[500]]
           }
         />
         <Portfolio
