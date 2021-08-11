@@ -7,13 +7,12 @@ import {
 
 export default function AboutComponent(props) {
   const animBG = keyframes`
-	0% {
-		background-position: 0% 0%
-	}
-	100% {
-		background-position: 50% 100%
-	}
+    0% { background-position: 0 0, 0 0; }
+    100%  { background-position: 50% 50%, 0 0; }
   `;
+
+  const dropShadow =
+    "drop-shadow(0 0 4px #f4364c) drop-shadow(0 0 10px #f4364c) drop-shadow(0 0 20px #f4364c) drop-shadow(0 0 30px #f4364c) drop-shadow(0 0 40px #f4364c) drop-shadow(0 0 60px #f4364c)";
 
   return (
     <FullSectionComponent
@@ -32,6 +31,7 @@ export default function AboutComponent(props) {
           spacing="1rem"
           w={{ base: "100%", md: "60%" }}
           py={{ base: "0", md: "10rem" }}
+          filter={dropShadow}
         >
           <Heading variant="section" as="h2" id={props.id}>
             Your Edge

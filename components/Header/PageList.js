@@ -33,7 +33,7 @@ export default function PageList(props) {
             variant="ghost"
             navigation="true"
             size="lg"
-            fontSize={{ base: "4xl", md: "md" }}
+            fontSize={{ base: "4xl", md: "lg" }}
             onClick={MobileDetect}
             letterSpacing="tight"
           >
