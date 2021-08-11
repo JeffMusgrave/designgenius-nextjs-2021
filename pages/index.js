@@ -59,6 +59,8 @@ export default function Home() {
               ? [prince[500], "#A6FFFA"]
               : [salmon[300], prince[500]]
           }
+          // customKeyframes={}
+          // customAnimation="5s linear infinite"
         />
         {/* <Portfolio
           id="video"

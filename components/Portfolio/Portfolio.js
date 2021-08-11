@@ -4,6 +4,7 @@ import {
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
 import Gallery from "../Gallery";
+import { keyframes } from "@emotion/react";
 
 export default function PortfolioComponent(props) {
   const { images, ...rest } = props;
@@ -30,7 +31,21 @@ function LayoutSwitch(props) {
     children,
     backgroundColor,
     backgroundImage,
+    customKeyframes,
+    customAnimation,
   } = props;
+
+  const animBG = customKeyframes
+    ? keyframes`${customKeyframes}`
+    : keyframes` 
+    0% {
+		  background-position: 0% 0%
+	  }
+    100% {
+      background-position: 0% -100%
+    } `;
+
+  const anim = customAnimation ? customAnimation : `60s linear infinite`;
 
   switch (layout) {
     case "single":
@@ -43,6 +58,7 @@ function LayoutSwitch(props) {
             backgroundImage={backgroundImage}
             pb="0"
             pt={{ base: !heading && "0rem", md: "5rem" }}
+            animation={`${animBG} ${anim}`}
           >
             <ContentConstrainer
               id={!heading && id}
@@ -72,6 +88,7 @@ function LayoutSwitch(props) {
           dark={dark}
           backgroundColor={backgroundColor}
           backgroundImage={backgroundImage}
+          animation={`${animBG} 60s linear infinite`}
         >
           <ContentConstrainer>
             {heading && (
