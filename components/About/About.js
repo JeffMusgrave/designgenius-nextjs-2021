@@ -8,7 +8,7 @@ import {
 export default function AboutComponent(props) {
   const animBG = keyframes`
     0% { background-position: 0 0, 0 0; }
-    100%  { background-position: 50% 50%, 0 0; }
+    100%  { background-position: 25% 75%, 0 0; }
   `;
 
   const dropShadow =
