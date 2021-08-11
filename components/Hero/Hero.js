@@ -6,6 +6,7 @@ import { keyframes } from "@emotion/react";
 import { Box, GridItem, Image, useColorMode } from "@chakra-ui/react";
 import HeroElements from "./HeroElements";
 import useWindowSize from "../../lib/useWindowSize";
+import LightBulb from "./LightBulb";
 
 export default function HeroComponent(props) {
   const size = useWindowSize();
@@ -50,13 +51,7 @@ export default function HeroComponent(props) {
             pl={{ base: "auto", lg: `${pad}rem` }}
             mr={{ base: "-30vw", sm: "auto" }}
           >
-            <Image
-              alignItems="center"
-              mixBlendMode={colorMode === "dark" && "overlay"}
-              opacity={colorMode === "dark" ? "1" : "0.25"}
-              src="/images/site/BlueLightBulb.svg"
-              dropShadow="lg"
-            />
+            <LightBulb colorMode={colorMode} />
           </Box>
         </GridItem>
 
