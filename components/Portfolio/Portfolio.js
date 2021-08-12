@@ -59,7 +59,7 @@ function LayoutSwitch(props) {
             _before={{
               content: '" "',
               position: "absolute",
-              width: "200%",
+              width: "100%",
               height: "100%",
               background: `${bgImg} 0 0 repeat`,
               backgroundColor: bgClr,
