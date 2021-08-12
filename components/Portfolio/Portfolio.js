@@ -1,10 +1,9 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, keyframes } from "@chakra-ui/react";
 import {
   FullSectionComponent,
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
 import Gallery from "../Gallery";
-import { keyframes } from "@emotion/react";
 
 export default function PortfolioComponent(props) {
   const { images, ...rest } = props;
@@ -29,8 +28,8 @@ function LayoutSwitch(props) {
     secHeadingColor = null,
     layout = null,
     children,
-    backgroundColor,
-    backgroundImage,
+    bgClr,
+    bgImg,
     customKeyframes,
     customAnimation,
   } = props;
@@ -38,12 +37,12 @@ function LayoutSwitch(props) {
   const animBG = customKeyframes
     ? keyframes`${customKeyframes}`
     : keyframes` 
-    0% {
-		  background-position: 0% 0%
-	  }
-    100% {
-      background-position: 0% -100%
-    } `;
+	0% {
+		transform: translate(0, 0)
+	}
+	100% {
+    transform: translate(0, -50%)
+	} `;
 
   const anim = customAnimation ? customAnimation : `60s linear infinite`;
 
@@ -54,11 +53,19 @@ function LayoutSwitch(props) {
           <FullSectionComponent
             light={light}
             dark={dark}
-            backgroundColor={backgroundColor}
-            backgroundImage={backgroundImage}
             pb="0"
             pt={{ base: !heading && "0rem", md: "5rem" }}
-            animation={`${animBG} ${anim}`}
+            overflow="hidden"
+            _before={{
+              content: '" "',
+              position: "absolute",
+              width: "200%",
+              height: "100%",
+              background: `${bgImg} 0 0 repeat`,
+              backgroundColor: bgClr,
+              animation: `${animBG} ${anim}`,
+              zIndex: "-1",
+            }}
           >
             <ContentConstrainer
               id={!heading && id}
@@ -86,9 +93,17 @@ function LayoutSwitch(props) {
         <FullSectionComponent
           light={light}
           dark={dark}
-          backgroundColor={backgroundColor}
-          backgroundImage={backgroundImage}
-          animation={`${animBG} 60s linear infinite`}
+          overflow="hidden"
+          _before={{
+            content: '" "',
+            position: "absolute",
+            width: "200%",
+            height: "100%",
+            background: `${bgImg} 0 0 repeat`,
+            backgroundColor: bgClr,
+            animation: `${animBG} ${anim}`,
+            zIndex: "-1",
+          }}
         >
           <ContentConstrainer>
             {heading && (
