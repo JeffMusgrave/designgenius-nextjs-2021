@@ -21,52 +21,18 @@ export default function PortfolioComponent(props) {
 
 function LayoutSwitch(props) {
   const {
-    light,
-    dark,
     id,
     heading = null,
     secHeadingColor = null,
     layout = null,
     children,
-    bgClr,
-    bgImg,
-    customKeyframes,
-    customAnimation,
   } = props;
-
-  const animBG = customKeyframes
-    ? keyframes`${customKeyframes}`
-    : keyframes` 
-	0% {
-		transform: translate(0, 0)
-	}
-	100% {
-    transform: translate(0, -50%)
-	} `;
-
-  const anim = customAnimation ? customAnimation : `60s linear infinite`;
 
   switch (layout) {
     case "single":
       return (
         <>
-          <FullSectionComponent
-            light={light}
-            dark={dark}
-            pb="0"
-            pt={{ base: !heading && "0rem", md: "5rem" }}
-            overflow="hidden"
-            _before={{
-              content: '" "',
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              background: `${bgImg} 0 0 repeat`,
-              backgroundColor: bgClr,
-              animation: `${animBG} ${anim}`,
-              zIndex: "-1",
-            }}
-          >
+          <FullSecCompWrapper single={true} {...props}>
             <ContentConstrainer
               id={!heading && id}
               sx={{ scrollMarginTop: "100px", scrollSnapMargin: "100px" }}
@@ -82,7 +48,7 @@ function LayoutSwitch(props) {
                 </Heading>
               )}
             </ContentConstrainer>
-          </FullSectionComponent>
+          </FullSecCompWrapper>
           {children}
         </>
       );
@@ -90,21 +56,7 @@ function LayoutSwitch(props) {
 
     default:
       return (
-        <FullSectionComponent
-          light={light}
-          dark={dark}
-          overflow="hidden"
-          _before={{
-            content: '" "',
-            position: "absolute",
-            width: "200%",
-            height: "100%",
-            background: `${bgImg} 0 0 repeat`,
-            backgroundColor: bgClr,
-            animation: `${animBG} ${anim}`,
-            zIndex: "-1",
-          }}
-        >
+        <FullSecCompWrapper {...props}>
           <ContentConstrainer>
             {heading && (
               <Heading variant="section" id={id} as="h2" size="3xl">
@@ -113,8 +65,56 @@ function LayoutSwitch(props) {
             )}
             {children}
           </ContentConstrainer>
-        </FullSectionComponent>
+        </FullSecCompWrapper>
       );
       break;
   }
+}
+
+function FullSecCompWrapper(props) {
+  const {
+    light,
+    dark,
+    bgImg,
+    bgClr,
+    customKeyframes,
+    customAnimation,
+    single,
+    children,
+  } = props;
+
+  const animBG = customKeyframes
+    ? keyframes`${customKeyframes}`
+    : keyframes` 
+	0% {
+		transform: translate(0, -5%)
+	}
+	100% {
+    transform: translate(0, -55%)
+	} `;
+
+  const anim = customAnimation ? customAnimation : `60s linear infinite`;
+
+  return (
+    <FullSectionComponent
+      light={light}
+      dark={dark}
+      overflow="hidden"
+      position="relative"
+      pb="0rem"
+      pt={{ base: "2.5rem", md: "5rem" }}
+      _before={{
+        content: '" "',
+        position: "absolute",
+        width: "100%",
+        height: "220%",
+        background: `${bgImg} 0 0 repeat`,
+        backgroundColor: bgClr,
+        animation: `${animBG} ${anim}`,
+        zIndex: "-1",
+      }}
+    >
+      {children}
+    </FullSectionComponent>
+  );
 }
