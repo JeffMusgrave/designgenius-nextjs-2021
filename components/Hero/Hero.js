@@ -16,10 +16,10 @@ export default function HeroComponent(props) {
 
   const animBG = keyframes`
 	0% {
-		transform: translate(0)
+		transform: translate(-100px)
 	}
 	100% {
-    transform: translate(-100px)
+    transform: translate(-200px)
 	}
   `;
 
@@ -73,7 +73,7 @@ export default function HeroComponent(props) {
         display={{ base: "none", sm: "inline-block" }}
         position="absolute"
         right="0"
-        width={{ base: "12vw", lg: "55vw" }}
+        width={{ base: "5vw", lg: "59vw", xl: "55vw" }}
         minH="100vh"
         height="100%"
         overflow="hidden"

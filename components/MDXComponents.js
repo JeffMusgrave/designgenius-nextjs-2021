@@ -46,7 +46,7 @@ const Quote = (props) => {
       bg={bgColor[colorMode]}
       variant="left-accent"
       status="info"
-      css={{
+      sx={{
         "> *:first-of-type": {
           marginTop: 0,
           marginLeft: 8,
@@ -59,7 +59,7 @@ const Quote = (props) => {
 
 const DocsHeading = (props) => (
   <Heading
-    css={{
+    sx={{
       scrollMarginTop: "100px",
       scrollSnapMargin: "100px", // Safari
       "&[id]": {
