@@ -87,13 +87,13 @@ function FullSecCompWrapper(props) {
     ? keyframes`${customKeyframes}`
     : keyframes` 
 	0% {
-		transform: translate(0, -5%)
+		transform: translate(0, -100px)
 	}
 	100% {
-    transform: translate(0, -55%)
+    transform: translate(0, -128px)
 	} `;
 
-  const anim = customAnimation ? customAnimation : `60s linear infinite`;
+  const anim = customAnimation ? customAnimation : `1s linear infinite`;
 
   return (
     <FullSectionComponent
