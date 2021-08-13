@@ -35,7 +35,6 @@ export default function PageList(props) {
             size="lg"
             fontSize={{ base: "4xl", md: "lg" }}
             onClick={MobileDetect}
-            letterSpacing="tight"
           >
             {pathList[e]}
           </Button>

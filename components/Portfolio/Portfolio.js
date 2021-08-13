@@ -93,7 +93,7 @@ function FullSecCompWrapper(props) {
     transform: translate(0, -128px)
 	} `;
 
-  const anim = customAnimation ? customAnimation : `1s linear infinite`;
+  const anim = customAnimation ? customAnimation : `1.5s linear infinite`;
 
   return (
     <FullSectionComponent
