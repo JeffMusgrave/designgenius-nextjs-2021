@@ -51,16 +51,14 @@ export default function AboutComponent(props) {
           <Text fontSize="2xl">
             A professionally designed brochure, business card, logo, and web
             site can attract customers and add profit to your bottom line. I can
-            help your business stand out with a design that customers can
-            remember and trust.
+            help your business stand out with an exciting, distinctive,
+            memorable design.
           </Text>
           <Text fontSize="2xl">
             <Link fontWeight="900" href="#contact">
               Contact me
             </Link>{" "}
-            now for a free consultation. I will help you make a great first
-            impression, so that you can attract customers, grow your sales, and
-            increase your profits.
+            now for a free consultation.
           </Text>
         </VStack>
       </ContentConstrainer>
