@@ -15,33 +15,35 @@ export default function AboutComponent(props) {
 	}
   `;
 
-  const dropShadow =
-    "drop-shadow(0 0 4px #ea2c42) drop-shadow(0 0 10px #ea2c42) drop-shadow(0 0 20px #ea2c42) drop-shadow(0 0 30px #ea2c42) drop-shadow(0 0 40px #ea2c42) drop-shadow(0 0 60px #ea2c42) drop-shadow(0 0 100px #ea2c42)";
+  // const dropShadow =
+  //   "drop-shadow(0 0 4px #ea2c42) drop-shadow(0 0 10px #ea2c42) drop-shadow(0 0 20px #ea2c42) drop-shadow(0 0 30px #ea2c42) drop-shadow(0 0 40px #ea2c42) drop-shadow(0 0 60px #ea2c42) drop-shadow(0 0 100px #ea2c42)";
 
   return (
     <FullSectionComponent
       position="relative"
+      backgroundColor="punch.700"
       _before={{
         content: '" "',
         position: "absolute",
         width: "400vw",
         height: "400vh",
-        background: `url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff4459' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 0 0 repeat`,
-        backgroundColor: "punch.700",
+        background: `url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff2d46' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 0 0 repeat`,
         animation: `${animBG} 7s linear infinite`,
+        zIndex: "0",
       }}
       id="youredge"
       overflow="hidden"
     >
       <ContentConstrainer alignItems="center">
         <VStack
+          // color="#ff2d46"
           flex="2"
           direction="column"
           align="stretch"
           spacing="1rem"
           w={{ base: "100%", md: "60%" }}
           py={{ base: "0", md: "10rem" }}
-          filter={dropShadow}
+          zIndex="1"
         >
           <Heading variant="section" as="h2" id={props.id}>
             Your Edge
