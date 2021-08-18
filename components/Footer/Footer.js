@@ -24,7 +24,8 @@ export default function FooterComponent(props) {
           <Flex w="100%" alignItems="center" flexDir="column">
             <Image
               src="/images/site/YellowLightBulb.svg"
-              w="clamp(10rem, 20vw, 40rem)"
+              w="clamp(20rem, 20vw, 40rem)"
+              pb="5rem"
             />
             <Text fontSize="sm">
               Created by{" "}
