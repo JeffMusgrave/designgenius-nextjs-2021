@@ -11,7 +11,7 @@ export default function StandardPageLayout({ children }) {
   return (
     <Container>
       <Head>
-        <title>404 - Design Genius</title>
+        <title>Your Edge - Design Genius</title>
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -23,15 +23,13 @@ export default function StandardPageLayout({ children }) {
           mt={{ base: "7.5rem", md: "12.5rem" }}
         >
           <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-            404
+            Your Edge
           </Heading>
           <Text minWidth="100px" mt={[2, 8]}>
-            You'll have better luck{" "}
-            <Link href="/" passHref>
-              <ChakraLink color="punch.500" fontWeight="extrabold">
-                here.
-              </ChakraLink>
-            </Link>
+            A professionally designed brochure, business card, logo, and web
+            site can attract customers and add profit to your bottom line. I can
+            help your business stand out with an exciting, distinctive,
+            memorable design. Contact me now for a free consultation.
           </Text>
 
           {children}
