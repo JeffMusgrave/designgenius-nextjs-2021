@@ -49,7 +49,7 @@ export default function FooterComponent(props) {
               <Link
                 color="punch.500"
                 // fontWeight="bold"
-                href="https://www.designgenius.ca/sitemap.xml"
+                href="/sitemap.xml"
               >
                 Sitemap
               </Link>
