@@ -45,6 +45,15 @@ export default function FooterComponent(props) {
                 Github.
               </Link>
             </Text>
+            <Text fontSize="xs" mt="1rem">
+              <Link
+                color="punch.500"
+                // fontWeight="bold"
+                href="https://www.designgenius.com/sitemap.xml"
+              >
+                Sitemap
+              </Link>
+            </Text>
           </Flex>
         </ContentConstrainer>
       </FullSectionComponent>
