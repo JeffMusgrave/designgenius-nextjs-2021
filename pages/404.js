@@ -7,7 +7,7 @@ import {
   ContentConstrainer,
 } from "../styles/designgenius/components/FullSectionComponent";
 
-export default function StandardPageLayout({ children, frontMatter }) {
+export default function StandardPageLayout({ children }) {
   return (
     <Container>
       <Head>
