@@ -7,11 +7,11 @@ import {
   ContentConstrainer,
 } from "../styles/designgenius/components/FullSectionComponent";
 
-export default function StandardPageLayout({ children, frontMatter }) {
+export default function StandardPageLayout({ children }) {
   return (
     <Container>
       <Head>
-        <title>404 - Design Genius</title>
+        <title>About My Portfolio - Design Genius</title>
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -23,7 +23,7 @@ export default function StandardPageLayout({ children, frontMatter }) {
           mt={{ base: "7.5rem", md: "12.5rem" }}
         >
           <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-            404
+            About My Portfolio
           </Heading>
           <Text minWidth="100px" mt={[2, 8]}>
             You'll have better luck{" "}
