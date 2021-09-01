@@ -20,6 +20,7 @@ export default function Home() {
         <title>Design Genius</title>
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="prefetch" href="/images/site/BlueLightBulb.svg" />
       </Head>
       <GalleryWrapper>
         <About light="#C8FE41" dark="punch.600" />
