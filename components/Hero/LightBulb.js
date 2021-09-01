@@ -8,6 +8,7 @@ export default function LightBulb(props) {
       mixBlendMode={colorMode === "dark" && "overlay"}
       opacity={colorMode === "dark" ? "1" : "0.25"}
       importance="high"
+      priority={true}
       sx={{ maskImage: "linear-gradient(to left, transparent 0%, black 100%)" }}
       src="/images/site/BlueLightBulb.svg"
     />
