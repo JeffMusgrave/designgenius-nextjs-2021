@@ -1,7 +1,4 @@
-import { Image, Box } from "@chakra-ui/react";
-
 export default function LightBulb(props) {
-  const { colorMode } = props;
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376.8 630.2">
       <defs>

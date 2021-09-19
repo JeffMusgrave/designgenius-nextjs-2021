@@ -49,14 +49,13 @@ export default function HeroComponent(props) {
             justifyContent={{ base: "flex-end", lg: "flex-start" }}
             pl={{ base: "auto", lg: `${pad}rem` }}
             mr={{ base: "-30vw", sm: "auto" }}
-            // alignItems="center"
             mixBlendMode={colorMode === "dark" && "overlay"}
             sx={{
               maskImage:
                 "linear-gradient(to left, transparent 50%, black 100%)",
             }}
           >
-            <LightBulb colorMode={colorMode} />
+            <LightBulb />
           </Box>
         </GridItem>
 
