@@ -51,8 +51,7 @@ export default function HeroComponent(props) {
             mr={{ base: "-30vw", sm: "auto" }}
             mixBlendMode={colorMode === "dark" && "overlay"}
             sx={{
-              maskImage:
-                "linear-gradient(to left, transparent 50%, black 100%)",
+              maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
             }}
           >
             <LightBulb />
