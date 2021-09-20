@@ -25,10 +25,12 @@ export default function HeroComponent(props) {
 
   const animLightbulb = {
     initial: {
-      x: 100,
+      x: 200,
+      opacity: 0,
     },
     animate: {
       x: 0,
+      opacity: 1,
       transition: {
         type: "spring",
       },
