@@ -33,10 +33,10 @@ const dpiImageList = {
       "How can an academic research website look serious yet stylish? Consider arXiv.org, for example. Here is how I would redesign the site to look more visually appealing, while retaining enough of the original to be recognizable.",
   },
   PyAdapt: {
-    title: "Pytorch Adapt",
+    title: "PyTorch Adapt",
     alt: "Logo for Pytorch Adapt.",
     description:
-      "Even a codebase on Github can be branded with a distinctive logo design. This logo uses a simplified and stylized chamelon with eyes to suggest artificial intelligence, and hint at the library's function: domain adaptation.",
+      "Even a codebase on Github can be branded with a distinctive logo design. This logo uses a simplified and stylized chamelon with eyes to suggest artificial intelligence, while performing double duty by hinting at the library's function: domain adaptation.",
   },
   // PML: {
   //   title: "Pytorch Metric Learning",
