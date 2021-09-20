@@ -2,8 +2,9 @@ import {
   FullSectionComponent,
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
-import { Flex, Text, Image, Link, useColorMode } from "@chakra-ui/react";
+import { Flex, Text, Box, Link, useColorMode } from "@chakra-ui/react";
 import Contact from "../Contact";
+import YellowLightbulb from "./YellowLightbulb";
 
 export default function FooterComponent(props) {
   const { colorMode } = useColorMode();
@@ -22,11 +23,9 @@ export default function FooterComponent(props) {
       >
         <ContentConstrainer>
           <Flex w="100%" alignItems="center" flexDir="column">
-            <Image
-              src="/images/site/YellowLightBulb.svg"
-              w="clamp(20rem, 20vw, 40rem)"
-              pb="5rem"
-            />
+            <Box w="clamp(20rem, 20vw, 40rem)" pb="5rem">
+              <YellowLightbulb />
+            </Box>
             <Text fontSize="sm">
               Created by{" "}
               <Link

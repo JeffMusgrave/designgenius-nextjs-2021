@@ -27,16 +27,18 @@ export default function ContactComponent(props) {
             Let's work together
           </Heading>
           <Stack
-            direction={{ base: "column", md: "row" }}
+            direction={{ base: "column", xl: "row" }}
             spacing="2rem"
             pt="2.5rem"
             pb="7rem"
+            align="stretch"
           >
             <Image
               borderRadius="full"
               w={{ base: "12rem", md: "15rem" }}
               h={{ base: "12rem", md: "15rem" }}
               src="/images/site/jeff-musgrave-1200.jpg"
+              m="0 auto"
             />
             <VStack spacing="1rem">
               <Text fontSize="xl" fontWeight="300">
