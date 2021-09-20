@@ -26,7 +26,7 @@ export default function HeroComponent(props) {
   const animLightbulb = {
     initial: {
       x: 100,
-      opacity: 1,
+      opacity: 0.5,
     },
     animate: {
       x: 0,
@@ -34,6 +34,9 @@ export default function HeroComponent(props) {
       transition: {
         type: "spring",
       },
+    },
+    complete: {
+      x: 0,
     },
   };
 
@@ -71,8 +74,8 @@ export default function HeroComponent(props) {
               maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
             }}
             variants={animLightbulb}
-            initial={!animFinished ? "initial" : " "}
-            animate={!animFinished ? "animate" : " "}
+            initial={!animFinished ? "initial" : "complete"}
+            animate={!animFinished ? "animate" : "complete"}
             onAnimationComplete={() => {
               setAnimFinished(true);
             }}
