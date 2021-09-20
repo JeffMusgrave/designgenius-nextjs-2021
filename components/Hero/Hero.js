@@ -24,8 +24,8 @@ export default function HeroComponent(props) {
 
   const animLightbulb = {
     initial: {
-      x: 200,
-      opacity: 0.25,
+      x: 100,
+      opacity: 0.5,
     },
     animate: {
       x: 0,
