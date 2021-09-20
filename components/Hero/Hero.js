@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FullSectionComponent,
   ContentConstrainer,
@@ -6,7 +7,7 @@ import { Box, GridItem, useColorMode, keyframes } from "@chakra-ui/react";
 import HeroElements from "./HeroElements";
 import useWindowSize from "../../lib/useWindowSize";
 import LightBulb from "./LightBulb";
-import { motion } from "framer-motion";
+import { motion, onAnimationComplete } from "framer-motion";
 
 export default function HeroComponent(props) {
   const size = useWindowSize();
@@ -37,6 +38,7 @@ export default function HeroComponent(props) {
   };
 
   const MotionBox = motion(Box);
+  const [animFinished, setAnimFinished] = useState(false);
 
   return (
     <FullSectionComponent
@@ -69,8 +71,11 @@ export default function HeroComponent(props) {
               maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
             }}
             variants={animLightbulb}
-            initial="initial"
-            animate="animate"
+            initial={!animFinished ? "initial" : " "}
+            animate={!animFinished ? "animate" : " "}
+            onAnimationComplete={() => {
+              setAnimFinished(true);
+            }}
           >
             <LightBulb />
           </MotionBox>
