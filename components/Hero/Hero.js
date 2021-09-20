@@ -37,6 +37,7 @@ export default function HeroComponent(props) {
     },
     complete: {
       x: 0,
+      opacity: 1,
     },
   };
 
