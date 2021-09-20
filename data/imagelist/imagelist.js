@@ -36,7 +36,7 @@ const dpiImageList = {
     title: "PyTorch Adapt",
     alt: "Logo for Pytorch Adapt.",
     description:
-      "Even a codebase on Github can be branded with a distinctive logo design. This logo uses a simplified and stylized chamelon with eyes to suggest artificial intelligence, while performing double duty by hinting at the library's function: domain adaptation.",
+      "Even a codebase on Github can be branded with a distinctive logo design. This logo uses a simplified and stylized chameleon with eyes to suggest artificial intelligence, while performing double duty by hinting at the library's function: domain adaptation.",
   },
   // PML: {
   //   title: "Pytorch Metric Learning",
