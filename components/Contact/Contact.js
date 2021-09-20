@@ -58,8 +58,8 @@ export default function ContactComponent(props) {
               </Text>
               <Text fontSize="xl" fontWeight="300">
                 Whatever your design, production, or communication challenge, I
-                can create a compelling solution. <strong>Contact me</strong>{" "}
-                with the form below to learn more.
+                can create a compelling solution. Contact me with the form below
+                to learn more.
               </Text>
             </VStack>
           </Stack>
