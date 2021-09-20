@@ -6,7 +6,7 @@ import { Box, GridItem, useColorMode, keyframes } from "@chakra-ui/react";
 import HeroElements from "./HeroElements";
 import useWindowSize from "../../lib/useWindowSize";
 import LightBulb from "./LightBulb";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function HeroComponent(props) {
   const size = useWindowSize();
@@ -24,11 +24,11 @@ export default function HeroComponent(props) {
 
   const animLightbulb = {
     initial: {
-      y: -200,
-      opacity: 0,
+      x: 200,
+      opacity: 0.25,
     },
     animate: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
         type: "spring",
