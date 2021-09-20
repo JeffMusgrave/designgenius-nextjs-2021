@@ -414,7 +414,7 @@ export default function LightBulb(props) {
         d="M187 147c3-4-45-31-46-33 4 5-1 12-2 18-4 12-10 26-3 38 0 2 46 30 48 32-16-15 2-38 3-55z"
         fill="url(#B)"
       />
-      <g fill="#c707ec" clip-path="url(#a)">
+      <g fill="#c707ec" clipPath="url(#a)">
         <path d="M179 219l-2-2-44-28v-1l2 2 44 29z" />
         <path d="M135 190l44 29-2-2-44-29 2 2" />
       </g>
@@ -426,7 +426,7 @@ export default function LightBulb(props) {
         d="M186 127c-7-1-13 8-16 13-5 6-8 22-17 19l44 29a4 4 0 003 0c7-2 9-10 12-16 5-6 11-17 19-16z"
         fill="url(#D)"
       />
-      <g fill="#c707ec" clip-path="url(#b)">
+      <g fill="#c707ec" clipPath="url(#b)">
         <path d="M231 156l-45-29 45 29zM187 127l44 29-45-29a2 2 0 011 0" />
       </g>
       <path
@@ -437,7 +437,7 @@ export default function LightBulb(props) {
         d="M246 156c0-4-2-8-5-10l-45-30c16 15-8 44-19 56-9 10-24 14-28 27-3 13-10 28-3 41-1 1 47 30 48 31-13-10-3-41 5-52 8-8 18-13 25-22 11-11 21-25 22-41z"
         fill="url(#F)"
       />
-      <g fill="#c707ec" clip-path="url(#c)">
+      <g fill="#c707ec" clipPath="url(#c)">
         <path d="M187 287l-45-29v-1l45 30z" />
         <path d="M143 258l44 29-45-30 1 1" />
       </g>
@@ -457,7 +457,7 @@ export default function LightBulb(props) {
         d="M255 224c0-4-1-8-4-11l-46-30c15 14-4 42-14 54-13 14-33 20-36 41-2 10-5 21 1 29-2 1 47 31 47 32-13-10-4-41 6-51 21-16 45-36 46-64z"
         fill="url(#J)"
       />
-      <g fill="#c707ec" clip-path="url(#d)">
+      <g fill="#c707ec" clipPath="url(#d)">
         <path d="M218 325c-2 0-45-29-46-29l46 29zm-45-29l44 29-44-29z" />
         <path d="M173 296l45 29c-2 0-45-29-46-29a4 4 0 001 0" />
       </g>
@@ -469,7 +469,7 @@ export default function LightBulb(props) {
         d="M246 294c1-1 3-2 5-1l-45-29a3 3 0 00-2 0c-10 3-15 14-20 23-3 4-6 10-11 9l45 29c5 0 8-5 10-9 4-8 9-17 18-22z"
         fill="url(#L)"
       />
-      <g fill="#c707ec" clip-path="url(#e)">
+      <g fill="#c707ec" clipPath="url(#e)">
         <path d="M211 358c-6-3-13-1-17-5l-45-29c5 4 12 2 17 5l45 28zm-4-2a7 7 0 012 1l-43-28c-4-3-11-1-15-3 10 4 45 33 56 30z" />
         <path d="M166 329l45 29c-6-3-13-1-17-5l-45-29c4 4 12 2 17 5" />
       </g>

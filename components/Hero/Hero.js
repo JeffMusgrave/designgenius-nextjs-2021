@@ -6,13 +6,12 @@ import { Box, GridItem, useColorMode, keyframes } from "@chakra-ui/react";
 import HeroElements from "./HeroElements";
 import useWindowSize from "../../lib/useWindowSize";
 import LightBulb from "./LightBulb";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroComponent(props) {
   const size = useWindowSize();
   const pad = Math.max(0, (30 * (1000 - size.height)) / 1000);
   const { colorMode } = useColorMode();
-  // const winH = size && size.height > 1000;
-  // const winW = size && size.width > 350;
 
   const animBG = keyframes`
 	0% {
@@ -22,6 +21,22 @@ export default function HeroComponent(props) {
     transform: translate(-200px)
 	}
   `;
+
+  const animLightbulb = {
+    initial: {
+      y: -200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+      },
+    },
+  };
+
+  const MotionBox = motion(Box);
 
   return (
     <FullSectionComponent
@@ -41,7 +56,7 @@ export default function HeroComponent(props) {
           colEnd="2"
           {...props}
         >
-          <Box
+          <MotionBox
             id="LIGHT"
             h="clamp(10rem, 100vh, 70rem)"
             minW={{ base: "20rem", sm: "30rem", lg: "70rem" }}
@@ -53,9 +68,12 @@ export default function HeroComponent(props) {
             sx={{
               maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
             }}
+            variants={animLightbulb}
+            initial="initial"
+            animate="animate"
           >
             <LightBulb />
-          </Box>
+          </MotionBox>
         </GridItem>
 
         <GridItem

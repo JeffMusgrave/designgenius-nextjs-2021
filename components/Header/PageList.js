@@ -1,8 +1,10 @@
 import { Button } from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function PageList(props) {
   const { mobileNav } = props;
+  const router = useRouter();
 
   const MobileDetect = (e) => {
     if (mobileNav) {
@@ -14,21 +16,20 @@ export default function PageList(props) {
     "#youredge": "Your Edge",
     "#design": "Design",
     "#albumart": "Album Art",
-    // "#video": "Video",
     "#contact": "Contact",
   };
 
   return (
     <>
       {Object.keys(pathList).map((e, idx) => (
-        <Link
-          href={`/${e}`}
-          shallow={true}
+        <LinkSwitch
+          e={e}
+          pathname={router.pathname}
           key={`${pathList[e]}+${idx}`}
-          passHref
         >
           <Button
             as="a"
+            href={router.pathname === "/" && `${e}`}
             w={{ base: "full", md: "auto" }}
             variant="ghost"
             navigation="true"
@@ -38,8 +39,24 @@ export default function PageList(props) {
           >
             {pathList[e]}
           </Button>
-        </Link>
+        </LinkSwitch>
       ))}
     </>
+  );
+}
+
+function NextLink({ e, children }) {
+  return (
+    <Link href={`/${e}`} shallow={true} passHref>
+      {children}
+    </Link>
+  );
+}
+
+function LinkSwitch(props) {
+  return props.pathname !== "/" ? (
+    <NextLink {...props} />
+  ) : (
+    <>{props.children}</>
   );
 }
