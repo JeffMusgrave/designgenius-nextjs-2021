@@ -32,12 +32,18 @@ const dpiImageList = {
     description:
       "How can an academic research website look serious yet stylish? Consider arXiv.org, for example. Here is how I would redesign the site to look more visually appealing, while retaining enough of the original to be recognizable.",
   },
-  PML: {
-    title: "Pytorch Metric Learning",
-    alt: "Logo for Pytorch Metric Learning library.",
+  PyAdapt: {
+    title: "PyTorch Adapt",
+    alt: "Logo for Pytorch Adapt.",
     description:
-      "Even a codebase on Github can be branded with a distinctive logo design. I designed this logo with eyes to suggest artificial intelligence, and with prominent, unequal ears to suggest interconnected datasets.",
+      "Even a codebase on Github can be branded with a distinctive logo design. This logo uses a simplified and stylized chamelon with eyes to suggest artificial intelligence, while performing double duty by hinting at the library's function: domain adaptation.",
   },
+  // PML: {
+  //   title: "Pytorch Metric Learning",
+  //   alt: "Logo for Pytorch Metric Learning library.",
+  //   description:
+  //     "Even a codebase on Github can be branded with a distinctive logo design. I designed this logo with eyes to suggest artificial intelligence, and with prominent, unequal ears to suggest interconnected datasets.",
+  // },
   // ReebeeContestSpread: {
   //   title: "reebee Mother's Day Contest Spread",
   //   alt: "",

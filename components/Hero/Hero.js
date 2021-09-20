@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FullSectionComponent,
   ContentConstrainer,
@@ -6,13 +7,12 @@ import { Box, GridItem, useColorMode, keyframes } from "@chakra-ui/react";
 import HeroElements from "./HeroElements";
 import useWindowSize from "../../lib/useWindowSize";
 import LightBulb from "./LightBulb";
+import { motion, onAnimationComplete } from "framer-motion";
 
 export default function HeroComponent(props) {
   const size = useWindowSize();
   const pad = Math.max(0, (30 * (1000 - size.height)) / 1000);
   const { colorMode } = useColorMode();
-  // const winH = size && size.height > 1000;
-  // const winW = size && size.width > 350;
 
   const animBG = keyframes`
 	0% {
@@ -22,6 +22,27 @@ export default function HeroComponent(props) {
     transform: translate(-200px)
 	}
   `;
+
+  const animLightbulb = {
+    initial: {
+      x: 200,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+      },
+    },
+    complete: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
+  const MotionBox = motion(Box);
+  const [animFinished, setAnimFinished] = useState(false);
 
   return (
     <FullSectionComponent
@@ -40,23 +61,28 @@ export default function HeroComponent(props) {
           colStart="1"
           colEnd="2"
           {...props}
+          mixBlendMode={colorMode === "dark" && "overlay"}
+          pl={{ base: "auto", lg: `${pad}rem` }}
+          mr={{ base: "-30vw", sm: "-15vw", md: "-10vw", lg: "auto" }}
         >
-          <Box
+          <MotionBox
             id="LIGHT"
             h="clamp(10rem, 100vh, 70rem)"
             minW={{ base: "20rem", sm: "30rem", lg: "70rem" }}
             display="flex"
             justifyContent={{ base: "flex-end", lg: "flex-start" }}
-            pl={{ base: "auto", lg: `${pad}rem` }}
-            mr={{ base: "-30vw", sm: "auto" }}
-            mixBlendMode={colorMode === "dark" && "overlay"}
             sx={{
-              maskImage:
-                "linear-gradient(to left, transparent 50%, black 100%)",
+              maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
+            }}
+            variants={animLightbulb}
+            initial={!animFinished ? "initial" : "complete"}
+            animate={!animFinished ? "animate" : "complete"}
+            onAnimationComplete={() => {
+              setAnimFinished(true);
             }}
           >
             <LightBulb />
-          </Box>
+          </MotionBox>
         </GridItem>
 
         <GridItem
