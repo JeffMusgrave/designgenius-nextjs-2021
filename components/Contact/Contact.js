@@ -1,4 +1,5 @@
-import { Heading, VStack, Text, Image, Stack } from "@chakra-ui/react";
+import { Heading, VStack, Text, Box, Stack } from "@chakra-ui/react";
+import Image from "next/image";
 import {
   FullSectionComponent,
   ContentConstrainer,
@@ -33,13 +34,22 @@ export default function ContactComponent(props) {
             pb="7rem"
             align="stretch"
           >
-            <Image
-              borderRadius="full"
-              w={{ base: "12rem", md: "15rem" }}
-              h={{ base: "12rem", md: "15rem" }}
-              src="/images/site/jeff-musgrave-1200.jpg"
+            <Box
               m="0 auto"
-            />
+              borderRadius="full"
+              minW="15rem"
+              maxW="15rem"
+              minH="15rem"
+              maxH="15rem"
+              overflow="hidden"
+              pos="relative"
+            >
+              <Image
+                layout="fill"
+                src="/images/site/jeff-musgrave-1200.jpg"
+                alt="photo of Jeff Musgrave"
+              />
+            </Box>
             <VStack spacing="1rem">
               <Text fontSize="xl" fontWeight="300">
                 Hello! My name is Jeff, and I'm an expert in the art and
