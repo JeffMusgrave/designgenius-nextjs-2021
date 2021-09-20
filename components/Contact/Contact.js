@@ -1,4 +1,4 @@
-import { Heading, VStack, Text, Image } from "@chakra-ui/react";
+import { Heading, VStack, Text, Image, Stack } from "@chakra-ui/react";
 import {
   FullSectionComponent,
   ContentConstrainer,
@@ -26,9 +26,30 @@ export default function ContactComponent(props) {
           >
             Let's work together
           </Heading>
-          <Text pb="5rem" fontSize="xl" textAlign="center">
-            Contact me to learn more.
-          </Text>
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            spacing="2rem"
+            pt="2.5rem"
+            pb="7rem"
+          >
+            <Image
+              borderRadius="full"
+              w={{ base: "12rem", md: "15rem" }}
+              h={{ base: "12rem", md: "15rem" }}
+              src="/images/site/jeff-musgrave-1200.jpg"
+            />
+            <VStack spacing="1rem">
+              <Text fontSize="xl" fontWeight="300">
+                Hello! My name is Jeff, and I'm an expert in the art and
+                technology of visual presentation.
+              </Text>
+              <Text fontSize="xl" fontWeight="300">
+                Whatever your design, production, or communication challenge, I
+                can create a compelling solution. <strong>Contact me</strong>{" "}
+                with the form below to learn more.
+              </Text>
+            </VStack>
+          </Stack>
           <ContactForm />
         </VStack>
       </ContentConstrainer>
