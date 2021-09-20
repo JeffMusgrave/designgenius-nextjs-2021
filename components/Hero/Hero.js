@@ -59,7 +59,7 @@ export default function HeroComponent(props) {
           colEnd="2"
           {...props}
           mixBlendMode={colorMode === "dark" && "overlay"}
-          // pl={{ base: "auto", lg: `${pad}rem` }}
+          pl={{ base: "auto", lg: `${pad}rem` }}
           // mr={{ base: "-30vw", sm: "auto" }}
         >
           <MotionBox
