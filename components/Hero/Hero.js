@@ -59,6 +59,8 @@ export default function HeroComponent(props) {
           colEnd="2"
           {...props}
           mixBlendMode={colorMode === "dark" && "overlay"}
+          pl={{ base: "auto", lg: `${pad}rem` }}
+          // mr={{ base: "-30vw", sm: "auto" }}
         >
           <MotionBox
             id="LIGHT"
@@ -66,8 +68,8 @@ export default function HeroComponent(props) {
             minW={{ base: "20rem", sm: "30rem", lg: "70rem" }}
             display="flex"
             justifyContent={{ base: "flex-end", lg: "flex-start" }}
-            pl={{ base: "auto", lg: `${pad}rem` }}
-            mr={{ base: "-30vw", sm: "auto" }}
+            // pl={{ base: "auto", lg: `${pad}rem` }}
+            // mr={{ base: "-30vw", sm: "auto" }}
             sx={{
               maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
             }}
