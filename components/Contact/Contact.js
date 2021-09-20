@@ -43,6 +43,7 @@ export default function ContactComponent(props) {
               maxH="15rem"
               overflow="hidden"
               pos="relative"
+              backgroundColor="prince.500"
             >
               <Image
                 layout="fill"

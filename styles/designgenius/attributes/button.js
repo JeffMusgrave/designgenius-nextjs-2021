@@ -1,7 +1,7 @@
 const Button = {
   variants: {
     ghost: (props) => ({
-      fontFamily: props.navigation ? "Paytone One" : "Open Sans",
+      fontFamily: props.navigation ? "Paytone One" : "Montserrat",
       fontWeight: "500",
     }),
   },
