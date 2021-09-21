@@ -27,45 +27,51 @@ export default function ContactComponent(props) {
           >
             Let's work together
           </Heading>
-          <Stack
-            direction={{ base: "column", xl: "row" }}
-            spacing="2rem"
-            pt="2.5rem"
-            pb="7rem"
-            align="stretch"
-          >
-            <Box
-              m="0 auto"
-              borderRadius="full"
-              minW="15rem"
-              maxW="15rem"
-              minH="15rem"
-              maxH="15rem"
-              overflow="hidden"
-              pos="relative"
-              backgroundColor="prince.500"
-            >
-              <Image
-                layout="fill"
-                src="/images/site/jeff-musgrave-1200.jpg"
-                alt="photo of Jeff Musgrave"
-              />
-            </Box>
-            <VStack spacing="1rem">
-              <Text fontSize="xl" fontWeight="300">
-                Hello! My name is Jeff, and I'm an expert in the art and
-                technology of visual presentation.
-              </Text>
-              <Text fontSize="xl" fontWeight="300">
-                Whatever your design, production, or communication challenge, I
-                can create a compelling solution. Contact me with the form below
-                to learn more.
-              </Text>
-            </VStack>
-          </Stack>
+          <Profile />
           <ContactForm />
         </VStack>
       </ContentConstrainer>
     </FullSectionComponent>
+  );
+}
+
+function Profile() {
+  return (
+    <Stack
+      direction={{ base: "column", xl: "row" }}
+      spacing="2rem"
+      pt="2.5rem"
+      pb="5rem"
+      align="stretch"
+    >
+      <Box
+        m="0 auto"
+        borderRadius="full"
+        minW="12rem"
+        maxW="12rem"
+        minH="12rem"
+        maxH="12rem"
+        overflow="hidden"
+        pos="relative"
+        backgroundColor="prince.500"
+      >
+        <Image
+          layout="fill"
+          src="/images/site/jeff-musgrave-960.jpg"
+          alt="photo of Jeff Musgrave"
+        />
+      </Box>
+      <VStack spacing="1rem">
+        <Text fontSize="lg" fontWeight="300">
+          Hello! My name is Jeff, and I'm an expert in the art and technology of
+          visual presentation.
+        </Text>
+        <Text fontSize="lg" fontWeight="300">
+          Whatever your design, production, or communication challenge, I can
+          create a compelling solution. Contact me with the form below to learn
+          more.
+        </Text>
+      </VStack>
+    </Stack>
   );
 }
