@@ -53,6 +53,7 @@ export default function Home() {
           heading={"Album Art"}
           images={AA}
           ratio={1}
+          padB="3rem"
           columns={{ base: "2", sm: "3", md: "3" }}
           // light="#C8FE41"
           // dark="salmon.500"

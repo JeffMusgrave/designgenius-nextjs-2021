@@ -81,6 +81,7 @@ function FullSecCompWrapper(props) {
     customAnimation,
     single,
     children,
+    padB = null,
   } = props;
 
   const animBG = customKeyframes
@@ -101,7 +102,7 @@ function FullSecCompWrapper(props) {
       dark={dark}
       overflow="hidden"
       position="relative"
-      pb="0rem"
+      pb={!padB ? "0rem" : padB}
       pt={{ base: "2.5rem", md: "5rem" }}
       _before={{
         content: '" "',
