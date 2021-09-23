@@ -1,18 +1,67 @@
+import Head from "next/head";
+import {
+  Heading,
+  Text,
+  Box,
+  GridItem,
+  useColorMode,
+  keyframes,
+} from "@chakra-ui/react";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import Container from "../components/Container";
 import {
   FullSectionComponent,
   ContentConstrainer,
-} from "../../styles/designgenius/components/FullSectionComponent";
-import { Box, GridItem, useColorMode, keyframes } from "@chakra-ui/react";
-import HeroElements from "./HeroElements";
-import useWindowSize from "../../lib/useWindowSize";
-import LightBulb from "./LightBulb";
-import { motion, useIsPresent } from "framer-motion";
+} from "../styles/designgenius/components/FullSectionComponent";
+import { render } from "react-dom";
 
-export default function HeroComponent(props) {
-  const size = useWindowSize();
-  const pad = Math.max(0, (30 * (1000 - size.height)) / 1000);
+export default function NewWebsiteSEOPage() {
+  return (
+    <Container>
+      <Head>
+        <title>New Websites for as low as $50 - Design Genius</title>
+        <meta name="description" content="Design Genius" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <HeroComponent />
+      <PageText />
+    </Container>
+  );
+}
+
+function PageText() {
+  return (
+    <FullSectionComponent>
+      <ContentConstrainer
+        display="flex"
+        flexDir="column"
+        justifyContent="flex-end"
+      >
+        <BigText>
+          Are you looking to establish your brand online? Social media platforms
+          come and go, but your website is forever!{" "}
+        </BigText>
+        <BigText>
+          Let me help you get started with your online web presence today.{" "}
+        </BigText>
+        <BigText>Contact me for a free quote</BigText>
+      </ContentConstrainer>
+    </FullSectionComponent>
+  );
+}
+
+function BigText({ children }) {
+  return (
+    <Text minWidth="100px" mt={[2, 8]} fontSize="xl">
+      {children}
+    </Text>
+  );
+}
+
+function HeroComponent(props) {
   const { colorMode } = useColorMode();
+
   const animBG = keyframes`
 	0% {
 		transform: translate(-100px)
@@ -43,14 +92,12 @@ export default function HeroComponent(props) {
   const MotionBox = motion(Box);
   const [animFinished, setAnimFinished] = useState(false);
 
-  const isPresent = useIsPresent();
-
   return (
     <FullSectionComponent
-      variant="heroFull"
-      bgColor={colorMode === "dark" ? "sunny.500" : "#A6FFFA"}
+      bgColor={colorMode === "dark" ? "salmon.500" : "#A6FFFA"}
       {...props}
       minH={{ md: "35rem" }}
+      variant="postPage"
     >
       <ContentConstrainer>
         <GridItem
@@ -63,54 +110,35 @@ export default function HeroComponent(props) {
           colEnd="2"
           {...props}
           mixBlendMode={colorMode === "dark" && "overlay"}
-          pl={{ base: "auto", lg: `${pad}rem` }}
           mr={{ base: "-30vw", sm: "-15vw", md: "-10vw", lg: "auto" }}
-        >
-          <MotionBox
-            id="LIGHT"
-            h="clamp(10rem, 100vh, 70rem)"
-            minW={{ base: "20rem", sm: "30rem", lg: "70rem" }}
-            display="flex"
-            justifyContent={{ base: "flex-end", lg: "flex-start" }}
-            sx={{
-              maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
-            }}
-            variants={animLightbulb}
-            initial={isPresent && !animFinished ? "initial" : "complete"}
-            animate={isPresent && !animFinished ? "animate" : "complete"}
-            onAnimationComplete={() => {
-              setAnimFinished(true);
-            }}
-            drag={size.width >= 992 ? true : false}
-            dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
-          >
-            <LightBulb />
-          </MotionBox>
-        </GridItem>
+        ></GridItem>
 
         <GridItem
           zIndex="3"
-          size={size}
           rowStart={{ base: "2", lg: "4" }}
           rowEnd={{ base: "7", lg: "6" }}
           colStart="1"
           colEnd="2"
-          alignSelf={{ base: "center", lg: "flex-end", xl: "flex-start" }}
+          alignSelf={{ base: "center", lg: "flex-end", xl: "center" }}
           w="inherit"
           {...props}
         >
-          <HeroElements />
+          <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
+            New Websites for as low as $50!
+          </Heading>
           {props.children}
         </GridItem>
       </ContentConstrainer>
       <Box
         display={{ base: "none", sm: "inline-block" }}
-        position="absolute"
-        right="0"
-        width={{ base: "5vw", lg: "59vw", xl: "55vw" }}
-        minH="100vh"
+        position="relative"
+        width={{ base: "5vw", lg: "20vw", xl: "30vw" }}
+        minH="40vh"
         height="100%"
         overflow="hidden"
+        borderRadius="3xl"
+        mt="10rem"
+        mr="0rem"
         _before={{
           content: '" "',
           position: "absolute",

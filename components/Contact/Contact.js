@@ -67,9 +67,8 @@ function Profile() {
           visual presentation.
         </Text>
         <Text fontSize="lg" fontWeight="300">
-          Whatever your design, production, or communication challenge, I can
-          create a compelling solution. Contact me with the form below to learn
-          more.
+          Whatever your design or communication challenge, I can create an
+          effective solution. To learn more, use the form below to contact me.
         </Text>
       </VStack>
     </Stack>
