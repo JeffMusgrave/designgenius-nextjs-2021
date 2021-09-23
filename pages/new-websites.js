@@ -14,6 +14,7 @@ import {
   FullSectionComponent,
   ContentConstrainer,
 } from "../styles/designgenius/components/FullSectionComponent";
+import { render } from "react-dom";
 
 export default function NewWebsiteSEOPage() {
   return (
@@ -36,20 +37,25 @@ function PageText() {
         display="flex"
         flexDir="column"
         justifyContent="flex-end"
-        mt={{ base: "7.5rem", md: "12.5rem" }}
       >
-        <Text minWidth="100px" mt={[2, 8]}>
+        <BigText>
           Are you looking to establish your brand online? Social media platforms
           come and go, but your website is forever!{" "}
-        </Text>
-        <Text minWidth="100px" mt={[2, 8]}>
+        </BigText>
+        <BigText>
           Let me help you get started with your online web presence today.{" "}
-        </Text>
-        <Text minWidth="100px" mt={[2, 8]}>
-          Contact me for a free quote
-        </Text>
+        </BigText>
+        <BigText>Contact me for a free quote</BigText>
       </ContentConstrainer>
     </FullSectionComponent>
+  );
+}
+
+function BigText({ children }) {
+  return (
+    <Text minWidth="100px" mt={[2, 8]} fontSize="xl">
+      {children}
+    </Text>
   );
 }
 
@@ -88,9 +94,10 @@ function HeroComponent(props) {
 
   return (
     <FullSectionComponent
-      bgColor={colorMode === "dark" ? "sunny.500" : "#A6FFFA"}
+      bgColor={colorMode === "dark" ? "salmon.500" : "#A6FFFA"}
       {...props}
       minH={{ md: "35rem" }}
+      variant="postPage"
     >
       <ContentConstrainer>
         <GridItem
@@ -124,11 +131,14 @@ function HeroComponent(props) {
       </ContentConstrainer>
       <Box
         display={{ base: "none", sm: "inline-block" }}
-        position="absolute"
-        right="0"
-        width="100%"
-        height="20rem"
+        position="relative"
+        width={{ base: "5vw", lg: "20vw", xl: "30vw" }}
+        minH="40vh"
+        height="100%"
         overflow="hidden"
+        borderRadius="3xl"
+        mt="10rem"
+        mr="0rem"
         _before={{
           content: '" "',
           position: "absolute",

@@ -53,7 +53,7 @@ export default function Home() {
           heading={"Album Art"}
           images={AA}
           ratio={1}
-          padB="3rem"
+          padB={{ base: "0rem", md: "3rem" }}
           columns={{ base: "2", sm: "3", md: "3" }}
           // light="#C8FE41"
           // dark="salmon.500"
@@ -66,28 +66,7 @@ export default function Home() {
               ? [prince[500], "#A6FFFA"]
               : [salmon[300], prince[500]]
           }
-          // customKeyframes={}
-          // customAnimation="5s linear infinite"
         />
-        {/* <Portfolio
-          id="video"
-          galleryType="description"
-          images={VID}
-          ratio={{ base: 21 / 9, md: 16 / 9 }}
-          columns={{ base: "1", sm: "2", md: "2" }}
-          light={["white", "black"]}
-          dark="#150833"
-          borderRadius={{ base: "1rem", md: "2.5rem" }}
-          layout="single"
-          descHeadingColor={colorMode === "dark" ? "#9769FF" : "#4C823D"}
-          // secHeadingColor={colorMode === "light" && "#00A9A5"}
-          borderWidthVar="2rem"
-          borderColorVar={
-            colorMode === "light"
-              ? ["white", "#A6FFFA"]
-              : ["#25144D", salmon[500]]
-          }
-        /> */}
       </GalleryWrapper>
     </Container>
   );
