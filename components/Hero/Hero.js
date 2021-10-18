@@ -75,12 +75,12 @@ export default function HeroComponent(props) {
             sx={{
               maskImage: "linear-gradient(to left, transparent 0%, black 100%)",
             }}
-            variants={animLightbulb}
-            initial={isPresent && !animFinished ? "initial" : "complete"}
-            animate={isPresent && !animFinished ? "animate" : "complete"}
-            onAnimationComplete={() => {
-              setAnimFinished(true);
-            }}
+            // variants={animLightbulb}
+            // initial={isPresent && !animFinished ? "initial" : "complete"}
+            // animate={isPresent && !animFinished ? "animate" : "complete"}
+            // onAnimationComplete={() => {
+            //   setAnimFinished(true);
+            // }}
             drag={size.width >= 992 ? true : false}
             dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
           >
