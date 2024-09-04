@@ -1,6 +1,6 @@
-const title = "Design Genius";
+const title = "Web Design for Small Businesses | SEO & Development Services";
 const description =
-  "A professionally designed brochure, business card, logo, and website can attract customers and add profit to your bottom line. I can help you with that. Contact me now for a free consultation.";
+  "Expert web design services for small businesses. Affordable, responsive, and SEO-optimized websites. Get a professional online presence that drives results.";
 
 export default {
   title,
