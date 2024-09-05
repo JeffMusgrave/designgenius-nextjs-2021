@@ -1,4 +1,6 @@
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox-pro";
+import SimpleReactLightbox, {
+  SRLWrapper,
+} from "@hueyyeng/simple-react-lightbox";
 
 export default function GalleryWrapper(props) {
   const options = {
