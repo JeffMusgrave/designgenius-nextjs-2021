@@ -1,0 +1,220 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "url": "https://www.designgenius.ca/",
+      "name": "Design Genius",
+      "description": "Expert web design services for small businesses. Affordable, responsive, and SEO-optimized websites. Get a professional online presence that drives results.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "Design Genius",
+      "url": "https://www.designgenius.ca/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.designgenius.ca/images/site/dg-thumb.png"
+      },
+      "sameAs": ["https://github.com/JeffMusgrave/designgenius-nextjs-2021"]
+    },
+    {
+      "@type": "Person",
+      "name": "Jeff Musgrave",
+      "jobTitle": "Web Designer",
+      "url": "https://www.jeffmusgrave.com/",
+      "image": "https://www.designgenius.ca/images/site/jeff-musgrave-960.jpg",
+      "description": "Expert in the art and technology of visual presentation"
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://www.designgenius.ca/",
+      "name": "Web Design for Small Businesses | SEO & Development Services",
+      "description": "Expert web design services for small businesses. Affordable, responsive, and SEO-optimized websites. Get a professional online presence that drives results.",
+      "inLanguage": "en-IE"
+    },
+    {
+      "@type": "Service",
+      "name": "Web Design, Development & SEO Services",
+      "description": "Professional web design services for small businesses, including brochure design, business card design, logo design, and website development.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Design Genius"
+      },
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Whitewater Ski Resort Website",
+      "creator": {
+        "@type": "Person",
+        "name": "Jeff Musgrave"
+      },
+      "description": "A new website design for Whitewater Ski Resort, helping them look more exciting and sophisticated."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "arXiv.org Redesign Concept",
+      "creator": {
+        "@type": "Person",
+        "name": "Jeff Musgrave"
+      },
+      "description": "A redesign concept for arXiv.org to look more visually appealing while retaining its recognizable elements."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "PyTorch Adapt Logo",
+      "creator": {
+        "@type": "Person",
+        "name": "Jeff Musgrave"
+      },
+      "description": "A logo design for PyTorch Adapt, featuring a stylized chameleon with eyes to suggest artificial intelligence and domain adaptation."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Pay Per Click Ad Designs",
+      "creator": {
+        "@type": "Person",
+        "name": "Jeff Musgrave"
+      },
+      "description": "Ad designs created for several clients for use in Google AdWords campaigns."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "University of Guelph FARE Website",
+      "creator": {
+        "@type": "Person",
+        "name": "Jeff Musgrave"
+      },
+      "description": "A website design for a professor at the University of Guelph, using images of food and agriculture to visually communicate the focus of research."
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "KCM Whitepaper Design",
+      "creator": {
+        "@type": "Person",
+        "name": "Jeff Musgrave"
+      },
+      "description": "An attractive design for a marketing whitepaper from KCM."
+    },
+    {
+      "@type": "ItemList",
+      "name": "Album Art Designs",
+      "description": "A collection of album art designs for various music projects.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Ephemeral Firelight",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Half The Truth Is A Whole Lie",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "LP One",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Melody In The Half Light",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Protection",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Tilt",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "I Can't Give Everything Away",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Yellow Brick Road",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "You'd Be So Nice To Come Home To",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
