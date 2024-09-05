@@ -17,7 +17,6 @@ export default function Home() {
   return (
     <Container hero={<Hero />}>
       <Head>
-        <title>Design Genius</title>
         <meta name="description" content="Design Genius" />
         <link rel="icon" href="/favicon.ico" />
         <link

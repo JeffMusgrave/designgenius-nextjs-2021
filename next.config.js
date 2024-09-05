@@ -1,5 +1,8 @@
+const path = require("path");
+
 module.exports = {
   webpack: (config, options) => {
+    // Preserve existing topLevelAwait configuration
     config.experiments = {
       topLevelAwait: true,
     };
