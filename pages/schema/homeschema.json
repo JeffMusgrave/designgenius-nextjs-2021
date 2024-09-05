@@ -3,17 +3,17 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://www.designgenius.ca/#website",
       "url": "https://www.designgenius.ca/",
       "name": "Design Genius",
       "description": "Expert web design services for small businesses. Affordable, responsive, and SEO-optimized websites. Get a professional online presence that drives results.",
-      "publisher": {
-        "@id": "https://www.designgenius.ca/#organization"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87"
       }
     },
     {
       "@type": "Organization",
-      "@id": "https://www.designgenius.ca/#organization",
       "name": "Design Genius",
       "url": "https://www.designgenius.ca/",
       "logo": {
@@ -24,189 +24,195 @@
     },
     {
       "@type": "Person",
-      "@id": "https://www.designgenius.ca/#person",
       "name": "Jeff Musgrave",
       "jobTitle": "Web Designer",
       "url": "https://www.jeffmusgrave.com/",
       "image": "https://www.designgenius.ca/images/site/jeff-musgrave-960.jpg",
-      "description": "Expert in the art and technology of visual presentation",
-      "worksFor": {
-        "@id": "https://www.designgenius.ca/#organization"
-      }
+      "description": "Expert in the art and technology of visual presentation"
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.designgenius.ca/#webpage",
       "url": "https://www.designgenius.ca/",
       "name": "Web Design for Small Businesses | SEO & Development Services",
-      "isPartOf": {
-        "@id": "https://www.designgenius.ca/#website"
-      },
-      "about": {
-        "@id": "https://www.designgenius.ca/#organization"
-      },
-      "datePublished": "2021-01-01T00:00:00+00:00",
-      "dateModified": "2024-09-06T00:00:00+00:00",
       "description": "Expert web design services for small businesses. Affordable, responsive, and SEO-optimized websites. Get a professional online presence that drives results.",
       "inLanguage": "en-IE"
     },
     {
       "@type": "Service",
-      "@id": "https://www.designgenius.ca/#service",
-      "name": "Web Design Services",
+      "name": "Web Design, Development & SEO Services",
       "description": "Professional web design services for small businesses, including brochure design, business card design, logo design, and website development.",
       "provider": {
-        "@id": "https://www.designgenius.ca/#organization"
+        "@type": "Organization",
+        "name": "Design Genius"
       },
-      "areaServed": "Worldwide",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Web Design Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Website Design"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Logo Design"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Brochure Design"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Business Card Design"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "SEO Optimization"
-            }
-          }
-        ]
-      }
+      "areaServed": "Worldwide"
     },
     {
       "@type": "CreativeWork",
       "name": "Whitewater Ski Resort Website",
       "creator": {
-        "@id": "https://www.designgenius.ca/#person"
+        "@type": "Person",
+        "name": "Jeff Musgrave"
       },
-      "description": "A new website design for Whitewater Ski Resort, helping them look more exciting and sophisticated.",
-      "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/digitalprint/WhitewaterStyle.699b628b2c15bdbee56a060e804a4bcd.jpg"
+      "description": "A new website design for Whitewater Ski Resort, helping them look more exciting and sophisticated."
     },
     {
       "@type": "CreativeWork",
       "name": "arXiv.org Redesign Concept",
       "creator": {
-        "@id": "https://www.designgenius.ca/#person"
+        "@type": "Person",
+        "name": "Jeff Musgrave"
       },
-      "description": "A redesign concept for arXiv.org to look more visually appealing while retaining its recognizable elements.",
-      "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/digitalprint/arXivConcept.337ab6fc3088d0d07cdfd40807c10e43.jpg"
+      "description": "A redesign concept for arXiv.org to look more visually appealing while retaining its recognizable elements."
     },
     {
       "@type": "CreativeWork",
       "name": "PyTorch Adapt Logo",
       "creator": {
-        "@id": "https://www.designgenius.ca/#person"
+        "@type": "Person",
+        "name": "Jeff Musgrave"
       },
-      "description": "A logo design for PyTorch Adapt, featuring a stylized chameleon with eyes to suggest artificial intelligence and domain adaptation.",
-      "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/digitalprint/PyAdapt.430c2d61ee496d8c1a7255fe15ad217b.jpg"
+      "description": "A logo design for PyTorch Adapt, featuring a stylized chameleon with eyes to suggest artificial intelligence and domain adaptation."
     },
     {
       "@type": "CreativeWork",
       "name": "Pay Per Click Ad Designs",
       "creator": {
-        "@id": "https://www.designgenius.ca/#person"
+        "@type": "Person",
+        "name": "Jeff Musgrave"
       },
-      "description": "Ad designs created for several clients for use in Google AdWords campaigns.",
-      "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/digitalprint/SmallGraphicsSpread.6c92244ff8636aac757bf69aa02de5a9.jpg"
+      "description": "Ad designs created for several clients for use in Google AdWords campaigns."
     },
     {
       "@type": "CreativeWork",
       "name": "University of Guelph FARE Website",
       "creator": {
-        "@id": "https://www.designgenius.ca/#person"
+        "@type": "Person",
+        "name": "Jeff Musgrave"
       },
-      "description": "A website design for a professor at the University of Guelph, using images of food and agriculture to visually communicate the focus of research.",
-      "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/digitalprint/UniversitySpread.ff03903731342bcb47ecc61e6be8fbb8.jpg"
+      "description": "A website design for a professor at the University of Guelph, using images of food and agriculture to visually communicate the focus of research."
     },
     {
       "@type": "CreativeWork",
       "name": "KCM Whitepaper Design",
       "creator": {
-        "@id": "https://www.designgenius.ca/#person"
+        "@type": "Person",
+        "name": "Jeff Musgrave"
       },
-      "description": "An attractive design for a marketing whitepaper from KCM.",
-      "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/digitalprint/WhitePaperSpread.f42b63b1ec7c2cdc89945ebd25e7b68a.jpg"
+      "description": "An attractive design for a marketing whitepaper from KCM."
     },
     {
-      "@type": "CreativeWorkSeries",
+      "@type": "ItemList",
       "name": "Album Art Designs",
-      "creator": {
-        "@id": "https://www.designgenius.ca/#person"
-      },
       "description": "A collection of album art designs for various music projects.",
       "itemListElement": [
         {
-          "@type": "VisualArtwork",
-          "name": "Ephemeral Firelight",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/EphemeralFirelight.4838311b45e0955212034203b53a1c37.jpg"
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Ephemeral Firelight",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "Half The Truth Is A Whole Lie",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/HalfTheTruthIsAWholeLieArt.9bc156194829ca6e7871218c160935ad.jpg"
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Half The Truth Is A Whole Lie",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "LP One",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/LPOne.ce6a9de7c6cfb490b342188a557744a6.jpg"
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "LP One",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "Melody In The Half Light",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/MelodyInTheHalfLight.0ef05edeef1250893632846900f80e77.jpg"
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Melody In The Half Light",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "Protection",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/SV1_03_Protection.29344afdeac697c2f40199e06cc4282b.jpg"
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Protection",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "Tilt",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/SV1_05_Tilt.8856ae8c235a9ba80ade5890b469b646.jpg"
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Tilt",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "I Can't Give Everything Away",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/SV1_06_ICantGiveEverythingAway.0f21742068785b9b25763c266283d657.jpg"
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "I Can't Give Everything Away",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "Yellow Brick Road",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/YellowBrickRoad.5a27358c4e6ce5d0ed80fa2d8b309ab4.jpg"
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "Yellow Brick Road",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         },
         {
-          "@type": "VisualArtwork",
-          "name": "You'd Be So Nice To Come Home To",
-          "image": "https://www.designgenius.ca/_next/static/image/public/images/portfolio/albumart/YoudBeSoNiceToComeHomeTo.88369cb8332ac1599ed23c1c800518d0.jpg"
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "VisualArtwork",
+            "name": "You'd Be So Nice To Come Home To",
+            "creator": {
+              "@type": "Person",
+              "name": "Jeff Musgrave"
+            }
+          }
         }
       ]
     }
