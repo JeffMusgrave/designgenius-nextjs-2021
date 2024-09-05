@@ -8,6 +8,7 @@ import { DPI, AA, VID } from "../data/imagelist/imagelist";
 import colors from "../styles/designgenius/attributes/colors";
 // import GalleryWrapper from "../components/GalleryWrapper";
 import About from "../components/About";
+import structuredData from "./schema/homeschema.json";
 
 const { prince, salmon, sunny, punch } = colors;
 
@@ -25,6 +26,10 @@ export default function Home() {
           href="/images/site/BlueLightBulb.svg"
           as="image"
           type="image/svg+xml"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
 
