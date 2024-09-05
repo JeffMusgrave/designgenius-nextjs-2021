@@ -1,4 +1,6 @@
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox-pro";
+import SimpleReactLightbox, {
+  SRLWrapper,
+} from "@hueyyeng/simple-react-lightbox";
 import ImageGrid from "./ImageGrid";
 import ImageWithDescription from "./ImageDesc";
 import { VStack } from "@chakra-ui/react";
