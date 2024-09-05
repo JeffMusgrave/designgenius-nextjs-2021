@@ -4,7 +4,6 @@ import {
   FullSectionComponent,
   ContentConstrainer,
 } from "../../styles/designgenius/components/FullSectionComponent";
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox-pro";
 
 export default function FeaturedComponent(props) {
   return (
