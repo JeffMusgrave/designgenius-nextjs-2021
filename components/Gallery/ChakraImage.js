@@ -17,10 +17,6 @@ export default function ChakraImage({
     <>
       <chakra.a
         href={e.default.src}
-        srl_video_thumbnail={thumbs[idx]}
-        srl_video_loop="true"
-        srl_video_scale="80"
-        srl_video_caption="youtube video"
         display="block"
         cursor="pointer"
         overflow="hidden"
